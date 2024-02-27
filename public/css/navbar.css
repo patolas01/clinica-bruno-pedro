@@ -103,6 +103,7 @@ h6 {
     position: fixed;
     width: 100%;
     z-index: 999;
+    opacity: 85%;
 
 
 }
@@ -110,6 +111,7 @@ h6 {
 .container-nav {
     align-items: center;
     display: flex;
+
     justify-content: space-between;
     background-color: var(--cl--black);
     padding: 15px 0;
@@ -144,10 +146,9 @@ li {
 
 .list a {
     color: hsl(0, 0%, 100%);
-    font-weight: 600;
     text-decoration: none;
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
@@ -159,7 +160,6 @@ li {
     bottom: -0.4em;
     height: 3px;
     width: 100%;
-    background: var(--cl--yellow);
     margin: auto;
     border-radius: 1000px;
     font-family: var(--ff--montserrat);
@@ -167,8 +167,8 @@ li {
 }
 
 .list a:hover{
-    color: hsl(0, 0%, 100%) !important;
-    text-decoration: none;
+    color: #6dffe9; /* Define a cor do texto ao passar o mouse */
+    text-decoration: none; /* Remove o sublinhado */
 }
 
 .navbar .logo {
