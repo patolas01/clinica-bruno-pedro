@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Password;
 */
 
 
-Route::get('/', [PageController::class, 'index']);
-Route::get('/area-clinica', [PageController::class, 'areaClinica']);
+Route::get('/', [PageController::class, 'index'])->name('index');
+Route::get('/area-clinica', [PageController::class, 'areaClinica'])->name('areaClinica');
 Route::get('/contactos', [PageController::class, 'contactos']);
 Route::get('/galeria', [PageController::class, 'galeria']);
 Route::get('/guia-saude', [PageController::class, 'guiaSaude']);

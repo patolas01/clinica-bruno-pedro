@@ -1,6 +1,8 @@
 @extends('layouts.app')
+@extends('partials.master')
 @include('partials.navbar')
 @section('title', 'Página Inicial')
+
 
 @section('content')
 
