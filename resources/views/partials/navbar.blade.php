@@ -158,7 +158,7 @@
     <div class="dropdown_menu open">
         <div class="subnav">
             <div class="logo">
-                <img src="{{ asset('img/Logo-PulseHub-Branco.png') }}" alt="logo website branco">
+                <img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="logo website branco">
             </div>
             <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
         </div>
