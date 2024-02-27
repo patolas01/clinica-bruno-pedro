@@ -173,7 +173,8 @@ li {
 .navbar .logo {
     overflow: hidden;
     cursor: pointer;
-    width: 150px;
+    width: 100px;
+
 }
 
 /* dropdown */

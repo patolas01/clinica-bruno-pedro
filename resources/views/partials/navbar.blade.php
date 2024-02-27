@@ -14,7 +14,7 @@
     <div class="container-nav">
         <a href="{{ route('index') }}">
             <div class="logo">
-                <img src="{{ asset('img/Logo-PulseHub-Branco.png') }}" alt="logo website branco">
+                <img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="logo website branco">
             </div>
         </a>
         <div class="toggle_btn"><i class="fa-solid fa-bars"></i></div>
@@ -22,6 +22,13 @@
             <ul class="list">
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'areaClinica') active @endif"
                     href="{{ route('areaClinica') }}">Area Clinica</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'guiaSaude') active @endif"
+                    href="{{ route('guiaSaude') }}">Guia Saude</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
+                     href="{{ route('galeria') }}">Galeria</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
+                     href="{{ route('contactos') }}">Contatos</a></li>
+
 
             </ul>
 
@@ -119,7 +126,7 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-    
+
 {{--
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

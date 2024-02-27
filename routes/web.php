@@ -20,9 +20,9 @@ use Illuminate\Support\Facades\Password;
 
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/area-clinica', [PageController::class, 'areaClinica'])->name('areaClinica');
-Route::get('/contactos', [PageController::class, 'contactos']);
-Route::get('/galeria', [PageController::class, 'galeria']);
-Route::get('/guia-saude', [PageController::class, 'guiaSaude']);
-Route::get('/sobre', [PageController::class, 'sobre']);
-Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes']);
-Route::fallback(function () {return view('partials.error');});
+Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
+Route::get('/galeria', [PageController::class, 'galeria'])->name('galeria');
+Route::get('/guia-saude', [PageController::class, 'guiaSaude'])->name('guiaSaude');
+Route::get('/sobre', [PageController::class, 'sobre'])->name('sobre');
+Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes'])->name('termosCondicoes');
+Route::fallback(function () {return view('partials.error');})->name('erro');
