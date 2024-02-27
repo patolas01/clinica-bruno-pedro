@@ -25,3 +25,4 @@ Route::get('/galeria', [PageController::class, 'galeria']);
 Route::get('/guia-saude', [PageController::class, 'guiaSaude']);
 Route::get('/sobre', [PageController::class, 'sobre']);
 Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes']);
+Route::fallback(function () {return view('partials.error');});
