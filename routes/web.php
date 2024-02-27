@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +15,10 @@ use App\Http\Controllers\HomeController;
 */
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [PageController::class, 'index']);
+Route::get('/area-clinica', [PageController::class, 'areaClinica']);
+Route::get('/contactos', [PageController::class, 'contactos']);
+Route::get('/galeria', [PageController::class, 'galeria']);
+Route::get('/guia-saude', [PageController::class, 'guiaSaude']);
+Route::get('/sobre', [PageController::class, 'sobre']);
+Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes']);

@@ -1,0 +1,78 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+html {
+    --color-default: black;
+    --color-light-grey: #333333;
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 100svw;
+    /* border-bottom: 1px solid red; */
+    background-color: #488bc2;
+    color: white;
+    font-size: 110%;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10%; */
+    list-style-type: none;
+}
+
+nav a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav .middle-section {
+    min-width: 50%;
+}
+
+nav .middle-section li {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+nav .middle-section li,
+.middle-section a {
+
+    transition-duration: 100ms;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+nav .middle-section li:hover {
+    border-bottom: 4px solid white;
+    background-color: #528fc2;
+}
+
+nav .left-section {
+    padding-left: 2rem;
+    justify-content: start;
+    min-width: 25%;
+}
+
+nav .right-section {
+    min-width: 25%;
+    /* padding-right: 2rem; */
+}
