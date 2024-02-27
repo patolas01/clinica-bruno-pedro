@@ -40,4 +40,8 @@ class PageController extends Controller
     {
         return view('termos-e-condicoes');
     }
+    public function Error()
+    {
+        return view('partials.error');
+    }
 }
