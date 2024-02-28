@@ -1,6 +1,6 @@
 @extends('partials.master')
 @include('partials.navbar')
-@section('title', 'Página Inicial')
+@section('title', 'Clínica Dentária Bruno & Pedro')
 
 @section('moreCSS')
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
