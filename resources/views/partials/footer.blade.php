@@ -1,3 +1,4 @@
+
 <footer class="footer">
     <div class="container-footer">
         <div class="upper-footer">
@@ -14,7 +15,7 @@
                 <a href="#"><img src="{{ asset('img/facebook-branco.svg') }}" alt="facebook icon"></a>
             </div>
         </div>
-        <img class="line" src="{{ asset('img/Line 2.svg') }}" alt="grey line footer">
+        <img class="line" src="{{ asset('img/Line_2.svg') }}" alt="grey line footer">
         <div class="lower-footer">
             <p>Copyright © 2024 Clínica Dentária Bruno & Pedro, lda. Todos os direitos reservados.</p>
         </div>
