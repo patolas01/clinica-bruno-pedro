@@ -54,7 +54,7 @@ canvas,
 svg {
     display: block;
     height: 50px;
-    max-width: auto;
+    width: auto;
 }
 
 html {
