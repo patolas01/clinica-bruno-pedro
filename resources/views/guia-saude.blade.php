@@ -1,5 +1,4 @@
-@extends('partials.master')
-@include('partials.navbar')
+@extends('layouts.master')
 @section('title', 'Guia Saúde - Clínica Dentária Bruno & Pedro')
 
 

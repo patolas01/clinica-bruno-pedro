@@ -1,5 +1,4 @@
-@extends('partials.master')
-@include('partials.navbar')
+@extends('layouts.master')
 @section('title', 'Termos e Condições - Clínica Dentária Bruno & Pedro')
 
 
