@@ -74,7 +74,6 @@ div.banner{
     width: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
 }
 
 .carousel__track {
