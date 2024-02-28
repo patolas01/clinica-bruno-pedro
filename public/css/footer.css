@@ -157,10 +157,9 @@ text-decoration: none;
 }
 .lower-footer p {
     color: hsl(0, 0%, 100%);
-
-font-size: 0.8125rem;
-
-letter-spacing: 0.12188rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0.12188rem;
+    padding-top: 15px;
 }
 .line{
     width: 100%;
