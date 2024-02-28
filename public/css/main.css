@@ -1,0 +1,145 @@
+/* COLORS */
+html{
+    --color-grey: #cccccc;
+}
+
+
+
+
+
+
+
+
+
+
+h1 {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* banner */
+
+div.banner{
+    width: 100%;
+    height: 90svh;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+.carousel {
+    position: relative;
+    height: 50svh;
+    width: 50svw;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.carousel__images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__track-container {
+    background: var(--color-grey);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.carousel__button:hover {
+    background-color: var(--color-grey);
+    border-radius: 20px;
+}
+
+.carousel__button--left {
+    left: -5svw;
+}
+
+.carousel__button--right {
+    right: -5svw;
+    transform: translateY(-50%) rotate(180deg)
+}
+
+.carousel__button img {
+    width: 2rem;
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 1.5rem;
+}
+
+.carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.is-hidden {
+    display: none;
+}
