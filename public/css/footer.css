@@ -106,8 +106,7 @@ h6 {
     margin-inline: auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-
+    gap: 1rem;
     justify-content: center;
     padding: 4rem 5%;
 }

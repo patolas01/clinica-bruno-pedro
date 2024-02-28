@@ -5,7 +5,13 @@
             <div class="logo"><img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="logo branco pulse hub"></div>
             <ul class="list-footer">
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'areaClinica') active @endif"
-                    href="{{ route('areaClinica') }}">Area Clinica</a></li>
+                    href="{{ route('areaClinica') }}">Área Clínica</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'guiaSaude') active @endif"
+                    href="{{ route('guiaSaude') }}">Guia Saúde</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
+                     href="{{ route('galeria') }}">Galeria</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
+                     href="{{ route('contactos') }}">Contactos</a></li>
 
 
             </ul>
