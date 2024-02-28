@@ -119,6 +119,7 @@ h6 {
     gap: 1.5rem;
     list-style: none;
     align-items: center;
+    padding-top: 15px;
 
 }
 .list-footer a{
@@ -164,17 +165,24 @@ letter-spacing: 0.12188rem;
 .line{
     width: 100%;
 }
-@media(max-width:840px){
-    .upper-footer{
-         flex-direction: column;
+@media(max-width: 840px) {
+    .upper-footer {
+        flex-direction: column;
         align-items: center;
         gap: 1.5rem;
     }
-    .list-footer{
+
+    .list-footer {
         flex-direction: column;
         gap: 0.5rem;
+        align-items: center; /* Alinha os itens ao centro verticalmente */
     }
-    .container-footer{
+
+    .container-footer {
         padding: 2rem 5%;
+    }
+
+    .logo {
+        margin-bottom: 1rem; /* Adiciona espaço abaixo do logo para acomodar a lista */
     }
 }
