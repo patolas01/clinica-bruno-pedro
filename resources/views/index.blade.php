@@ -10,14 +10,11 @@
 @section('content')
 
 
-    <h1>Teste</h1>
-    <p>
-    <p>ola</p>
-    </p>
-
     <div class="banner">
         <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="banner">
     </div>
+
+    <h1>Teste</h1>
 
     <div>
         <div class="carousel">
@@ -64,6 +61,8 @@
                 <button class="carousel__indicator"></button>
             </div>
         </div>
+
+
 
     @endsection
 
