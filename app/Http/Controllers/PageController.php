@@ -12,6 +12,11 @@ class PageController extends Controller
         return view('index'); // Update with the actual path to your Blade view.
     }
 
+    public function index1()
+    {
+        return view('index1'); // Update with the actual path to your Blade view.
+    }
+
     public function areaClinica()
     {
         return view('area-clinica');
