@@ -122,18 +122,19 @@ h6 {
     padding-top: 15px;
 
 }
-.list-footer a{
+.list-footer a {
     color: hsl(0, 0%, 100%);
-
-font-size: 12px;
-letter-spacing: 0.13125rem;
-text-transform: uppercase;
-text-decoration: none;
-
+    font-size: 12px;
+    letter-spacing: 0.13125rem;
+    text-transform: uppercase;
+    text-decoration: none !important;/* Remover sublinhado */
 }
-.list-footer a:hover{
+
+.list-footer a:hover {
     color: #6dffe9;
+
 }
+
 .social-footer{
     display: flex;
     gap: 1rem;

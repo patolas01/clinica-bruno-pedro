@@ -56,7 +56,7 @@ div.banner{
 
 .carousel {
     position: relative;
-    height: 700px;
+    height: 100vh;
     width: auto;
     margin: 0 auto;
     margin-bottom: 5rem;
