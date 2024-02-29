@@ -3,14 +3,6 @@ html{
 }
 
 
-
-
-
-
-
-
-
-
 h1 {
     text-align: center;
     margin: 3rem 0;
@@ -60,8 +52,8 @@ a{
 }
 .container-cards{
 	width:100%;
+
     background-color: #0b86dd;
-	
 	justify-content: center;
 	align-items: center;
     padding-top: 40px;
@@ -79,11 +71,24 @@ a{
 	justify-content: space-between;
 	box-sizing: border-box;
 	margin: 20px 10px;
+    object-fit: cover;
 }
 .model{
-	height: 250px;
-	max-height: auto;
+	/*height: 250px;
+	max-height: auto; */
 	width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    transition: 0.5s ease-in;
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: 50%;
+    background-size: cover; */
+
 }
 .details{
 	display: flex;
@@ -105,9 +110,7 @@ a{
 	font-family: bebas kai;
 	font-size: 25px;
 }
-.logo{
-	height: 60px;
-}
+
 .box:hover{
 	background-color: #17171d;
 	transform-style: preserve-3d;
