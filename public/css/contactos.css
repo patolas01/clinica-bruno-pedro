@@ -1,0 +1,220 @@
+html{
+    --color-grey: #cccccc;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*---TITULO---*/
+
+.titulo {
+    font-family: 'HT Modern Hand Sans', sans-serif;
+    font-size: 24pt;
+    text-align: center;
+    font-style: normal;
+    font-weight: var(--fw--900);
+    color: #000000;
+    padding-top: 150px;
+    padding-bottom: 20px;
+}
+
+/*---CONTACTOS, HORARIO E MAPA---*/
+
+#main2{
+    padding-bottom: 50px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#post2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* Alterado para centralizar os itens sem espaço extra */
+    margin-top: 50px;
+    background-color: #ffffff;
+}
+
+#infopost2 {
+    max-width: 650px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-top: 20px; /* Adicione margem no topo */
+    display: flex;
+    flex-direction: column;
+}
+
+.info-bloco {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 70px; /* Adicione margem à esquerda para separar os elementos */
+}
+
+
+.info-bloco i {
+    margin-right: 30px; /* Adiciona espaço após o ícone */
+    font-size: 20px;
+}
+
+.info-content h6 {
+    font-size: 16pt;
+    font-weight: 600;
+    color: #30383B;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info-content p {
+    font-size: 14px;
+    color: #787c83;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px; /* Remover a margem inferior */
+}
+
+
+
+/*--RESPONSIVO--*/
+@media (min-width: 768px) {
+    #post2 {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+
+
+/*---TITULO 2---*/
+
+.titulo2 {
+    font-family: 'HT Modern Hand Sans', sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    font-style: normal;
+    font-weight: var(--fw--900);
+    color: #000000;
+    padding-top: 50px;
+}
+
+/*---SUBTITULO---*/
+
+.subtitulo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    font-style: normal;
+    color: #787c83;
+}
+
+/*---FORMULARIO---*/
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.form-column:last-child {
+    margin-right: 0;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #419fe1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #0b86dd;
+}
+
+#mensagem {
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+    overflow: hidden;
+}
+
+button {
+    background-color: #0b86dd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px !important;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 50px !important;
+}
+
+.centralizarbotao{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+button:hover {
+    background-color: #419fe1;
+}
+
+
+.tudoform{
+    background-color: #f9f9f9;
+    margin-top: 50px;
+}
+
