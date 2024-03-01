@@ -42,12 +42,37 @@
                 <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
                 <p class="slider-text">Teste</p>
             </div>
+            <div class="slider-item">
+                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
+                <p class="slider-text">Teste</p>
+            </div>
+            <div class="slider-item">
+                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
+                <p class="slider-text">Teste</p>
+            </div>
+            <div class="slider-item">
+                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
+                <p class="slider-text">Teste</p>
+            </div>
+            <div class="slider-item">
+                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
+                <p class="slider-text">Teste</p>
+            </div>
+            <div class="slider-item">
+                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
+                <p class="slider-text">Teste</p>
+            </div>
+            <div class="slider-item">
+                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
+                <p class="slider-text">Teste</p>
+            </div>
         </div>
 
         <div class="slider-btn left"></div>
+        <div class="slider-btn right"></div>
 
         <div class="slider-nav-dots">
-            <div class="slider-dot"></div>
+            {{-- <div class="slider-dot"></div> --}}
         </div>
     </div>
 
@@ -178,5 +203,6 @@
 
 @section('moreScripts')
     {{-- <script src="{{ asset('js/carousel.js') }}"></script> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/lightslider.js') }}"></script>
 @endsection
