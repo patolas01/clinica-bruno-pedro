@@ -9,7 +9,7 @@
 @section('content')
 <div class="titulo">Contactos</div>
 
-<section id="main2">
+<section id="main">
     <div id="post2">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3062.025158114526!2d-8.541598724317756!3d39.87367437153199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd227cb9753e463d%3A0xf46d2fac71a20e7f!2sBruno%20%26%20Pedro%20Lda!5e0!3m2!1spt-PT!2spt!4v1709211847777!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div id="infopost2">
