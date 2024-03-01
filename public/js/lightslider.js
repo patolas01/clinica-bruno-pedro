@@ -21,22 +21,30 @@ jQuery(document).ready(function ($) {
                 $dots.removeClass('active').eq(currentIndex).addClass('active');
             }
 
+            // Mover slide
             function moveToSlide(index) {
-                var $targetSlide = $items.eq(index);
-                var offset = $targetSlide.position().left;
+                var totalItems = $items.length;
+                var $cloneSlides = $items.clone(); // Clone os slides originais
 
-                // Ajusta a largura negativa do slider-track
-                $track.stop().animate({ left: -offset }, 500, function () {
-                    // Callback para garantir que a animação tenha sido concluída antes de remover a classe
-                    $track.removeClass('transition-active');
-                });
+                // Adicione os clones no final e início
+                $track.append($cloneSlides).prepend($cloneSlides);
 
-                // Adiciona uma classe para controlar a transição
-                $track.addClass('transition-active');
+                // Mova o slider-track usando translate3d
+                var offset = $cloneSlides.eq(index).position().left;
+                $track.css('transform', 'translate3d(-' + offset + 'px, 0, 0)');
 
                 currentIndex = index;
                 updateDots();
+
+                // Remova a classe de transição para evitar flicker
+                $track.removeClass('transition-active');
+
+                // Após um pequeno atraso, remova a transição para restaurar o movimento suave
+                setTimeout(function () {
+                    $track.addClass('transition-active');
+                }, 50);
             }
+
 
 
 
@@ -65,6 +73,17 @@ jQuery(document).ready(function ($) {
 
             // Inicializa o slider
             updateDots();
+
+
+
         });
+
     });
+
+
+
+
+
+
 });
+

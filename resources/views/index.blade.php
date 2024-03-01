@@ -42,30 +42,6 @@
                 <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
                 <p class="slider-text">Teste</p>
             </div>
-            <div class="slider-item">
-                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
-                <p class="slider-text">Teste</p>
-            </div>
-            <div class="slider-item">
-                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
-                <p class="slider-text">Teste</p>
-            </div>
-            <div class="slider-item">
-                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
-                <p class="slider-text">Teste</p>
-            </div>
-            <div class="slider-item">
-                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
-                <p class="slider-text">Teste</p>
-            </div>
-            <div class="slider-item">
-                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
-                <p class="slider-text">Teste</p>
-            </div>
-            <div class="slider-item">
-                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
-                <p class="slider-text">Teste</p>
-            </div>
         </div>
 
         <!-- Botões de navegação -->
