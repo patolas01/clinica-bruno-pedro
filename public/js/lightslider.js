@@ -21,13 +21,24 @@ jQuery(document).ready(function ($) {
                 $dots.removeClass('active').eq(currentIndex).addClass('active');
             }
 
-            // Função para mover para um slide específico
             function moveToSlide(index) {
-                var offset = $items.eq(index).position().left; // Corrigido aqui
-                $track.css('transform', 'translateX(-' + offset + 'px)');
+                var $targetSlide = $items.eq(index);
+                var offset = $targetSlide.position().left;
+
+                // Ajusta a largura negativa do slider-track
+                $track.stop().animate({ left: -offset }, 500, function () {
+                    // Callback para garantir que a animação tenha sido concluída antes de remover a classe
+                    $track.removeClass('transition-active');
+                });
+
+                // Adiciona uma classe para controlar a transição
+                $track.addClass('transition-active');
+
                 currentIndex = index;
                 updateDots();
             }
+
+
 
             // Associa os eventos aos botões de navegação
             $this.find('.slider-btn.left').on('click', function () {
