@@ -11,17 +11,15 @@
 
         <div class="banner">
             <div class="content">
-                <div class="title">BEM VINDO AO GINÁSIO</div>
-                <div class="title1">PULSEHUB</div>
-                <div class="subtitle">O nosso ginásio, o seu sucesso.</div>
-                <a href="#" class="button">EXPERIMENTE GRÁTIS</a>
+                <div class="title">Clínica Dentária Bruno & Pedro</div>
+                <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
+                <div class="subtitle1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
+                <a href="{{ route('contactos') }}#formtodo" class="button">Pedido de Marcação</a>
             </div>
         </div>
 
 
     <div class="slider">
-
-
         <div class="slider-track">
             <div class="slider-item">
                 <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
@@ -48,138 +46,13 @@
                 <p class="slider-text">Teste</p>
             </div>
         </div>
-
-        <!-- Botões de navegação -->
         <button class="slider-btn left">&lt;</button>
         <button class="slider-btn right">&gt;</button>
 
         <div class="slider-nav-dots">
-            <!-- Indicadores serão adicionados dinamicamente pelo JavaScript -->
         </div>
     </div>
 
-    {{-- <div class="slider-dot"></div> --}}
-
-
-    {{-- <div class="container-cards">
-        <!--slider------------------->
-        <ul id="autoWidth" class="cs-hidden">
-            <!--1------------------------------>
-            <li class="item-a">
-                <!--slider-box-->
-                <div class="box">
-
-                    <!--model-->
-                    <img class="model" src="{{ asset('img/Ant-Man.png') }}">
-                    <!--details-->
-                    <p class="marvel">MARVEL</p>
-
-                    <div class="details">
-                        <!--logo-character-->
-                        <!--character-details-->
-                        <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How
-                            MaKE him will be ie.</p>
-                    </div>
-
-                </div>
-            </li>
-            <!--2------------------------------>
-            <li class="item-a">
-                <!--slider-box-->
-                <div class="box">
-
-                    <!--model-->
-                    <img class="model" src="{{ asset('img/dentist-2589771.jpg') }}">
-                    <!--details-->
-                    <p class="marvel">MARVEL</p>
-
-
-                </div>
-            </li>
-            <!--3------------------------------>
-            <li class="item-a">
-                <!--slider-box-->
-                <div class="box">
-                    <p class="marvel">MARVEL</p>
-                    <!--model-->
-                    <img class="model" src="{{ asset('img/SpiderMan.png') }}">
-                    <!--details-->
-                    <div class="details">
-                        <!--logo-character-->
-                        <!--character-details-->
-                        <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How
-                            MaKE him will be ie.</p>
-                    </div>
-
-                </div>
-            </li>
-            <!--4------------------------------>
-            <li class="item-a">
-                <!--slider-box-->
-                <div class="box">
-                    <p class="marvel">MARVEL</p>
-                    <!--model-->
-                    <img class="model" src="{{ asset('img/Venom.png') }}">
-                    <!--details-->
-                    <div class="details">
-                        <!--logo-character-->
-                        <!--character-details-->
-                        <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How
-                            MaKE him will be ie.</p>
-                    </div>
-
-                </div>
-            </li>
-            <!--5------------------------------>
-            <li class="item-a">
-                <!--slider-box-->
-                <div class="box">
-                    <p class="marvel">MARVEL</p>
-                    <!--model-->
-                    <img class="model" src="{{ asset('img/Thor.png') }}">
-                    <!--details-->
-                    <div class="details">
-                        <!--logo-character-->
-                        <!--character-details-->
-                        <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How
-                            MaKE him will be ie.</p>
-                    </div>
-
-                </div>
-            </li>
-            <!--6------------------------------>
-            <li class="item-a">
-                <!--slider-box-->
-                <div class="box">
-                    <p class="marvel">MARVEL</p>
-                    <!--model-->
-                    <img class="model" src="{{ asset('img/IronMan.png') }}">
-                    <!--details-->
-                    <div class="details">
-                        <!--logo-character-->
-                        <!--character-details-->
-                        <p>Bruce Bayne invite deadpool to kill the enemy how make distrub bat To the Kill The Anymens How
-                            MaKE him will be ie.</p>
-                    </div>
-
-                </div>
-
-            </li>
-
-        </ul>
-
-        <div class="carousel__nav">
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-        </div>
-
-
-    </div> --}}
-
-    <h1>Teste</h1>
 
 @endsection
 
