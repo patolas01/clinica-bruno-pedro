@@ -68,7 +68,7 @@ div.banner {
     display: flex;
     transition: transform 0.5s ease;
     /* Add smooth transition for sliding effect */
-    overflow: hidden;
+    overflow-x: hidden; /* Oculta as barras de rolagem horizontal */
     gap: 1rem;
 }
 

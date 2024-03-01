@@ -15,7 +15,7 @@
 
 
     <div class="slider">
-        <div class="slider-btn left"></div>
+       
 
         <div class="slider-track">
             <div class="slider-item">
@@ -72,11 +72,11 @@
         <div class="slider-btn right"></div>
 
         <div class="slider-nav-dots">
-            {{-- <div class="slider-dot"></div> --}}
+            <!-- Indicadores serão adicionados dinamicamente pelo JavaScript -->
         </div>
     </div>
 
-
+{{-- <div class="slider-dot"></div> --}}
 
 
     {{-- <div class="container-cards">

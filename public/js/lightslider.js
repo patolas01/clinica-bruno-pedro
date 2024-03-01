@@ -21,60 +21,39 @@ jQuery(document).ready(function ($) {
                 $dots.removeClass('active').eq(currentIndex).addClass('active');
             }
 
-            // Atualiza a visibilidade dos botões de navegação
-            function updateNavButtons() {
-                if (currentIndex === 0) {
-                    $this.find('.slider-btn.left').hide();
-                } else {
-                    $this.find('.slider-btn.left').show();
-                }
-
-                if (currentIndex === totalItems - 1) {
-                    $this.find('.slider-btn.right').hide();
-                } else {
-                    $this.find('.slider-btn.right').show();
-                }
-            }
-
-            // Função para ir para o próximo slide
-            function nextSlide() {
-                if (currentIndex < totalItems - 1) {
-                    currentIndex++;
-                    var translateValue = -100 * currentIndex + '%';
-                    $track.css('transform', 'translateX(' + translateValue + ')');
-                    updateDots();
-                    updateNavButtons();
-                }
-            }
-
-            // Função para ir para o slide anterior
-            function prevSlide() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    var translateValue = -100 * currentIndex + '%';
-                    $track.css('transform', 'translateX(' + translateValue + ')');
-                    updateDots();
-                    updateNavButtons();
-                }
+            // Função para mover para um slide específico
+            function moveToSlide(index) {
+                var offset = $items.eq(index).position().left; // Corrigido aqui
+                $track.css('transform', 'translateX(-' + offset + 'px)');
+                currentIndex = index;
+                updateDots();
             }
 
             // Associa os eventos aos botões de navegação
-            $this.find('.slider-btn.left').on('click', prevSlide);
-            $this.find('.slider-btn.right').on('click', nextSlide);
+            $this.find('.slider-btn.left').on('click', function () {
+                if (currentIndex > 0) {
+                    moveToSlide(currentIndex - 1);
+                } else {
+                    moveToSlide(totalItems - 1); // Volta para o último slide se estiver no primeiro
+                }
+            });
+
+            $this.find('.slider-btn.right').on('click', function () {
+                if (currentIndex < totalItems - 1) {
+                    moveToSlide(currentIndex + 1);
+                } else {
+                    moveToSlide(0); // Volta para o primeiro slide se estiver no último
+                }
+            });
 
             // Associa os eventos aos botões indicadores
             $dots.on('click', function () {
                 var index = $(this).index();
-                currentIndex = index;
-                var translateValue = -100 * currentIndex + '%';
-                $track.css('transform', 'translateX(' + translateValue + ')');
-                updateDots();
-                updateNavButtons();
+                moveToSlide(index);
             });
 
             // Inicializa o slider
             updateDots();
-            updateNavButtons();
         });
     });
 });
