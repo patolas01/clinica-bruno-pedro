@@ -12,6 +12,8 @@
                      href="{{ route('galeria') }}">Galeria</a></li>
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
                      href="{{ route('contactos') }}">Contactos</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'termosCondicoes') active @endif"
+                    href="{{ route('termosCondicoes') }}">Termos Condições</a></li>
 
 
             </ul>
