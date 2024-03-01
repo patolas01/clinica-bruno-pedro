@@ -22,11 +22,13 @@
     <div class="slider">
         <div class="slider-track">
             <div class="slider-item">
+                <div class="gradient-overlay"></div>
                 <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
                 <p class="slider-text">Teste</p>
             </div>
             <div class="slider-item">
-                <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="image">
+                <div class="gradient-overlay"></div>
+                <img src="{{ asset('img/dentistateste.jpg') }}" alt="image">
                 <p class="slider-text">Teste</p>
             </div>
             <div class="slider-item">
