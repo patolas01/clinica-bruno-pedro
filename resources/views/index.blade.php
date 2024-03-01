@@ -9,9 +9,14 @@
 
 @section('content')
 
-    <div class="banner">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="banner">
-    </div>
+        <div class="banner">
+            <div class="content">
+                <div class="title">BEM VINDO AO GINÁSIO</div>
+                <div class="title1">PULSEHUB</div>
+                <div class="subtitle">O nosso ginásio, o seu sucesso.</div>
+                <a href="#" class="button">EXPERIMENTE GRÁTIS</a>
+            </div>
+        </div>
 
 
     <div class="slider">
