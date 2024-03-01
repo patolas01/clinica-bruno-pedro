@@ -21,13 +21,32 @@ jQuery(document).ready(function ($) {
                 $dots.removeClass('active').eq(currentIndex).addClass('active');
             }
 
-            // Função para mover para um slide específico
+            // Mover slide
             function moveToSlide(index) {
-                var offset = $items.eq(index).position().left; // Corrigido aqui
-                $track.css('transform', 'translateX(-' + offset + 'px)');
+                var totalItems = $items.length;
+                var $cloneSlides = $items.clone(); // Clone os slides originais
+
+                // Adicione os clones no final e início
+                $track.append($cloneSlides).prepend($cloneSlides);
+
+                // Mova o slider-track usando translate3d
+                var offset = $cloneSlides.eq(index).position().left;
+                $track.css('transform', 'translate3d(-' + offset + 'px, 0, 0)');
+
                 currentIndex = index;
                 updateDots();
+
+                // Remova a classe de transição para evitar flicker
+                $track.removeClass('transition-active');
+
+                // Após um pequeno atraso, remova a transição para restaurar o movimento suave
+                setTimeout(function () {
+                    $track.addClass('transition-active');
+                }, 50);
             }
+
+
+
 
             // Associa os eventos aos botões de navegação
             $this.find('.slider-btn.left').on('click', function () {
@@ -54,6 +73,17 @@ jQuery(document).ready(function ($) {
 
             // Inicializa o slider
             updateDots();
+
+
+
         });
+
     });
+
+
+
+
+
+
 });
+

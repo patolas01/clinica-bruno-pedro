@@ -118,10 +118,11 @@ a {
 /* Styling the slider container */
 .slider {
     position: relative;
-    width: 90%;
+    width: 100%;
     /* Adjust the width as needed */
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
     /* Center the slider */
 
 }
@@ -129,10 +130,16 @@ a {
 /* Styling for the track that holds the slider items */
 .slider-track {
     display: flex;
+    position: relative;
     transition: transform 0.5s ease;
     /* Add smooth transition for sliding effect */
-    overflow-x: hidden; /* Oculta as barras de rolagem horizontal */
+
+    /* Oculta as barras de rolagem horizontal */
     gap: 1rem;
+    white-space: nowrap;
+    box-sizing: border-box;
+
+    -webkit-user-drag: auto;
 }
 
 /* Styling for each slider item */
@@ -153,9 +160,9 @@ a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
+    width: 50px;
     /* Adjust width as needed */
-    height: 40px;
+    height: 50px;
     /* Adjust height as needed */
     background-color: #333;
     /* Button background color */
@@ -166,9 +173,12 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    opacity: 80%;
 }
 
-.slider-item img{
+.slider-item img {
     position: relative;
     width: 100%;
     height: 100%;
@@ -176,11 +186,11 @@ a {
 }
 
 .left {
-    left: 0;
+    left: 1%;
 }
 
 .right {
-    right: 0;
+    right: 1%;
 }
 
 /* Styling for the navigation dots */
@@ -191,6 +201,7 @@ a {
 }
 
 .slider-dot {
+    transition-duration: 0.5s;
     display: inline-block;
     width: 10px;
     /* Adjust width as needed */
@@ -206,7 +217,7 @@ a {
 
 /* Active dot style */
 .slider-dot.active {
-    background-color: #fff;
+    background-color: #759aff;
     /* Active dot color */
 }
 
