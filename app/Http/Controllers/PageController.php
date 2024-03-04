@@ -42,6 +42,11 @@ class PageController extends Controller
         return view('sobre');
     }
 
+    public function equipa()
+    {
+        return view('equipa');
+    }
+
     public function termosCondicoes()
     {
         return view('termos-e-condicoes');
