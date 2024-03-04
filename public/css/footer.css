@@ -110,39 +110,48 @@ h6 {
     justify-content: center;
     padding: 4rem 5%;
 }
+
+.upper-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.divisorblocof {
+    width: 100%;
+    text-align: center;
+}
+
+.divisorblocof .linhaf {
+    justify-content: left;
+    width: 50px;
+    height: 2px;
+    background: white;
+    display: inline-block;
+}
+
+
+.footer h5{
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+/********************************************** Esquerda footer *****************************************************/
+
+.esquerda{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo{
     width: 150px;
-}
-.list-footer{
-    padding: 0;
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    align-items: center;
-    padding-top: 15px;
-
-}
-.list-footer a {
-    color: hsl(0, 0%, 100%);
-    font-size: 12px;
-    letter-spacing: 0.13125rem;
-    text-transform: uppercase;
-    text-decoration: none !important;/* Remover sublinhado */
-}
-
-.list-footer a:hover {
-    color: #6dffe9;
-
 }
 
 .social-footer{
     display: flex;
     gap: 1rem;
     align-items: center;
-}
-.upper-footer{
-    display: flex;
-    justify-content: space-between;
 }
 
 .social-footer img {
@@ -152,9 +161,75 @@ h6 {
 
 }
 
+/********************************************** Meio footer *****************************************************/
+
+.meio{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-footer{
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column; /* Altera a direção da lista para vertical */
+    list-style: none;
+    align-items: center;
+    padding-top: 15px;
+
+}
+.list-footer a {
+    color: hsl(0, 0%, 100%);
+    font-size: 11px;
+    letter-spacing: 0.13125rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    margin-bottom: 0.5rem;
+}
+
+.list-footer a:hover {
+    color: #6dffe9;
+
+}
+
+/********************************************** Direita footer *****************************************************/
+
+.direita {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+}
+
+.dirinfo {
+    gap: 0.5rem;
+   
+}
+
+.dirinfo i {
+    display: flex;
+
+    padding-top: 15px;
+}
+
+.direita p {
+    color: #ffffff;
+
+}
+
+/********************************************** Lower footer *****************************************************/
+
+.line{
+    width: 100%;
+}
+
 .lower-footer{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 .lower-footer p {
     color: hsl(0, 0%, 100%);
@@ -162,9 +237,8 @@ h6 {
     letter-spacing: 0.12188rem;
     padding-top: 15px;
 }
-.line{
-    width: 100%;
-}
+
+/********************************************** Responsive *****************************************************/
 @media(max-width: 840px) {
     .upper-footer {
         flex-direction: column;
