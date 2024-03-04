@@ -31,7 +31,7 @@ jQuery(document).ready(function ($) {
 
                 // Mova o slider-track usando translate3d
                 var offset = $cloneSlides.eq(index).position().left;
-                $track.css('transform', 'translate3d(-' + offset + 'px, 0, 0)');
+                $track.css('transform', 'translate3d(calc(-' + offset + 'px + 1rem), 0, 0)');
 
                 currentIndex = index;
                 updateDots();
