@@ -3,7 +3,9 @@
         <div class="upper-footer">
 
             <div class="esquerda">
-                <div class="logo"><img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="logo branco pulse hub"></div>
+                <div class="logofooter"><img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="logo clinica"></div>
+                <div class="descricao">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
+                <div class="descricao1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
                 <div class="social-footer">
                     <a href="#"><img src="{{ asset('img/email-branco.svg') }}" alt="email icon"></a>
                     <a href="#"><img src="{{ asset('img/insta-branco.svg') }}" alt="instagram icon"></a>
@@ -32,28 +34,27 @@
 
             <div class="direita">
                 <h5>Contactos</h5>
-
                 <div class="divisorblocof">
                     <div class="linhaf"></div>
                 </div>
-
                 <div class="dirinfo">
-                    
-                    <i class="fas fa-phone" style="color: #9a89f4;"></i>
-                    <div class="info-contentf">
+                    <div class="infocontent">
+                    <i class="fas fa-phone" style="color: #ffffff;"></i>
                         <p>236 922 431</p>
                     </div>
-
+                    <div class="infocontent">
                     <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
                     <p>bruno_pedro.lda@hotmail.com</p>
+                    </div>
                 </div>
-
             </div>
-        </div>
-        <img class="line" src="{{ asset('img/Line_2.svg') }}" alt="grey line footer">
-        <div class="lower-footer">
 
-            <p>Copyright © 2024 Clínica Dentária Bruno & Pedro, lda. Todos os direitos reservados.</p>
         </div>
+
+        {{-- <img class="line" src="{{ asset('img/Line_2.svg') }}" alt="white line footer"> --}}
 
 </footer>
+
+<div class="lower-footer">
+            <p>Copyright © 2024 Clínica Dentária Bruno & Pedro, lda. Todos os direitos reservados.</p>
+        </div>

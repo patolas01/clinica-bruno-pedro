@@ -53,7 +53,7 @@ a {
 }
 
 .banner {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%), url('../img/dentist-2589771.jpg');
+    background-image: url('../img/dentist-2589771.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -88,7 +88,6 @@ a {
     font-size: 24px;
     color: #fff;
     font-family: 'Roboto', sans-serif;
-
 }
 
 .button {

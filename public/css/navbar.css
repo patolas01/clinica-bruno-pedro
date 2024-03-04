@@ -42,7 +42,7 @@
     */
 body {
     line-height: 1.5;
-    font-family: 'HT Modern Hand Sans', sans-serif !important;
+    /* font-family: 'HT Modern Hand Sans', sans-serif !important; */
 }
 
 /*
@@ -138,6 +138,8 @@ h6 {
     gap: 2rem;
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 li {
@@ -162,7 +164,6 @@ li {
     width: 100%;
     margin: auto;
     border-radius: 1000px;
-    font-family: var(--ff--montserrat);
     font-weight: 600;
 }
 
@@ -217,8 +218,7 @@ li {
 
 
 .dropdown_menu ul a {
-    font-family: var(--ff--montserrat);
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 1.5rem;
 }
@@ -240,7 +240,7 @@ li {
     text-decoration: none;
     font-size: 1rem;
     color: var(--cl--yellow);
-    font-family: var(--ff--Roboto);
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;

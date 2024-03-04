@@ -106,9 +106,17 @@ h6 {
     margin-inline: auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     justify-content: center;
     padding: 4rem 5%;
+}
+
+.descricao,
+.descricao1 {
+    font-size: 12px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-weight: bold;
 }
 
 .upper-footer{
@@ -117,69 +125,80 @@ h6 {
 }
 
 .divisorblocof {
-    width: 100%;
-    text-align: center;
+    width: 100%; /* Certifica-se de que a divisória ocupe a largura total */
+    margin-top: 10px; /* Ajuste conforme necessário */
+    margin-bottom: 10px; /* Ajuste conforme necessário */
 }
 
 .divisorblocof .linhaf {
-    justify-content: left;
     width: 50px;
     height: 2px;
     background: white;
-    display: inline-block;
 }
 
 
 .footer h5{
     color: #ffffff;
     font-weight: bolder;
+    margin-top: 10px; /* Ajuste conforme necessário */
+    margin-bottom: 10px; /* Ajuste conforme necessário */
 }
 
 /********************************************** Esquerda footer *****************************************************/
 
-.esquerda{
-    flex-grow: 1;
+.esquerda {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Alinha os itens à esquerda */
 }
 
-.logo{
+.logofooter{
     width: 150px;
+    padding-bottom: 20px;
 }
 
-.social-footer{
+.social-footer {
     display: flex;
     gap: 1rem;
     align-items: center;
+    padding-top: 20px;
 }
 
 .social-footer img {
     display: block !important;
     height: 30px !important;
-    width: 30px;
-
+    width: 20px;
 }
 
 /********************************************** Meio footer *****************************************************/
 
-.meio{
-    flex-grow: 1;
+.meio {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.list-footer{
+.meio h5 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.list-footer {
     padding: 0;
     display: flex;
     gap: 0.5rem;
-    flex-direction: column; /* Altera a direção da lista para vertical */
+    flex-direction: column;
     list-style: none;
-    align-items: center;
+    text-align: left;
     padding-top: 15px;
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
 }
+
 .list-footer a {
     color: hsl(0, 0%, 100%);
     font-size: 11px;
@@ -191,33 +210,33 @@ h6 {
 
 .list-footer a:hover {
     color: #6dffe9;
-
 }
 
 /********************************************** Direita footer *****************************************************/
 
 .direita {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     align-items: flex-start;
 }
 
 .dirinfo {
-    gap: 0.5rem;
-   
-}
-
-.dirinfo i {
     display: flex;
-
-    padding-top: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
-.direita p {
-    color: #ffffff;
+.infocontent {
+    display: flex;
+    align-items: center;
+}
 
+.infocontent i, .infocontent p {
+    color: #ffffff;
 }
 
 /********************************************** Lower footer *****************************************************/
@@ -229,13 +248,19 @@ h6 {
 .lower-footer{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    background-color: #1a68a0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .lower-footer p {
     color: hsl(0, 0%, 100%);
     font-size: 0.8125rem;
     letter-spacing: 0.12188rem;
     padding-top: 15px;
+
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 /********************************************** Responsive *****************************************************/
@@ -256,7 +281,7 @@ h6 {
         padding: 2rem 5%;
     }
 
-    .logo {
+    .logofooter {
         margin-bottom: 1rem; /* Adiciona espaço abaixo do logo para acomodar a lista */
     }
 }
