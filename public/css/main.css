@@ -37,7 +37,7 @@ a {
 
 /* banner */
 
-.content{
+.content {
     text-align: left;
 }
 
@@ -53,7 +53,7 @@ a {
 }
 
 .banner {
-    background-image: url('../img/dentist-2589771.jpg');
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%), url('../img/dentist-2589771.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -105,7 +105,7 @@ a {
     display: inline-block;
     border-radius: 10px;
     -webkit-transition: all 0.7s ease;
-  	transition: all 0.7s ease;
+    transition: all 0.7s ease;
 }
 
 .button:hover {
@@ -136,7 +136,7 @@ a {
     -webkit-user-drag: auto;
 }
 
-.slider-text{
+.slider-text {
     position: absolute;
     bottom: 0;
     padding: 20px 20px 20px 50px;
