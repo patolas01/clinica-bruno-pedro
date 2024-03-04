@@ -46,6 +46,11 @@
                     <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
                     <p>bruno_pedro.lda@hotmail.com</p>
                     </div>
+                    <div class="infocontent">
+                        <i class="fas fa-map-marker-alt" style="color: #ffffff;"></i>
+                        <p>Rua Fonte da Vila, n 922 3100-012 Abiul</p>
+                        </div>
+
                 </div>
             </div>
 
