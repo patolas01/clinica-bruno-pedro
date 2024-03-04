@@ -25,7 +25,7 @@
                 <div class="info-content">
                     <h6 class="info-titulo">Contacto</h6>
                     <p>236 922 431</p>
-                    <p>xxx</p>
+                    <p>bruno_pedro.lda@hotmail.com</p>
                 </div>
             </div>
             <div class="info-bloco">
