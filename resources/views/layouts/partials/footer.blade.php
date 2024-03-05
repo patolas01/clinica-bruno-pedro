@@ -25,6 +25,8 @@
                             href="{{ route('guiaSaude') }}">Guia Saúde</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
                             href="{{ route('galeria') }}">Galeria</a></li>
+                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
+                            href="{{ route('equipa') }}">Equipa</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
                             href="{{ route('contactos') }}">Contactos</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'termosCondicoes') active @endif"

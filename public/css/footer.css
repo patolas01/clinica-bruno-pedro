@@ -162,7 +162,7 @@ h6 {
     display: flex;
     gap: 1rem;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .social-footer img {
@@ -238,11 +238,13 @@ h6 {
     color: #ffffff;
 }
 
+.infocontent p {
+    margin-bottom: 0 !important;
+}
+
 .hiperligacao{
     color: #ffffff !important;
     margin-left: 10px;
-    margin-top: 0;
-    margin-bottom: 0;
     font-weight: normal;
     text-decoration: none !important;
     font-size: 14px;
