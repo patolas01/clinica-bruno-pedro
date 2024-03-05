@@ -22,7 +22,7 @@
     <div class="slider" id="specialties-slider">
         <div class="slider-track" id="slider-track">
         </div>
-        <button class="slider-btn left"><img src="{{ asset('img/white-arrow-left.svg') }}" alt="right button"></button>
+        <button class="slider-btn left"><img src="{{ asset('img/white-arrow-left.svg') }}" alt="left button"></button>
         <button class="slider-btn right"><img src="{{ asset('img/white-arrow-right.svg') }}" alt="right button"></button>
 
         <div class="slider-nav-dots">
