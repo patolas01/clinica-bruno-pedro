@@ -57,3 +57,7 @@
 </section>
 
 @endsection
+@section('moreScripts')
+        <script src="{{ asset('js/form.js') }}"></script>
+        <script src="{{ asset('js/upbuton.js') }}"></script>
+    @endsection

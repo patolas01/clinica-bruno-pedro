@@ -195,6 +195,10 @@ a {
     z-index: 1;
 }
 
+.slider-btn img {
+    height: 1.5rem;
+}
+
 .slider-btn:hover {
     opacity: 100%;
 }
