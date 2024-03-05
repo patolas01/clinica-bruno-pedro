@@ -154,7 +154,7 @@ a {
     flex: 0 0 auto;
     box-sizing: border-box;
     width: auto;
-    height: 22rem;
+    height: 40svh;
     overflow: hidden;
 }
 
