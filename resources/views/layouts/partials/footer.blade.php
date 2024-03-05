@@ -39,20 +39,21 @@
                 </div>
                 <div class="dirinfo">
                     <div class="infocontent">
-                    <i class="fas fa-phone" style="color: #ffffff;"></i>
-                        <p>236 922 431</p>
+                        <i class="fas fa-phone" style="color: #ffffff;"></i>
+                        <p><a href="tel:236922431" class="hiperligacao">236 922 431</a></p>
                     </div>
                     <div class="infocontent">
-                    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
-                    <p>bruno_pedro.lda@hotmail.com</p>
+                        <i class="fas fa-envelope" style="color: #ffffff;"></i>
+                        <p><a href="mailto:bruno_pedro.lda@hotmail.com" class="hiperligacao">bruno_pedro.lda@hotmail.com</a></p>
                     </div>
                     <div class="infocontent">
-                        <i class="fas fa-map-marker-alt" style="color: #ffffff;"></i>
-                        <p>Rua Fonte da Vila, n 922 3100-012 Abiul</p>
-                        </div>
-
+                        <i class="fas fa-map" style="color: #ffffff;"></i>
+                        <p><a href="https://maps.app.goo.gl/FUMPdDQXhUKs8VS48" class="hiperligacao">Rua Fonte da Vila, n 922 3100-012 Abiul</a></p>
+                    </div>
                 </div>
             </div>
+
+
 
         </div>
 

@@ -165,13 +165,13 @@
 
         <ul class="list">
             <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'areaClinica') active @endif"
-                    href="{{ route('areaClinica') }}">Area Clinica</a></li>
+                    href="{{ route('areaClinica') }}">Área Clínica</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'guiaSaude') active @endif"
-                        href="{{ route('guiaSaude') }}">Guia Saude</a></li>
+                        href="{{ route('guiaSaude') }}">Guia Saúde</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
                          href="{{ route('galeria') }}">Galeria</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
-                         href="{{ route('contactos') }}">Contatos</a></li>
+                         href="{{ route('contactos') }}">Contactos</a></li>
 
 
         </ul>

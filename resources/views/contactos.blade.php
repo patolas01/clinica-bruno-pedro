@@ -40,6 +40,7 @@
         </div>
     </div>
 </section>
+
 <div id="formtodo">
 <div class="tudoform">
 <div class="titulo2">Marque já a sua consulta</div>
@@ -59,6 +60,16 @@
             <div class="form-column">
                 <label for="contacto">Contacto</label>
                 <input type="tel" id="contacto" name="contacto" placeholder="Contacto" required>
+
+                <label for="especialidade">Especialidade</label>
+                <select id="especialidade" name="especialidade">
+                    <option value="" disabled selected>Selecione a especialidade</option>
+                    <option value="Especialidade1">Especialidade 1</option>
+                    <option value="Especialidade2">Especialidade 2</option>
+                    <option value="Especialidade3">Especialidade 3</option>
+                    <option value="Especialidade4">Especialidade 4</option>
+                    <option value="Especialidade5">Especialidade 5</option>
+                </select>
             </div>
         </div>
         <div class="form-row">
