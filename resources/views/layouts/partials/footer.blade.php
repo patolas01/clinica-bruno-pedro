@@ -7,9 +7,9 @@
                 <div class="descricao">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
                 <div class="descricao1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
                 <div class="social-footer">
-                    <a href="#"><img src="{{ asset('img/email-branco.svg') }}" alt="email icon"></a>
+                    {{-- <a href="#"><img src="{{ asset('img/email-branco.svg') }}" alt="email icon"></a> --}}
                     <a href="#"><img src="{{ asset('img/insta-branco.svg') }}" alt="instagram icon"></a>
-                    <a href="#"><img src="{{ asset('img/facebook-branco.svg') }}" alt="facebook icon"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100054419142752a"><img src="{{ asset('img/facebook-branco.svg') }}" alt="facebook icon"></a>
                 </div>
             </div>
 
