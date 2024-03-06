@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 html{
     --color-grey: #cccccc;
 }
@@ -14,6 +15,7 @@ li {
 
 body {
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif !important;
 }
 
 * {
@@ -23,7 +25,7 @@ body {
 
 
 .titulo {
-    font-family: 'HT Modern Hand Sans', sans-serif;
+
     font-size: 24pt;
     text-align: center;
     font-style: normal;
@@ -62,8 +64,8 @@ body {
 .cardequipa h2 {
     padding-top: 10px;
     text-align: center;
-    color: #000000;
-    font-weight: bolder;
+    color: #0b86dd;
+
 }
 
 .cardequipa p {
@@ -77,12 +79,12 @@ body {
 
 @media (max-width: 768px) {
     .cardequipa {
-        flex: 0 0 calc(50% - 30px); /* Reduz a largura para ocupar metade da linha em telas menores */
+        flex: 0 0 calc(50% - 30px);
     }
 }
 
 @media (max-width: 576px) {
     .cardequipa {
-        flex: 0 0 calc(100% - 30px); /* Reduz a largura para ocupar toda a linha em telas muito pequenas */
+        flex: 0 0 calc(100% - 30px);
     }
 }
