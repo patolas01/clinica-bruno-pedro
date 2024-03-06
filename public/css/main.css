@@ -35,6 +35,22 @@ a {
 
 
 
+
+h1{
+    margin-top: 4rem!important;
+    margin-bottom: 1rem!important;
+    color: #424242;
+}
+
+
+
+
+
+
+
+
+
+
 /* banner */
 
 .content {
@@ -121,8 +137,8 @@ a {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
 }
 
 .slider-track {
@@ -180,7 +196,7 @@ a {
 
 .slider-btn {
     position: absolute;
-    top: 45%;
+    top: 38%;
     transform: translateY(-50%);
     width: 3.5rem;
     height: 3.5rem;

@@ -19,7 +19,11 @@
     </div>
 
 
+
+
+    <h1>As nossas Especialidades</h1>
     <div class="slider" id="specialties-slider">
+
         <div class="slider-track" id="slider-track">
         </div>
         <button class="slider-btn left"><img src="{{ asset('img/white-arrow-left.svg') }}" alt="left button"></button>
@@ -89,6 +93,6 @@
     </script>
 @endsection
 @section('moreScripts')
-        <script src="{{ asset('js/form.js') }}"></script>
-        <script src="{{ asset('js/upbuton.js') }}"></script>
-    @endsection
+    <script src="{{ asset('js/form.js') }}"></script>
+    <script src="{{ asset('js/upbuton.js') }}"></script>
+@endsection
