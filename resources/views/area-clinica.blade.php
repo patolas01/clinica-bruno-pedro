@@ -12,6 +12,52 @@
 
 <div class="titulo">Serviços</div>
 
+<section class="servicos">
+    <div class="container flex-center">
+        <div class="grid-servicos">
+            <div class="servicos-card">
+                <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
+                <div></div>
+                <h5>condicionamento Físico</h5>
+                <p>Programas de condicionamento físico específicos para diferentes níveis de aptidão.</p>
+                <div class="button-wrapper">
+                <a href="" class="button">Saber mais</a>
+                </div>
+            </div>
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
+                <h5>nutrição</h5>
+                <p>O Pulse Hub oferece serviços de aconselhamento nutricional.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
+                <h5>testes de desempenho</h5>
+                <p>Realizar avaliações físicas iniciais e periódicas para rastrear o progresso dos membros.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
+                <h5>plano PERSONALIZADO</h5>
+                <p>Planos de treino ajustados aos objetivos pessoais.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{--
 <div class="categorias">
 
     <div class="rowcategoria">
@@ -47,7 +93,7 @@
     </div>
 
     </div>
-
+--}}
 
 
 <div class="rowequipa">
