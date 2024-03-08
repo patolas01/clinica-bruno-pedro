@@ -34,6 +34,12 @@
     </div>
 
 
+    <div class="text-section" id="about-us">
+        <h1>Sobre a Clinica</h1>
+        <p>Esta Clinica tem um texto de exemplo pois ainda não foi feito o estudo sobre a história da clinica. Foi fundada talvez num ano qualquer por exemplo 1988, na zona de Pombal.</p>
+    </div>
+
+
 @endsection
 
 @section('moreScripts')
