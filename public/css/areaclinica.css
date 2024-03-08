@@ -37,18 +37,81 @@ body {
 
 /************* Main ***********/
 
+.banner {
+    background-image: url('../img/dentist-2589771.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+
+/************* Categoria ***********/
+
+.rowcategoria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding-bottom: 250px;
+}
+
+.cardcategoria {
+    width: 500;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardcategoria img{
+    width: 500px;
+    height: 300px;
+    border-bottom: 1px solid #ddd;
+    object-fit: cover;
+    transition-duration: 0.5s;
+}
+
+.imgcat {
+    width: 500px;
+    height: 300px;
+    overflow: hidden; /* Oculta qualquer parte da imagem que saia da div */
+}
+
+.cardcategoria:hover img {
+    scale: 115%;
+}
+
+.cardcategoria h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #0b86dd;
+
+}
+
+.cardcategoria p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/************* Especialifdades ***********/
 .rowequipa {
     display: flex;
     flex-wrap: wrap;
-max-width: 1400px;
+    max-width: 1450px;
     justify-content: center;
     align-items: flex-start;
     margin: 0 auto;
 }
 
 .cardequipa {
-    width: 280;
+    width: 350;
     border-radius: 8px;
     margin: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -80,9 +143,9 @@ max-width: 1400px;
 
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .rowequipa {
-        max-width: 750px; /* Defina a largura máxima da div dos cards */
+        max-width: 800px; /* Defina a largura máxima da div dos cards */
         margin: 0 auto; /* Centralize a div dos cards na página */
     }
 
