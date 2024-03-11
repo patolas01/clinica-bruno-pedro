@@ -184,57 +184,31 @@ body {
   */
 
 /************* Especialifdades ***********/
-.rowequipa {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1450px;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto;
+
+
+@media (max-width: 1360px) {
+    .grid-servicos {
+        grid-template-columns: repeat(2, auto); /* Dois cards por linha em telas menores */
+        gap: 1rem;
+    }
 }
 
-.cardequipa {
-    width: 350;
-    border-radius: 5px;
-    margin: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.cardequipa img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    object-fit: cover;
-
-}
-
-.cardequipa h2 {
-    padding-top: 10px;
-    text-align: center;
-    color: #0b86dd;
-
-}
-
-.cardequipa p {
-    padding-left: 10px;
-    padding-right: 10px;
+@media (max-width: 992px) {
+    .grid-servicos {
+        grid-template-columns: repeat(1, auto); /* Dois cards por linha em telas menores */
+        
+    }
 }
 /*
-.card-conteudo {
-
-}*/
-
-
-
 @media (max-width: 1200px) {
     .rowequipa {
-        max-width: 800px; /* Defina a largura máxima da div dos cards */
-        margin: 0 auto; /* Centralize a div dos cards na página */
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .cardequipa {
-        width: 300px ;  /* Calcula a largura para exibir 2 cards por linha */
-        margin: 20px; /* Ajusta a margem entre os cards */
+        width: 300px ;
+        margin: 20px;
     }
 }
+*/
