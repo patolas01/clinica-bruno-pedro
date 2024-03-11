@@ -37,22 +37,16 @@ a {
 }
 
 
-
-
-h1 {
-    margin-top: 4rem !important;
-    margin-bottom: 1rem !important;
-    color: #424242;
+.titulo1 {
+    font-size: 24pt;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    color: #30383B;
+    font-family: "Poppins", sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-
-
-
-
-
-
-
-
-
 
 /* banner */
 
@@ -99,7 +93,6 @@ h1 {
     color: #fff;
     font-weight: bold;
     margin-bottom: 40px;
-
 }
 
 .subtitle,
@@ -129,8 +122,6 @@ h1 {
 .button:hover {
     background-color: #419fe1;
     color: #fff;
-    /*scale: 105%;*/
-    border-radius: 2rem;
 }
 
 
@@ -142,8 +133,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    padding-top: 3rem;
-    padding-bottom: 8rem;
+    padding-bottom: 50px;
 }
 
 .slider-track {
@@ -261,18 +251,269 @@ h1 {
 }
 
 
-.text-section {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
+/*---DIVISOR PRINCIPAL---
 
-.text-section p {
+.divisorblocoprincipal {
+    width: 100%;
     text-align: center;
-    padding-left: 2rem;
-    padding-right: 2rem;
+}
+
+.divisorblocoprincipal .linhaprincipal {
+    width: 500px;
+    height: 1px;
+    background: #0b86dd;
+    display: inline-block;
+} */
+
+
+/*---SECÇÃO SOBRE---*/
+
+#main2{
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+#seccaoprincipal2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    background-color: #f5f5f5;
 }
 
 
+#infoseccaoprincipal2{
+    max-width: 650px;
+    padding-left: 80px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-top: 50px;
+}
+
+#nomeseccaoprincipal2{
+    font-size: 20pt;
+    font-weight: 600;
+    color: #30383B;
+    font-family: "Poppins", sans-serif;
+}
+
+.divisorbloco {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    float: left;
+    position: relative;
+}
+
+.divisorbloco .linha {
+    width: 40px;
+    padding: 2px;
+    background: #0b86dd;
+    float: left;
+}
+
+#descricaoseccaoprincipal2{
+    font-size: 18px;
+    color: #30383B;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+#imgseccaoprincipal2 {
+    max-width: 500px;
+    max-height: 350px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 50px;
+}
+
+.vermais2 {
+    color: #0b86dd;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.vermais2:hover {
+    color: #419fe1;
+    text-decoration: none;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/*--RESPONSIVO--*/
+@media (min-width: 768px) {
+    #contactos2 {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    #imgcontactos2 {
+        max-width: 600px;
+        max-height: 350px;
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+/*--REVIEW--*/
+
+.container {
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 24pt;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    color: #30383B;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: #30383B;
+    text-align: center;
+    width: 43%;
+    font-family: "Poppins", sans-serif;
+}
+
+.clientImage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.clientImage span {
+    margin-left: 10px;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+}
+
+/* .clientImage img {
+    width: 40px;
+} */
+
+.reviewSection {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reviewItem {
+    width: 300px;
+    padding: 10px;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #419fe1;
+    border: 1px solid #0b86dd;
+    transition: all .2s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviewItem:hover {
+    border-color: aqua;
+    transform: scale(1.01);
+    background-color: #0b86dd;
+    box-shadow: 0 0px 5px 0px #cbc0c0;
+}
+
+.top {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top ul {
+    display: flex;
+    list-style: none;
+}
+
+.top ul li {
+    padding-left: 4px;
+}
+
+article {
+    text-align: center;
+    width: 100%;
+}
+
+article p {
+    font-size: 15px;
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.stars {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding-left: 4px !important;
+}
+
+@media screen and (max-width:700px) {
+    .container {
+        height: auto;
+    }
+
+    .description {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .reviewSection {
+        padding: 0;
+    }
+
+    .reviewItem {
+        width: 100%;
+    }
+
+    .clientImage {
+        margin-bottom: 0.6rem;
+    }
+
+    .top {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
 
 /*--responsive for mobile phone--*/
@@ -296,6 +537,7 @@ h1 {
         padding-right: 5svw;
         display: grid;
         justify-content: center;
+        padding-top: 70px;
     }
 
     .title {
@@ -312,7 +554,7 @@ h1 {
 
     .subtitle,
     .subtitle1 {
-        font-size: 2svh;
+        font-size: 3svh;
     }
 
     .content .button {
@@ -322,12 +564,9 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
-        height: 70%;
-        border-radius: 50em;
+
+
     }
-
-
 
 
 
@@ -377,10 +616,6 @@ h1 {
         cursor: pointer;
         margin-right: 0.9rem;
     }
-
-
-
-
 
     .text-section {
         margin-top: 5rem;
