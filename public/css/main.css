@@ -19,6 +19,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: "Poppins", sans-serif !important;
+    overflow-x: hidden;
 
 }
 
@@ -45,7 +46,7 @@ a {
     color: #30383B;
     font-family: "Poppins", sans-serif;
     padding-top: 30px;
-    padding-bottom: 30px;
+
 }
 
 /* banner */
@@ -127,131 +128,150 @@ a {
     color: #fff;
 }
 
+/*******SLIDER*******/
 
-/************************************* slider ***************************************/
-
-.slider {
-    position: relative;
+.wrapper {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    padding-bottom: 50px;
-}
-
-.slider-track {
+    height: 60vh;
+    position: relative;
     display: flex;
-    position: relative;
-    transition: transform 0.5s ease;
-    gap: 1rem;
-    white-space: nowrap;
-    box-sizing: border-box;
-    -webkit-user-drag: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.slider-text {
-    position: absolute;
-    bottom: 0;
-    padding: 0.5rem 0.5rem;
-    padding-left: 2rem;
-    z-index: 1;
-    color: #0b86dd;
-    font-size: 20pt;
-    font-weight: bold;
-}
-
-.slider-item {
-    position: relative;
-    border-radius: 1rem;
-    flex: 0 0 auto;
-    box-sizing: border-box;
-    width: auto;
-    height: 40svh;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.gradient-overlay {
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(242, 242, 242, 0) 100%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.slider-item img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition-duration: 0.8s;
-}
-
-.slider-btn {
-    position: absolute;
-    top: 38%;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
     transform: translateY(-50%);
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: #0b86dd;
-    color: #ffffff;
+    transition: transform 0.1s linear;
+  }
+
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+
+  .wrapper i:first-child{
+    left: 10px;
+    z-index: 2;
+    background-color: #419fe1;
+    color: #fff;
+  }
+
+  .wrapper i:last-child{
+    right: 10px;
+    z-index: 2;
+    background-color: #419fe1;
+    color: #fff;
+  }
+
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 4));
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+
+  .carousel :where(.card, .img) {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
     cursor: pointer;
-    border: 0;
-    border-radius: 50%;
-    opacity: 60%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card .img img {
+    height: 351px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card .img {
+    position: relative;
+}
+
+.card .img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
     z-index: 1;
+    border-radius: 8px;
 }
 
-.slider-btn img {
-    height: 1.5rem;
+.carousel .card .img {
+    position: relative;
 }
 
-.slider-btn:hover {
-    opacity: 100%;
-}
-
-.left {
-    left: 1.5rem;
-}
-
-.right {
-    right: 1.5rem;
-}
-
-.slider-nav-dots {
-    margin-top: 3rem;
-    text-align: center;
-    cursor: pointer;
-}
-
-.slider-dot {
-    transition-duration: 0.3s;
-    display: inline-block;
-    width: 0.7rem;
-    height: 0.7rem;
-    background-color: #0b86dd;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 1.3rem;
-}
-
-.slider-dot.active {
-    background-color: #85ccff;
-    width: 1.8rem;
-    border-radius: 1rem;
+.carousel .card h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    position: absolute;
+    bottom: 20px;
+    left: 28px;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 0 0 5px #0b86dd;
 }
 
 
-.slider-item:hover img {
-    scale: 115%;
-}
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+
+
 
 
 /*---DIVISOR PRINCIPAL---
@@ -573,70 +593,4 @@ article p {
 
 
     }
-
-
-
-
-
-    /**SLIDER**/
-    .slider {
-        position: relative;
-        width: 100svw;
-        margin-left: 0;
-        margin-right: 0;
-        overflow: hidden;
-        padding-top: 2rem;
-        padding-bottom: 5rem;
-    }
-
-    .slider-item {
-        position: relative;
-        border-radius: 1rem;
-        flex: 0 0 auto;
-        box-sizing: border-box;
-        width: auto;
-        width: 93svw;
-        overflow: hidden;
-    }
-
-    .slider-track {
-        display: flex;
-        position: relative;
-        width: 100%;
-        transition: transform 0.5s ease;
-        gap: 1rem;
-        white-space: nowrap;
-        box-sizing: border-box;
-        -webkit-user-drag: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .slider-dot {
-        transition-duration: 0.3s;
-        display: inline-block;
-        width: 0.8rem;
-        height: 0.8rem;
-        background-color: #0b86dd;
-        border-radius: 50em;
-        cursor: pointer;
-        margin-right: 0.9rem;
-    }
-
-    .text-section {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-
-    .text-section h1{
-        font-weight: bold;
-    }
-
-    .text-section p {
-        font-size: larger;
-        text-align: center;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
 }
