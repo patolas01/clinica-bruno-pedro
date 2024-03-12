@@ -74,6 +74,11 @@
                 sliderTrack.appendChild(slide);
             });
 
+            specialties.forEach(function(specialty) {
+                var slide = createSlide(specialty);
+                sliderTrack.appendChild(slide);
+            });
+
             // Função para criar um slide com base na especialidade
             function createSlide(specialty) {
                 var slide = document.createElement("div");
