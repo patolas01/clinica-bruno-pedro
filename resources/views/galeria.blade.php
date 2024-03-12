@@ -31,10 +31,10 @@
     <!-- filter Images -->
     <div class="gallery">
       <div class="image" data-name="Dentisteria"><span><img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></span></div>
-      <div class="image" data-name="headphone"><span><img src="https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></span></div>
+      <div class="image" data-name="Endodontia"><span><img src="https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></span></div>
       <div class="image" data-name="Higiene Oral"><span><img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></span></div>
       <div class="image" data-name="Estética"><span><img src="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></span></div>
-      <div class="image" data-name="headphone"><span><img src="images/headphone-2.jpg" alt=""></span></div>
+      <div class="image" data-name="Endodontia"><span><img src="images/headphone-2.jpg" alt=""></span></div>
       <div class="image" data-name="Endodontia"><span><img src="https://images.pexels.com/photos/6992/forest-trees-northwestisbest-exploress.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></span></div>
       <div class="image" data-name="Estética"><span><img src="images/shoe-2.jpg" alt=""></span></div>
       <div class="image" data-name="Higiene Oral"><span><img src="images/camera-2.jpg" alt=""></span></div>
@@ -44,7 +44,7 @@
   <!-- fullscreen img preview box -->
   <div class="preview-box">
     <div class="details">
-      <span class="title">Image Category: <p></p></span>
+      <span class="title">Galeria: <p></p></span>
       <span class="icon fas fa-times"></span>
     </div>
     <div class="image-box"><img src="" alt=""></div>
