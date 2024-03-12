@@ -24,51 +24,51 @@
         <i id="left" class="fa-solid fa-angle-left"></i>
         <ul class="carousel">
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/dentisteria.jpg') }}" alt="img" draggable="false"></div>
             <h3>Dentisteria</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/estetica.jpg') }}" alt="img" draggable="false"></div>
             <h3>Estética</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/endodontia.jpg') }}" alt="img" draggable="false"></div>
             <h3>Endodontia</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/higieneoral.jpg') }}" alt="img" draggable="false"></div>
             <h3>Higiene Oral</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/periodontologia.jpg') }}" alt="img" draggable="false"></div>
             <h3>Periodontologia</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/protesefixa.jpg') }}" alt="img" draggable="false"></div>
             <h3>Prótese Fixa</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/proteseremovivel.jpg') }}" alt="img" draggable="false"></div>
             <h3>Prótese Removível</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/ortodontia.jpg') }}" alt="img" draggable="false"></div>
             <h3>Ortodontia</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/odontopediatria.jpg') }}" alt="img" draggable="false"></div>
             <h3>Odontopediatria</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/odontogeriatria.jpg') }}" alt="img" draggable="false"></div>
             <h3>Odontogeriatria</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/cirurgiaoral.jpg') }}" alt="img" draggable="false"></div>
             <h3>Cirurgia Oral</h3>
           </li>
           <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
+            <div class="img"><img src="{{ asset('img/implantes.jpg') }}" alt="img" draggable="false"></div>
             <h3>Implantes</h3>
           </li>
         </ul>
