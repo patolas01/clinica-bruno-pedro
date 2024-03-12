@@ -30,26 +30,76 @@ body {
     text-align: center;
     font-style: normal;
     font-weight: 600;
-    color: #000000;
+    color: #30383B;
     padding-top: 100px;
     padding-bottom: 20px;
+
 }
 
 /************* Main ***********/
 
 .banner {
-    background-image: url('../img/dentist-2589771.jpg');
+    background-image: url('../img/serv.jpg');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
+.content {
+    text-align: center;
+    margin-left: 5px;
+}
 
+.title {
+    padding-top: 100px;
+    font-size: 64px;
+    color: #0b86dd;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.subtitle,
+.subtitle1 {
+    font-size: 22px;
+    color: #0b86dd;
+    margin-left: 17px;
+}
+
+.button1 {
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-bottom: 35px;
+    padding: 10px 40px;
+    background-color: white;
+    color: #0b86dd;
+    font-weight: bold;
+    text-decoration: none !important;
+    font-size: 16px;
+    text-align: left;
+    border:1px solid #0b86dd;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2rem;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.button1-wrapper {
+    text-align: center; /* Alinha o botão à esquerda */
+
+}
+
+.button1:hover {
+    background-color: #0b86dd;
+    color: #fff;
+    /*scale: 105%;*/
+    border-radius: 2rem;
+}
 /************* Categoria ***********/
+
 
 .servicos {
     padding-bottom: 64px;
@@ -184,57 +234,31 @@ body {
   */
 
 /************* Especialifdades ***********/
-.rowequipa {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1450px;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto;
+
+
+@media (max-width: 1360px) {
+    .grid-servicos {
+        grid-template-columns: repeat(2, auto); /* Dois cards por linha em telas menores */
+        gap: 1rem;
+    }
 }
 
-.cardequipa {
-    width: 350;
-    border-radius: 5px;
-    margin: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
+@media (max-width: 992px) {
+    .grid-servicos {
+        grid-template-columns: repeat(1, auto); /* Dois cards por linha em telas menores */
 
-.cardequipa img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    object-fit: cover;
-
-}
-
-.cardequipa h2 {
-    padding-top: 10px;
-    text-align: center;
-    color: #0b86dd;
-
-}
-
-.cardequipa p {
-    padding-left: 10px;
-    padding-right: 10px;
+    }
 }
 /*
-.card-conteudo {
-
-}*/
-
-
-
 @media (max-width: 1200px) {
     .rowequipa {
-        max-width: 800px; /* Defina a largura máxima da div dos cards */
-        margin: 0 auto; /* Centralize a div dos cards na página */
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .cardequipa {
-        width: 300px ;  /* Calcula a largura para exibir 2 cards por linha */
-        margin: 20px; /* Ajusta a margem entre os cards */
+        width: 300px ;
+        margin: 20px;
     }
 }
+*/

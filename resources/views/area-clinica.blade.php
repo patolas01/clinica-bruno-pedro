@@ -5,20 +5,30 @@
     <link rel="stylesheet" href="{{ asset('css/areaclinica.css') }}">
 @endsection
 
+@section('content')
 
 <div class="banner">
-
+    <div class="content">
+        <div class="title">Área Clínica</div>
+        <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
+        <div class="subtitle1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
+        <div class="button-wrapper">
+            <a href="" class="button1">Saber mais</a>
+        </div>
+    </div>
 </div>
 
-<div class="titulo">Serviços</div>
+
+
+<div class="titulo">Especialidades</div>
 
 <section class="servicos">
     <div class="container flex-center">
         <div class="grid-servicos">
             <div class="servicos-card">
-                <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
+                <img src="{{ asset('img/Ortodontia.svg') }}" alt="icon de corpo laranja">
                 <div></div>
-                <h5>condicionamento Físico</h5>
+                <h5>Ortodontia</h5>
                 <p>Programas de condicionamento físico específicos para diferentes níveis de aptidão.</p>
                 <div class="button-wrapper">
                 <a href="" class="button">Saber mais</a>
@@ -26,8 +36,8 @@
             </div>
 
             <div class="servicos-card">
-                <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
-                <h5>nutrição</h5>
+                <img src="{{ asset('img/HigieneOralicon.svg') }}" alt="icon de corpo laranja">
+                <h5>Higiene Oral</h5>
                 <p>O Pulse Hub oferece serviços de aconselhamento nutricional.</p>
                 <div class="button-wrapper">
                     <a href="" class="button">Saber mais</a>
@@ -36,8 +46,8 @@
 
 
             <div class="servicos-card">
-                <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
-                <h5>testes de desempenho</h5>
+                <img src="{{ asset('img/Cirugiaoral.svg') }}" alt="icon de corpo laranja">
+                <h5>Cirugia Oral</h5>
                 <p>Realizar avaliações físicas iniciais e periódicas para rastrear o progresso dos membros.</p>
                 <div class="button-wrapper">
                     <a href="" class="button">Saber mais</a>
@@ -46,8 +56,53 @@
 
 
             <div class="servicos-card">
+                <img src="{{ asset('img/endodontiaa.svg') }}" alt="icon de corpo laranja">
+                <h5>Endodontia</h5>
+                <p>Planos de treino ajustados aos objetivos pessoais.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/Implantes.svg') }}" alt="icon de corpo laranja">
+                <h5>Implantes</h5>
+                <p>Planos de treino ajustados aos objetivos pessoais.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+
+            <div class="servicos-card">
                 <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
-                <h5>plano PERSONALIZADO</h5>
+                <h5>Odontogeriatria</h5>
+                <p>Planos de treino ajustados aos objetivos pessoais.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/Periodontologia.svg') }}" alt="icon de corpo laranja">
+                <h5>Periodontologia</h5>
+                <p>Planos de treino ajustados aos objetivos pessoais.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/ortopediatria.svg') }}" alt="icon de corpo laranja">
+                <h5>Odontopediatria</h5>
+                <p>Planos de treino ajustados aos objetivos pessoais.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/proteses.svg') }}" alt="icon de corpo laranja">
+                <h5>Próteses</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
                     <a href="" class="button">Saber mais</a>
@@ -57,6 +112,7 @@
     </div>
 </section>
 
+@endsection
 {{--
 <div class="categorias">
 
@@ -94,59 +150,6 @@
 
     </div>
 --}}
-
-
-<div class="rowequipa">
-
-    <div class="cardequipa">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        <div class="card-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    <div class="cardequipa">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        <div class="card-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    <div class="cardequipa">
-        <img src="{{ asset('img/perfil.jpg') }}" alt="Musculação">
-        <div class="card-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    <div class="cardequipa">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        <div class="card-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    <div class="cardequipa">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        <div class="card-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    <div class="cardequipa">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        <div class="card-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-</div>
 
 
 @section('moreScripts')

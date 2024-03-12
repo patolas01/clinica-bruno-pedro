@@ -18,10 +18,7 @@
         </div>
     </div>
 
-
-
-
-    <h1>As nossas Especialidades</h1>
+    <h1 class="titulo1">As nossas Especialidades</h1>
     <div class="slider" id="specialties-slider">
 
         <div class="slider-track" id="slider-track">
@@ -33,10 +30,92 @@
         </div>
     </div>
 
+    {{-- <div class="divisorblocoprincipal">
+        <div class="linhaprincipal"></div>
+    </div> --}}
 
-    <div class="text-section" id="about-us">
-        <h1>Sobre a Clinica</h1>
-        <p>Esta Clinica tem um texto de exemplo pois ainda não foi feito o estudo sobre a história da clinica. Foi fundada talvez num ano qualquer por exemplo 1988, na zona de Pombal.</p>
+    <section id="main2">
+        <div id="seccaoprincipal2">
+            <div id="infoseccaoprincipal2">
+                <h6 id="nomeseccaoprincipal2">Sobre a Clínica</h6>
+                <div class="divisorbloco">
+                    <div class="linha"></div>
+                </div>
+                <div id="descricaoseccaoprincipal2">
+                    <p>Esta Clinica tem um texto de exemplo pois ainda não foi feito o estudo sobre a história da clinica. Foi fundada talvez num ano qualquer por exemplo 1988, na zona de Pombal.</p>
+                </div>
+                <a href="{{ route('sobre') }}" class="vermais2">Saber mais ></a>
+            </div>
+            <img src="{{asset('img/Logo BrunoPedro escuro.png')}}" alt="Secção Principal" id="imgseccaoprincipal2">
+        </div>
+        </section>
+
+    <div class="container">
+        <h2>Opiniões dos nossos Clientes</h2>
+        <p class="description">Onde cada Doente é um Amigo!</p>
+
+        <div class="reviewSection">
+
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="{{asset('img/favicon preto.png')}}" alt="">
+                        <span>Ana Filipe Faveiro</span>
+                    </div>
+                </div>
+                <ul class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                </ul>
+                <article>
+                    <p class="review">Profissional e atencioso, 5 estrelas!</p>
+                    <p>01 Fev. 2019</p>
+                </article>
+            </div>
+
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="{{asset('img/favicon preto.png')}}" alt="">
+                        <span>Sonia Pereira</span>
+                    </div>
+                </div>
+                <ul class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-regular fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                </ul>
+                <article>
+                    <p class="review">uma clinica com dentistas espetaculares, que continuem assim</p>
+                    <p>15 Jan. 2019</p>
+                </article>
+            </div>
+
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <img src="{{asset('img/favicon preto.png')}}" alt="">
+                        <span>Serginho Santos</span>
+                    </div>
+                </div>
+                <ul class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                </ul>
+                <article>
+                    <p class="review">5 estrelas ⭐️ nada a apontar !!</p>
+                    <p>29 Jul. 2019</p>
+                </article>
+            </div>
+        </div>
     </div>
 
 

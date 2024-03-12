@@ -63,7 +63,7 @@ body {
     font-size: 20pt;
     font-weight: 600;
     color: #30383B;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Poppins", sans-serif;
     padding-bottom: 20px;
 }
 
@@ -78,7 +78,7 @@ body {
 .informacao p {
     font-size: 14px;
     color: #30383B;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 5px;
 }
 
