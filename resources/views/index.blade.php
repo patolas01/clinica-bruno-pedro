@@ -59,7 +59,7 @@
             <div class="reviewItem">
                 <div class="top">
                     <div class="clientImage">
-                        <img src="{{asset('img/favicon.png')}}" alt="">
+                        <img src="{{asset('img/favicon preto.png')}}" alt="">
                         <span>Ana Filipe Faveiro</span>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
             <div class="reviewItem">
                 <div class="top">
                     <div class="clientImage">
-                        <img src="{{asset('img/favicon.png')}}" alt="">
+                        <img src="{{asset('img/favicon preto.png')}}" alt="">
                         <span>Sonia Pereira</span>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                     <i class="fa-regular fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
                 </ul>
                 <article>
-                    <p class="review">uma clinica com dentistas espetaculares,que continuem assim</p>
+                    <p class="review">uma clinica com dentistas espetaculares, que continuem assim</p>
                     <p>15 Jan. 2019</p>
                 </article>
             </div>
@@ -99,7 +99,7 @@
             <div class="reviewItem">
                 <div class="top">
                     <div class="clientImage">
-                        <img src="{{asset('img/favicon.png')}}" alt="">
+                        <img src="{{asset('img/favicon preto.png')}}" alt="">
                         <span>Serginho Santos</span>
                     </div>
                 </div>
