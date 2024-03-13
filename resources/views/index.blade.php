@@ -169,9 +169,6 @@
 @section('moreScripts')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/slider.js') }}"></script>
-
-@endsection
-@section('moreScripts')
-    <script src="{{ asset('js/form.js') }}"></script>
-    <script src="{{ asset('js/upbuton.js') }}"></script>
+<script src="{{ asset('js/upbuton.js') }}"></script>
+<script src="{{ asset('js/form.js') }}"></script>
 @endsection

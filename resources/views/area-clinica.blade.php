@@ -108,6 +108,24 @@
                     <a href="" class="button">Saber mais</a>
                     </div>
             </div>
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/chair.svg') }}" alt="icon de corpo laranja">
+                <h5>Estética</h5>
+                <p>Planos de treino ajustados aos objetivos pessoais.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
+
+            <div class="servicos-card">
+                <img src="{{ asset('img/toothbrush.svg') }}" alt="icon de corpo laranja">
+                <h5>Dentisteria</h5>
+                <p>Planos de treino ajustados aos objetivos pessoais.</p>
+                <div class="button-wrapper">
+                    <a href="" class="button">Saber mais</a>
+                    </div>
+            </div>
         </div>
     </div>
 </section>
@@ -156,4 +174,5 @@
     {{-- <script src="{{ asset('js/carousel.js') }}"></script> --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/lightslider.js') }}"></script>
+    <script src="{{ asset('js/upbuton.js') }}"></script>
 @endsection

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    --color-grey: #cccccc;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.titulo {
+
+    font-size: 24pt;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    color: #30383B;
+    padding-top: 100px;
+    padding-bottom: 20px;
+
+}
+/************* Main ***********/
+
+.banner {
+    background-image: url('../img/serv.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+    margin-left: 5px;
+}
+
+.title {
+    padding-top: 100px;
+    font-size: 64px;
+    color: #0b86dd;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.subtitle,
+.subtitle1 {
+    font-size: 22px;
+    color: #0b86dd;
+    margin-left: 17px;
+}
+
+.button1 {
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-bottom: 35px;
+    padding: 10px 40px;
+    background-color: white;
+    color: #0b86dd;
+    font-weight: bold;
+    text-decoration: none !important;
+    font-size: 16px;
+    text-align: left;
+    border:1px solid #0b86dd;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2rem;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.button1-wrapper {
+    text-align: center; /* Alinha o botão à esquerda */
+
+}
+
+.button1:hover {
+    background-color: #0b86dd;
+    color: #fff;
+    /*scale: 105%;*/
+    border-radius: 2rem;
+}

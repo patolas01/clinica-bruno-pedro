@@ -1,14 +1,21 @@
 @extends('layouts.master')
 @section('title', 'Guia Saúde - Clínica Dentária Bruno & Pedro')
 
+@section('moreCSS')
+    <link rel="stylesheet" href="{{ asset('css/guiasaude.css') }}">
+@endsection
 
 @section('content')
-
-
-<h1>Teste</h1>
-<p>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p>ola</p>
-</p>
+<div class="banner">
+    <div class="content">
+        <div class="title">Guia de saúde</div>
+        <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
+        <div class="subtitle1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
+        <div class="button-wrapper">
+            <a href="" class="button1">Saber mais</a>
+        </div>
+    </div>
+</div>
 
 @endsection
 @section('moreScripts')
