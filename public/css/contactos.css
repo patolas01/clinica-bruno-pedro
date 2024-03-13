@@ -31,7 +31,7 @@ body {
     text-align: center;
     font-style: normal;
     font-weight: bold;
-    color: #000000;
+    color: #30383B;
     padding-top: 150px;
     padding-bottom: 20px;
 }
@@ -154,7 +154,7 @@ body {
     text-align: center;
     font-style: normal;
     font-weight: bold;
-    color: #000000;
+    color: #30383B;
     padding-top: 50px;
 }
 
@@ -176,7 +176,7 @@ body {
 }
 
 form {
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
     padding: 20px;
     padding-bottom: 50px;
 }
@@ -213,7 +213,7 @@ textarea {
     margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid #ccc;
-    border-radius: 0;
+    border-radius: 5px;
 
 }
 
@@ -249,20 +249,23 @@ select:focus {
 }
 
 button {
-    background-color: #0b86dd;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px !important;
-    cursor: pointer;
-    font-size: 16px;
+    padding: 10px 30px;
     margin-top: 50px !important;
+    background-color: #0b86dd;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none !important;
+    font-size: 16px;
+    text-align: left;
+    border:1px solid #0b86dd;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2rem;
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
 }
 
 .centralizarbotao{
-
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
@@ -271,12 +274,15 @@ button {
 
 
 button:hover {
-    background-color: #419fe1;
+    background-color: #fff;
+    color: #0b86dd;
+    /*scale: 105%;*/
+    border-radius: 2rem;
 }
 
 
 .tudoform{
-    background-color: #f9f9f9;
+    background-color: #f5f5f5;
     margin-top: 50px;
 }
 

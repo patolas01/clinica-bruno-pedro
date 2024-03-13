@@ -95,8 +95,8 @@ a {
     font-size: 64px;
     color: #fff;
     font-weight: bold;
-    margin-bottom: 40px;
     font-family: "Poppins", sans-serif;
+    margin-bottom: 25px;
 }
 
 .subtitle,
@@ -107,25 +107,27 @@ a {
 }
 
 .button {
-
     margin-top: 50px;
     padding: 15px 25px;
-    background-color: #0b86dd;
-    color: #fff;
+    background-color: white;
+    color: #0b86dd;
     font-weight: bold;
     text-decoration: none !important;
-    font-size: 18px;
-    border: none;
+    font-size: 16px;
+    text-align: left;
+    border:1px solid #0b86dd;
     cursor: pointer;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 2rem;
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
 }
 
 .button:hover {
-    background-color: #419fe1;
+    background-color: #0b86dd;
     color: #fff;
+    /*scale: 105%;*/
+    border-radius: 2rem;
 }
 
 /*******SLIDER*******/
