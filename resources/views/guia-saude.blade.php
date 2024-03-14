@@ -12,7 +12,7 @@
         <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
         <div class="subtitle1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
         <div class="button-wrapper">
-            <a href="" class="button1">Saber mais</a>
+            <a href="" class="button1">Saber Mais</a>
         </div>
     </div>
 </div>
@@ -54,7 +54,9 @@
     </div>
 
     </div>
-    
+
+
+
 @endsection
 @section('moreScripts')
         <script src="{{ asset('js/form.js') }}"></script>

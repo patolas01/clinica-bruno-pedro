@@ -13,7 +13,7 @@
         <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
         <div class="subtitle1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
         <div class="button-wrapper">
-            <a href="" class="button1">Saber mais</a>
+            <a href="" class="button1">Saber Mais</a>
         </div>
     </div>
 </div>
@@ -31,7 +31,7 @@
                 <h5>Ortodontia</h5>
                 <p>Programas de condicionamento físico específicos para diferentes níveis de aptidão.</p>
                 <div class="button-wrapper">
-                <a href="" class="button">Saber mais</a>
+                <a href="" class="button">Saber Mais</a>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
                 <h5>Higiene Oral</h5>
                 <p>O Pulse Hub oferece serviços de aconselhamento nutricional.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <h5>Cirugia Oral</h5>
                 <p>Realizar avaliações físicas iniciais e periódicas para rastrear o progresso dos membros.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -60,7 +60,7 @@
                 <h5>Endodontia</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -69,7 +69,7 @@
                 <h5>Implantes</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -78,7 +78,7 @@
                 <h5>Odontogeriatria</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -87,7 +87,7 @@
                 <h5>Periodontologia</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -96,7 +96,7 @@
                 <h5>Odontopediatria</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -105,7 +105,7 @@
                 <h5>Próteses</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -114,7 +114,7 @@
                 <h5>Estética</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
 
@@ -123,7 +123,7 @@
                 <h5>Dentisteria</h5>
                 <p>Planos de treino ajustados aos objetivos pessoais.</p>
                 <div class="button-wrapper">
-                    <a href="" class="button">Saber mais</a>
+                    <a href="" class="button">Saber Mais</a>
                     </div>
             </div>
         </div>
