@@ -26,14 +26,25 @@ body {
 /*---TITULO---*/
 
 .titulo {
-
     font-size: 24pt;
     text-align: center;
     font-style: normal;
     font-weight: bold;
     color: #30383B;
     padding-top: 150px;
-    padding-bottom: 20px;
+}
+
+.divisorbloco {
+    width: 100%;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.divisorbloco .linha {
+    width: 100px;
+    height: 2px;
+    background: #0b86dd;
+    display: inline-block;
 }
 
 /*---CONTACTOS, HORARIO E MAPA---*/

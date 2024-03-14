@@ -25,15 +25,25 @@ body {
 
 
 .titulo {
-
     font-size: 24pt;
     text-align: center;
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     color: #30383B;
-    padding-top: 100px;
-    padding-bottom: 20px;
+    padding-top: 75px;
+}
 
+.divisorbloco {
+    width: 100%;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.divisorbloco .linha {
+    width: 100px;
+    height: 2px;
+    background: #0b86dd;
+    display: inline-block;
 }
 
 /************* Main ***********/

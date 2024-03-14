@@ -18,6 +18,9 @@
 </div>
 
 <div class="titulo">Guia de saude</div>
+<div class="divisorbloco">
+    <div class="linha"></div>
+</div>
 
 <div class="categorias">
 

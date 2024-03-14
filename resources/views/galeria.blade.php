@@ -8,6 +8,9 @@
 
 @section('content')
 <div class="titulo">Galeria</div>
+<div class="divisorbloco">
+    <div class="linha"></div>
+</div>
 
 <div class="wrapper">
     <!-- filter Items -->

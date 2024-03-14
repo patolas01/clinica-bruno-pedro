@@ -21,6 +21,9 @@
 
 
 <div class="titulo">Especialidades</div>
+<div class="divisorbloco">
+    <div class="linha"></div>
+</div>
 
 <section class="servicos">
     <div class="container flex-center">
