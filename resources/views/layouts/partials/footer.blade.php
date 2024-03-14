@@ -31,8 +31,8 @@
                             href="{{ route('contactos') }}">Contactos</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'termosCondicoes') active @endif"
                             href="{{ route('termosCondicoes') }}">Termos e Condições</a></li>
-                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'politicaPrivacidade') active @endif"
-                            href="{{ route('politicaPrivacidade') }}">Política de Privacidade</a></li>
+                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'politicaprivacidade') active @endif"
+                            href="{{ route('politicaprivacidade') }}">Política de Privacidade</a></li>
                 </ul>
             </div>
 
