@@ -19,7 +19,42 @@
 
 <div class="titulo">Guia de saude</div>
 
+<div class="categorias">
 
+    <div class="rowcategoria">
+
+    <div class="cardcategoria">
+        <div class="imgcat">
+        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
+        </div>
+        <div class="categoria-conteudo">
+        <h2>Card 1</h2>
+        <p>Conteúdo do Card 1</p>
+        </div>
+    </div>
+
+    <div class="cardcategoria">
+        <div class="imgcat">
+        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
+        </div>
+        <div class="categoria-conteudo">
+        <h2>Card 1</h2>
+        <p>Conteúdo do Card 1</p>
+        </div>
+    </div>
+
+    <div class="cardcategoria">
+        <div class="imgcat">
+        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
+        </div>
+        <div class="categoria-conteudo">
+        <h2>Card 1</h2>
+        <p>Conteúdo do Card 1</p>
+        </div>
+    </div>
+
+    </div>
+    
 @endsection
 @section('moreScripts')
         <script src="{{ asset('js/form.js') }}"></script>
