@@ -152,12 +152,13 @@ body {
 }
 
 .servicos-card p {
-    color: #000000;
-    font-size: 14px;
     align-self: center;
     margin: 10px;
-    max-width: 90%; /* Defina uma largura máxima para o texto */
-    word-wrap: break-word; /* ou overflow-wrap: break-word; */
+    max-width: 90%;
+    word-wrap: break-word;
+    font-size: 14px;
+    color: #30383B;
+    font-family: "Poppins", sans-serif;
 }
 
 .servicos-card img{
