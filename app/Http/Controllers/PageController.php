@@ -51,6 +51,12 @@ class PageController extends Controller
     {
         return view('termos-e-condicoes');
     }
+
+    public function politicaprivacidade()
+    {
+        return view('politicaprivacidade');
+    }
+
     public function Error()
     {
         return view('partials.error');

@@ -8,6 +8,9 @@
 
 @section('content')
 <div class="titulo">Contactos</div>
+<div class="divisorbloco">
+    <div class="linha"></div>
+</div>
 
 <section id="main">
     <div id="contactos2">

@@ -26,12 +26,11 @@ body {
 /*---TITULO---*/
 
 .titulo {
-
     font-size: 24pt;
     text-align: center;
     font-style: normal;
-    font-weight: 600;
-    color: #000000;
+    font-weight: bold;
+    color: #30383B;
     padding-top: 150px;
 }
 

@@ -26,11 +26,13 @@
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
                             href="{{ route('galeria') }}">Galeria</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
-                            href="{{ route('equipa') }}">Equipa</a></li>
+                            href="{{ route('sobre') }}">Sobre</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
                             href="{{ route('contactos') }}">Contactos</a></li>
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'termosCondicoes') active @endif"
                             href="{{ route('termosCondicoes') }}">Termos e Condições</a></li>
+                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'politicaprivacidade') active @endif"
+                            href="{{ route('politicaprivacidade') }}">Política de Privacidade</a></li>
                 </ul>
             </div>
 
