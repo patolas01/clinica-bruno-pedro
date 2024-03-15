@@ -23,57 +23,69 @@
     <div class="wrapper">
         <i id="left" class="fa-solid fa-angle-left"></i>
         <ul class="carousel">
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Dentisteria</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Estética</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Endodontia</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Higiene Oral</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Periodontologia</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Prótese Fixa</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Prótese Removível</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Ortodontia</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Odontopediatria</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Odontogeriatria</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Cirurgia Oral</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Implantes</h3>
-          </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Dentisteria</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Estética</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Endodontia</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Higiene Oral</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Periodontologia</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Prótese Fixa</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Prótese Removível</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Ortodontia</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Odontopediatria</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Odontogeriatria</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Cirurgia Oral</h3>
+            </li>
+            <li class="card">
+                <div class="img"><img src="{{ asset('img/dentist-2589771.jpg') }}" alt="img" draggable="false">
+                </div>
+                <h3>Implantes</h3>
+            </li>
         </ul>
         <i id="right" class="fa-solid fa-angle-right"></i>
-      </div>
+    </div>
 
     {{-- <div class="divisorblocoprincipal">
         <div class="linhaprincipal"></div>
@@ -87,13 +99,14 @@
                     <div class="linha"></div>
                 </div>
                 <div id="descricaoseccaoprincipal2">
-                    <p>Esta Clinica tem um texto de exemplo pois ainda não foi feito o estudo sobre a história da clinica. Foi fundada talvez num ano qualquer por exemplo 1988, na zona de Pombal.</p>
+                    <p>Esta Clinica tem um texto de exemplo pois ainda não foi feito o estudo sobre a história da clinica.
+                        Foi fundada talvez num ano qualquer por exemplo 1988, na zona de Pombal.</p>
                 </div>
                 <a href="{{ route('sobre') }}" class="vermais2">Saber mais ></a>
             </div>
-            <img src="{{asset('img/Logo BrunoPedro escuro.png')}}" alt="Secção Principal" id="imgseccaoprincipal2">
+            <img src="{{ asset('img/Logo BrunoPedro escuro.png') }}" alt="Secção Principal" id="imgseccaoprincipal2">
         </div>
-        </section>
+    </section>
 
     <div class="container">
         <h2>Opiniões dos nossos Clientes</h2>
@@ -104,7 +117,7 @@
             <div class="reviewItem">
                 <div class="top">
                     <div class="clientImage">
-                        <img src="{{asset('img/favicon preto.png')}}" alt="">
+                        <img src="{{ asset('img/favicon preto.png') }}" alt="">
                         <span>Ana Filipe Faveiro</span>
                     </div>
                 </div>
@@ -124,7 +137,7 @@
             <div class="reviewItem">
                 <div class="top">
                     <div class="clientImage">
-                        <img src="{{asset('img/favicon preto.png')}}" alt="">
+                        <img src="{{ asset('img/favicon preto.png') }}" alt="">
                         <span>Sonia Pereira</span>
                     </div>
                 </div>
@@ -144,7 +157,7 @@
             <div class="reviewItem">
                 <div class="top">
                     <div class="clientImage">
-                        <img src="{{asset('img/favicon preto.png')}}" alt="">
+                        <img src="{{ asset('img/favicon preto.png') }}" alt="">
                         <span>Serginho Santos</span>
                     </div>
                 </div>
@@ -169,6 +182,7 @@
 @section('moreScripts')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/slider.js') }}"></script>
+    <script src="{{ asset('js/animation-scroll.js') }}"></script>
 
 @endsection
 @section('moreScripts')
