@@ -140,6 +140,7 @@ body {
 }
 
 .servicos-card {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     width: 25rem; /* Aumentando a largura máxima dos cards */
@@ -175,6 +176,30 @@ body {
     margin-top: 15px;
     align-self: center;
 }
+
+
+/* animation */
+.servicos-card.animation {
+    animation: up-opacity ease-in 0.5s;
+}
+
+/* comments */
+@keyframes up-opacity {
+    0% {
+        z-index: -1;
+        height: fixed;
+        transform: translateY(10svh);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+
+
 
 .button {
     margin-top: 15px;
