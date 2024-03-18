@@ -2,22 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Mensagem extends Model
+class Formulario extends Model
 {
-    /**
-     * The table associated with the model.
-     *
-     * @var string
-     */
-    protected $table = 'mensagens';
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    protected $table = 'formulario';
     protected $fillable = [
         'contacto',
         'nome',
@@ -25,9 +16,6 @@ class Mensagem extends Model
         'especialidade_id',
     ];
 
-    /**
-     * Get the especialidade that owns the mensagem.
-     */
     public function especialidade()
     {
         /*return $this->belongsTo(Especialidade::class);*/

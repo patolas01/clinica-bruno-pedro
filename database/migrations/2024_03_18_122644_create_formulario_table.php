@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('mensagens', function (Blueprint $table) {
+        Schema::create('formulario', function (Blueprint $table) {
             $table->id();
             $table->string('contacto');
             $table->string('nome');
