@@ -11,7 +11,7 @@ class DetalheEspRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,19 @@ class DetalheEspRequest extends FormRequest
      */
     public function rules(): array
     {
+        $currentId = $this->detalheesp ? $this->detalheesp->id : null;
         return [
-            //
+        "descricao" =>'required|min:15',
+        'imagem' =>$this->detalheesp ? 'nullable':'required'.'|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'imagem.max' => 'Imagem demaisado grande',
+            'imagem.mimes' => 'A imagem deve ter um dos seguintes formatos: jpg, png, jpeg, gif, svg',
+            'imagem.max' => 'A imagem não deve exceder 2MB',
         ];
     }
 }
