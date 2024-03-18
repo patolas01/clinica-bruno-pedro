@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('avaliacoes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->enum('classificacao', ['0', '1', '2', '3', '4', '5'])->default('0');
+            $table->string('texto',150);
+            $table->softDeletes();
         });
     }
 
