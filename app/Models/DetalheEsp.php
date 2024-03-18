@@ -10,7 +10,7 @@ class DetalheESP extends Model
 {
     use HasFactory, SoftDeletes;
     protected $table='detalhe_esp';
-    protected $fillable=['descricao' 'especialidade_id'];
+    protected $fillable=['descricao', 'especialidade_id'];
 
     public function especialidade(){
         return $this->belongsTo(Especialidade::class,'especialidade_id','id')->withTrashed();
