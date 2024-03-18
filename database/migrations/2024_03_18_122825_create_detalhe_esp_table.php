@@ -14,6 +14,11 @@ return new class extends Migration
         Schema::create('detalhe_esp', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('imagem');
+            $table->text('descrição');
+            $table->unsignedBigInteger('especialidade_id'); // Chave estrangeira
+            $table->foreign('especialidade_id')->references('id')->on('especialidade');
+            $table->softDeletes();
         });
     }
 
