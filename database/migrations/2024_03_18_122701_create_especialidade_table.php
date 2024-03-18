@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('especialidade', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nome', 70);
+            $table->text('curt_desc');
+            $table->string('icon');
+            $table->softDeletes();
         });
     }
 
