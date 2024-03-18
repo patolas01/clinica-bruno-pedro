@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->enum('classificacao', ['0', '1', '2', '3', '4', '5'])->default('0');
-            $table->string('texto',150);
+            $table->string('texto', 150)->nullable(false);
             $table->softDeletes();
         });
     }
