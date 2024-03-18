@@ -20,4 +20,5 @@ class Formulario extends Model
     {
         return $this->belongsTo(Especialidade::class);
     }
+
 }
