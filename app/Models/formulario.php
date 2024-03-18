@@ -18,6 +18,7 @@ class Formulario extends Model
 
     public function especialidade()
     {
-        /*return $this->belongsTo(Especialidade::class);*/
+        return $this->belongsTo(Especialidade::class);
     }
+
 }
