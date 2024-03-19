@@ -67,6 +67,16 @@ class PageController extends Controller
         return view('_admin.especialidade.index');
     }
 
+    public function formularioIndex()
+    {
+        return view('_admin.formulario.index');
+    }
+
+    public function postSaudeIndex()
+    {
+        return view('_admin.post-saude.index');
+    }
+
     public function Error()
     {
         return view('partials.error');
