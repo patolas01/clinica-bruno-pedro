@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
-
+use App\Http\Controllers\EspecialidadeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +32,8 @@ Route::get('/especialidade', [PageController::class, 'especialidade'])->name('es
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/_admin/especialidade', [PageController::class, 'especialidadeIndex'])->name('_admin.especialidade');
 
+Route::group(['middleware' => ['auth', 'verified', 'admin'] , 'as' => 'admin.', 'prefix' => 'admin'], function () {
+
+    Route::resource('especialidades', EspecialidadeController::class);
+
+});
