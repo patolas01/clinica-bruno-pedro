@@ -1,4 +1,4 @@
-@extends ("layout.admin")
+@extends ("layouts.admin")
 
 
 @section('content')
@@ -48,7 +48,7 @@
                             </tbody>
                         </table>
                     </div>
-                @else
+
                     <h6>Não existem modalidades registados</h6>
 
             </div>
