@@ -8,21 +8,40 @@ class PostSaudeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
+     *
+     * @return bool
      */
-    public function authorize(): bool
+    public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     * @return array
      */
-    public function rules(): array
+    public function rules()
     {
         return [
-            //
+            'imagem' => 'required',
+            'nome' => 'required',
+            'descricao' => 'required',
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'imagem.required' => 'O campo imagem é obrigatório.',
+            'nome.required' => 'O campo nome é obrigatório.',
+            'descricao.required' => 'O campo descrição é obrigatório.',
         ];
     }
 }
+
