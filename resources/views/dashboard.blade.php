@@ -21,7 +21,7 @@
 <a href="" class="button2">3</a>
 <a href="" class="button2">4</a>
 <a href="" class="button2">5</a>
-<a href="{{ route('_admin.avaliacoes') }}" class="button6">6</a>
+<a href="{{ route('_admin.avaliacoes') }}" class="button2">6</a>
 @endsection
 
 

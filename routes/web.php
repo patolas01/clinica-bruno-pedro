@@ -34,6 +34,7 @@ Route::get('/especialidade', [PageController::class, 'especialidade'])->name('es
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/_admin/especialidade', [PageController::class, 'especialidadeIndex'])->name('_admin.especialidade');
 Route::get('/_admin/avaliacoes', [AvaliacoesController::class, 'index'])->name('admin.avaliacoes.index');
+Route::get('/_admin/avaliacoes', [AvaliacoesController::class, 'index'])->name('_admin.avaliacoes');
 Route::get('/_admin/avaliacoes/create', [AvaliacoesController::class, 'create'])->name('admin.avaliacoes.create');
 Route::get('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'show'])->name('admin.avaliacoes.show');
 Route::get('/_admin/avaliacoes/{avaliacoes}/edit', [AvaliacoesController::class, 'edit'])->name('admin.avaliacoes.edit');
