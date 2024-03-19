@@ -30,4 +30,5 @@ Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes'])->n
 Route::get('/politicaprivacidade', [PageController::class, 'politicaprivacidade'])->name('politicaprivacidade');
 Route::get('/especialidade', [PageController::class, 'especialidade'])->name('especialidade');
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+Route::get('/_admin/especialidade', [PageController::class, 'especialidadeIndex'])->name('_admin.especialidade');
 

@@ -62,9 +62,9 @@ class PageController extends Controller
         return view('dashboard');
     }
 
-    public function formulario()
+    public function especialidadeIndex()
     {
-        return view('formulario');
+        return view('_admin.especialidade.index');
     }
 
     public function Error()
