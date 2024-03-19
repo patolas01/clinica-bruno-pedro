@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Formulario;
+use App\Models\PostSaude;
 
 class PageController extends Controller
 {
@@ -69,12 +70,14 @@ class PageController extends Controller
 
     public function formularioIndex()
     {
-        return view('_admin.formulario.index');
+        $formularios = Formulario::all();
+        return view('_admin.formulario.index', compact('formularios'));
     }
 
     public function postSaudeIndex()
     {
-        return view('_admin.post-saude.index');
+        $posts_saude = PostSaude::all();
+        return view('_admin.post-saude.index', compact('posts_saude'));
     }
 
     public function Error()

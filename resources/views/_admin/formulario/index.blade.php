@@ -1,4 +1,4 @@
-@extends ("layout.admin")
+@extends ("layouts.admin")
 
 
 @section('content')
@@ -8,12 +8,12 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a class="btn btn-primary" href="{{ route('admin.formulario.create') }}">
+                <a class="btn btn-primary" href="{{ route('_admin.formulario.create') }}">
                     <i class="fas fa-plus"></i> Novo Formulário
                 </a>
             </div>
             <div class="card-body">
-                @if (count($formularios))
+                @if ($formularios !== null && count($formularios))
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
@@ -36,13 +36,13 @@
                                         <td>{{ $formulario->especialidade_id }}</td>
                                         <td nowrap>
                                             <a class="btn btn-xs btn-primary btn-p"
-                                                href="{{ route('admin.formulario.show', $formulario) }}"><i
+                                                href="{{ route('_admin.formulario.show', $formulario) }}"><i
                                                     class="fas fa-eye fa-xs"></i></a>
                                             <a class="btn btn-xs btn-warning btn-p"
-                                                href="{{ route('admin.formulario.edit', $formulario) }}"><i
+                                                href="{{ route('_admin.formulario.edit', $formulario) }}"><i
                                                     class="fas fa-pen fa-xs"></i></a>
                                             <form method="POST"
-                                                action="{{ route('admin.formulario.destroy', $formulario) }}" role="form"
+                                                action="{{ route('_admin.formulario.destroy', $formulario) }}" role="form"
                                                 class="inline"
                                                 onsubmit="return confirm('Confirma que pretende eliminar este formulário?');">
                                                 @csrf

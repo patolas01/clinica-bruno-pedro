@@ -1,4 +1,4 @@
-@extends('layout.admin')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container-fluid">
@@ -11,7 +11,7 @@
             <div><strong>Contacto:</strong> {{$formulario->contacto}}</div>
 			<div><strong>Nome:</strong> {{$formulario->nome}}</div>
 			<div><strong>Email:</strong> {{$formulario->email}}</div>
-			<div><strong>Especialidade:</strong> {{$formulario->especialidade->nome}}</div>
+			<div><strong>Especialidade:</strong> {{$formulario->especialidade}}</div>
 		</div>
 	</div>
 </div>
