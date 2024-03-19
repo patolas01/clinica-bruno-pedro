@@ -31,6 +31,8 @@ Route::get('/politicaprivacidade', [PageController::class, 'politicaprivacidade'
 Route::get('/especialidade', [PageController::class, 'especialidade'])->name('especialidade');
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 Route::get('/_admin/especialidade', [PageController::class, 'especialidadeIndex'])->name('_admin.especialidade');
+Route::get('/_admin/formulario', [PageController::class, 'formularioIndex'])->name('_admin.formulario');
+Route::get('/_admin/post-saude', [PageController::class, 'postSaudeIndex'])->name('_admin.post-saude');
 
 Route::group(['middleware' => ['auth', 'verified', 'admin'] , 'as' => 'admin.', 'prefix' => 'admin'], function () {
 
