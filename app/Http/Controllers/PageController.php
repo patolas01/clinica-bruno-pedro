@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Avaliacoes;
+use App\Models\Formulario;
+use App\Models\PostSaude;use App\Models\Avaliacoes;
 
 
 class PageController extends Controller
@@ -67,13 +68,6 @@ class PageController extends Controller
     {
         return view('_admin.especialidade.index');
     }
-
-    public function avaliacoesIndex()
-    {
-        $avaliacoes = Avaliacoes::all();
-        return view('_admin.avaliacoes.index', compact('avaliacoes'));
-    }
-
 
     public function Error()
     {
