@@ -57,6 +57,16 @@ class PageController extends Controller
         return view('politicaprivacidade');
     }
 
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
+
+    public function formulario()
+    {
+        return view('formulario');
+    }
+
     public function Error()
     {
         return view('partials.error');

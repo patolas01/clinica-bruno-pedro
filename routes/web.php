@@ -28,4 +28,6 @@ Route::get('/sobre', [PageController::class, 'sobre'])->name('sobre');
 Route::get('/equipa', [PageController::class, 'equipa'])->name('equipa');
 Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes'])->name('termosCondicoes');
 Route::get('/politicaprivacidade', [PageController::class, 'politicaprivacidade'])->name('politicaprivacidade');
-Route::fallback(function () {return view('partials.error');})->name('erro');
+Route::get('/especialidade', [PageController::class, 'especialidade'])->name('especialidade');
+Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+
