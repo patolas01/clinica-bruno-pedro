@@ -1,4 +1,4 @@
-@extends('layout.admin')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container-fluid">
@@ -9,12 +9,12 @@
 		</div>
 		<div class="card-body">
 
-			<form method="POST" action="{{ route('admin.services.store') }}" class="form-group" enctype="multipart/form-data">
+			<form method="POST" action="{{ route('admin.avaliacoes.store') }}" class="form-group" enctype="multipart/form-data">
 				@csrf
-				@include('_admin.services.partials.add-edit')
+				@include('_admin.avaliacoes.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Salvar</button>
-					<a href="{{ route('admin.services.index') }}" class="btn btndefault">Cancelar</a>
+					<a href="{{ route('admin.avaliacoes.index') }}" class="btn btndefault">Cancelar</a>
 				</div>
 			</form>
 		</div>
