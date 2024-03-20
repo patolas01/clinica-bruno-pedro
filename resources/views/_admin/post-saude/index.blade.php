@@ -13,7 +13,7 @@
                 </a>
             </div>
             <div class="card-body">
-                @if ($posts_saude->count() > 0)
+                @if ($postsSaude->count() > 0)
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
