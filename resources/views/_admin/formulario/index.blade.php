@@ -36,13 +36,13 @@
                                         <td>{{ $formulario->especialidade_id }}</td>
                                         <td nowrap>
                                             <a class="btn btn-xs btn-primary btn-p"
-                                                href="{{ route('_admin.formulario.show', $formulario) }}"><i
+                                                href="{{ route('formularios.show', $formulario) }}"><i
                                                     class="fas fa-eye fa-xs"></i></a>
                                             <a class="btn btn-xs btn-warning btn-p"
-                                                href="{{ route('_admin.formulario.edit', $formulario) }}"><i
+                                                href="{{ route('formularios.edit', $formulario) }}"><i
                                                     class="fas fa-pen fa-xs"></i></a>
                                             <form method="POST"
-                                                action="{{ route('_admin.formulario.destroy', $formulario) }}" role="form"
+                                                action="{{ route('formularios.destroy', $formulario) }}" role="form"
                                                 class="inline"
                                                 onsubmit="return confirm('Confirma que pretende eliminar este formulário?');">
                                                 @csrf

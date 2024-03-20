@@ -48,20 +48,20 @@ Route::put('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'upd
 Route::put('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'update'])->name('admin.avaliacoes.update');
 
 /* formulario */
-Route::get('/_admin/formulario', [PageController::class, 'formularioIndex'])->name('_admin.formulario.index');
+/*Route::get('/_admin/formulario', [PageController::class, 'formularioIndex'])->name('_admin.formulario.index');
 Route::get('/_admin/formulario/create', [FormularioController::class, 'create'])->name('_admin.formulario.create');
 Route::get('/_admin/formulario/show', [FormularioController::class, 'show'])->name('_admin.formulario.show');
 Route::get('/_admin/formulario/edit', [FormularioController::class, 'edit'])->name('_admin.formulario.edit');
 Route::post('/_admin/formulario', [FormularioController::class, 'store'])->name('_admin.formulario.store');
-Route::post('/_admin/formulario', [FormularioController::class, 'update'])->name('_admin.formulario.update');
+Route::post('/_admin/formulario', [FormularioController::class, 'update'])->name('_admin.formulario.update');*/
 
 /* post-saude */
-Route::get('/_admin/post-saude', [PageController::class, 'postSaudeIndex'])->name('_admin.post-saude.index');
+/*Route::get('/_admin/post-saude', [PageController::class, 'postSaudeIndex'])->name('_admin.post-saude.index');
 Route::get('/_admin/post-saude/create', [PostSaudeController::class, 'create'])->name('_admin.post-saude.create');
 Route::get('/_admin/post-saude/show', [PostSaudeController::class, 'show'])->name('_admin.post-saude.show');
 Route::get('/_admin/post-saude/edit', [PostSaudeController::class, 'edit'])->name('_admin.post-saude.edit');
 Route::post('/_admin/post-saude', [PostSaudeController::class, 'store'])->name('_admin.post-saude.store');
-Route::post('/_admin/post-saude', [PostSaudeController::class, 'update'])->name('_admin.post-saude.update');
+Route::post('/_admin/post-saude', [PostSaudeController::class, 'update'])->name('_admin.post-saude.update');*/
 
 
 

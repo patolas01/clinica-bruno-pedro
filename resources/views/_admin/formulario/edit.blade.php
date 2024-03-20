@@ -7,7 +7,7 @@
                 Editar Formulários
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ route('_admin.formulario.update', $formulario) }}" class="form-group">
+                <form method="POST" action="{{ route('formularios.update', $formulario) }}" class="form-group">
                     @csrf
                     @method('PUT')
                     <!-- Inclua aqui os campos do formulário -->
@@ -36,7 +36,7 @@
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-success" name="ok">Guardar</button>
-                        <a href="{{ route('_admin.formulario.index') }}" class="btn btn-default">Cancelar</a>
+                        <a href="{{ route('formularios.index') }}" class="btn btn-default">Cancelar</a>
                     </div>
                 </form>
             </div>
