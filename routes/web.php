@@ -30,20 +30,20 @@ Route::get('/sobre', [PageController::class, 'sobre'])->name('sobre');
 Route::get('/equipa', [PageController::class, 'equipa'])->name('equipa');
 Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes'])->name('termosCondicoes');
 Route::get('/politicaprivacidade', [PageController::class, 'politicaprivacidade'])->name('politicaprivacidade');
-Route::get('/especialidade', [PageController::class, 'especialidade'])->name('especialidade');
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
-Route::get('/_admin/especialidade', [PageController::class, 'especialidadeIndex'])->name('_admin.especialidade');
+
+
+
+
+
+/* avaliações */
 Route::get('/_admin/avaliacoes', [AvaliacoesController::class, 'index'])->name('admin.avaliacoes.index');
 Route::get('/_admin/avaliacoes', [AvaliacoesController::class, 'index'])->name('_admin.avaliacoes');
 Route::get('/_admin/avaliacoes/create', [AvaliacoesController::class, 'create'])->name('admin.avaliacoes.create');
 Route::get('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'show'])->name('admin.avaliacoes.show');
 Route::get('/_admin/avaliacoes/{avaliacoes}/edit', [AvaliacoesController::class, 'edit'])->name('admin.avaliacoes.edit');
 Route::delete('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'destroy'])->name('admin.avaliacoes.destroy');
-
-
-
 Route::post('/_admin/avaliacoes', [AvaliacoesController::class, 'store'])->name('admin.avaliacoes.store');
-
 Route::put('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'update'])->name('admin.avaliacoes.update');
 Route::put('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'update'])->name('admin.avaliacoes.update');
 
@@ -64,10 +64,8 @@ Route::post('/_admin/post-saude', [PostSaudeController::class, 'store'])->name('
 Route::post('/_admin/post-saude', [PostSaudeController::class, 'update'])->name('_admin.post-saude.update');
 
 
-Route::group(['middleware' => ['auth', 'verified', 'admin'], 'as' => 'admin.', 'prefix' => 'admin'], function () {
+
 
     Route::resource('especialidades', EspecialidadeController::class);
     Route::resource('formularios', FormularioController::class);
     Route::resource('posts-saude', PostSaudeController::class);
-
-});

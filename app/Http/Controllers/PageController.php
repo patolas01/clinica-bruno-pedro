@@ -61,12 +61,7 @@ class PageController extends Controller
 
     public function dashboard()
     {
-        return view('dashboard');
-    }
-
-    public function especialidadeIndex()
-    {
-        return view('_admin.especialidade.index');
+        return view('_admin.dashboard');
     }
 
     public function Error()

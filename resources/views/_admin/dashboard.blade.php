@@ -16,7 +16,7 @@
     </div>
 </div>
 
-<a href="{{ route('_admin.especialidade') }}" class="button2">1</a>
+<a href="{{ route('especialidades.index') }}" class="button2">1</a>
 <a href="" class="button2">2</a>
 <a href="" class="button2">3</a>
 <a href="" class="button2">4</a>
