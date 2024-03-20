@@ -8,7 +8,7 @@
 
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <a class="btn btn-primary" href="{{route('admin.avaliacoes.create')}}">
+      <a class="btn btn-primary" href="{{route('avaliacoes.create')}}">
         <i class="fas fa-plus"></i>Nova Avaliação
       </a>
     </div>
@@ -29,9 +29,9 @@
               <td>{{$avaliacoes->classificacao}}</td>
               <td>{{$avaliacoes->texto}}</td>
               <td nowrap>
-                <a class="btn btn-xs btn-primary btn-p" href="{{route('admin.avaliacoes.show',$avaliacoes)}}"><i class="fas fa-eye fa-xs"></i></a>
-                <a class="btn btn-xs btn-warning btn-p" href="{{route('admin.avaliacoes.edit',$avaliacoes)}}"><i class="fas fa-pen fa-xs"></i></a>
-                <form method="POST" action="{{route('admin.avaliacoes.destroy',$avaliacoes)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar esta avaliação?');">
+                <a class="btn btn-xs btn-primary btn-p" href="{{route('avaliacoes.show',$avaliacoes)}}"><i class="fas fa-eye fa-xs"></i></a>
+                <a class="btn btn-xs btn-warning btn-p" href="{{route('avaliacoes.edit',$avaliacoes)}}"><i class="fas fa-pen fa-xs"></i></a>
+                <form method="POST" action="{{route('avaliacoes.destroy',$avaliacoes)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar esta avaliação?');">
                   @csrf
                   @method("DELETE")
                   <button type="submit" class="btn btn-xs btn-danger btn-p">

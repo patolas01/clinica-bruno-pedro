@@ -19,9 +19,9 @@
 <a href="{{ route('especialidades.index') }}" class="button2">1</a>
 <a href="{{ route('formularios.index') }}" class="button2">2</a>
 <a href="{{ route('posts-saude.index') }}" class="button2">3</a>
-<a href="" class="button2">4</a>
+<a href="{{ route('avaliacoes.index') }}" class="button2">4</a>
 <a href="" class="button2">5</a>
-<a href="{{ route('_admin.avaliacoes') }}" class="button2">6</a>
+<a href="" class="button2">6</a>
 @endsection
 
 

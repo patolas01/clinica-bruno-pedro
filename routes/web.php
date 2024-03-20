@@ -36,7 +36,7 @@ Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard'
 
 
 
-/* avaliações */
+/* avaliações
 Route::get('/_admin/avaliacoes', [AvaliacoesController::class, 'index'])->name('admin.avaliacoes.index');
 Route::get('/_admin/avaliacoes', [AvaliacoesController::class, 'index'])->name('_admin.avaliacoes');
 Route::get('/_admin/avaliacoes/create', [AvaliacoesController::class, 'create'])->name('admin.avaliacoes.create');
@@ -46,7 +46,7 @@ Route::delete('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, '
 Route::post('/_admin/avaliacoes', [AvaliacoesController::class, 'store'])->name('admin.avaliacoes.store');
 Route::put('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'update'])->name('admin.avaliacoes.update');
 Route::put('/_admin/avaliacoes/{avaliacoes}', [AvaliacoesController::class, 'update'])->name('admin.avaliacoes.update');
-
+*/
 /* formulario */
 /*Route::get('/_admin/formulario', [PageController::class, 'formularioIndex'])->name('_admin.formulario.index');
 Route::get('/_admin/formulario/create', [FormularioController::class, 'create'])->name('_admin.formulario.create');
@@ -69,3 +69,4 @@ Route::post('/_admin/post-saude', [PostSaudeController::class, 'update'])->name(
     Route::resource('especialidades', EspecialidadeController::class);
     Route::resource('formularios', FormularioController::class);
     Route::resource('posts-saude', PostSaudeController::class);
+    Route::resource('avaliacoes', AvaliacoesController::class);
