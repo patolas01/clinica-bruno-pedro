@@ -6,11 +6,11 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Editar Serviço
+			Editar Avaliação
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{ route('avaliacoes.update', $avaliacoes)}}" class="form-group">
+			<form method="POST" action="{{ route('_admin.avaliacoes.update', $avaliacoes)}}" class="form-group" enctype="multipart/form-data>
 				@csrf
 				@method("PUT")
 				@include('_admin.avaliacoes.partials.add-edit')

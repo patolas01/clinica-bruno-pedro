@@ -5,7 +5,7 @@
 
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			Novo Avaliacao
+			Nova Avaliação
 		</div>
 		<div class="card-body">
 

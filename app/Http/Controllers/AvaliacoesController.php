@@ -74,7 +74,8 @@ class AvaliacoesController extends Controller
 
     public function destroy(Avaliacoes $avaliacoes)
     {
-
+        $avaliacoes->delete();
+        return redirect()->route('avaliacoes.index')->with('success', 'Post eliminado com sucesso.');
     }
 }
 

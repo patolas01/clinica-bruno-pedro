@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
-    <title>Dashboard - PulseHub</title>
+    <title>Dashboard - Clínica Dentária Bruno & Pedro</title>
 
     <!-- Custom fonts for this template -->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel=" stylesheet" type="text/css">
@@ -101,8 +101,8 @@
                     <div id="collapseAvaliacoes" class="collapse" aria-labelledby="headingAvaliacoes"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Nova Avaliação</a>
+                            <a class="collapse-item" href="{{ route('avaliacoes.index') }}">Listagem</a>
+                            <a class="collapse-item" href="{{ route('avaliacoes.create') }}">Nova Avaliação</a>
                         </div>
                     </div>
                 </li>
@@ -116,8 +116,8 @@
                     <div id="collapseEspecialidades" class="collapse" aria-labelledby="headingEspecialidades"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Nova Especialidade</a>
+                            <a class="collapse-item" href="{{ route('especialidades.index') }}">Listagem</a>
+                            <a class="collapse-item" href="{{ route('especialidades.create') }}">Nova Especialidade</a>
                         </div>
                     </div>
                 </li>
@@ -270,7 +270,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; PulseHub</span>
+                        <span>Copyright © 2024 Clínica Dentária Bruno & Pedro, lda. Todos os direitos reservados.</span>
                     </div>
                 </div>
             </footer>
