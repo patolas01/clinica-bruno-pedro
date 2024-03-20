@@ -9,11 +9,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Especialidade extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $table='especialidade';
+    protected $table='especialidades';
     protected $fillable=['nome','curt_desc'];
 
     public function detalhesesp(){
         return $this->hasMany(Detalhes_esp::class,'especialidade_id','id');
     }
-    
+
 }

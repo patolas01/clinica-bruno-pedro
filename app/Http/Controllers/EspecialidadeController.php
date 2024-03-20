@@ -36,6 +36,9 @@ class EspecialidadeController extends Controller
     public function store(EspecialidadeRequest $request)
     {
         $fields = $request->validated();
+        \Log::info('Dados validados:', $fields);
+
+
         $especialidade = new especialidade();
         $especialidade->fill($fields);
         if ($request->hasFile('icon')) {
@@ -44,6 +47,7 @@ class EspecialidadeController extends Controller
             $especialidade->imagem = basename($imagem_path);
         }
         $especialidade->save();
+        \Log::info('Especialidade criada com sucesso:', $especialidade);
         return redirect()->route('especialidade.index')
             ->with('success', 'Especialidade criada com sucesso');
     }
