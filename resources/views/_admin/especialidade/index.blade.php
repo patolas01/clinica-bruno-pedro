@@ -8,7 +8,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a class="btn btn-primary" href="">
+                <a class="btn btn-primary" href="{{ route('especialidades.create') }}">
                     <i class="fas fa-plus"></i> Nova Especialidade
                 </a>
                 <a class="btn btn-primary" href="">

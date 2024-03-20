@@ -11,49 +11,17 @@
                 <div class="row">
                     <div class="col-md-3 mb-3">
                         <strong>Imagem:</strong>
-                        <img class="img-fluid" src=""
-                            alt="Imagem da modalidade">
+                        <img class="img-fluid" src="{{asset('storage/especialidade_imagens/'. $especialidade->icon )}}"
+                            alt="Imagem da especialidade">
                     </div>
 
                     <div class="col-md-9">
                         <div class="mb-3">
-                            <strong>Nome:</strong>
+                            <strong>Nome:</strong> {{ $especialidade->nome }}
                         </div>
                         <div class="mb-3">
-                            <strong>Categoria:</strong>
+                            <strong>Curta_desc:</strong> {{$especialidade->curta_desc}}
                         </div>
-                        <div class="mb-3">
-                            <strong>Descrição:</strong>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-
-                            <div class="mb-3">
-                                <strong>Staff associado à modalidade:</strong>
-                                <ul class="list-unstyled">
-
-                                        <li></li>
-
-                                </ul>
-                            </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-
-                            <div class="mb-3">
-                                <strong>Duração dos planos associados à modalidade:</strong>
-                                <ul class="list-unstyled">
-
-                                        <li></li>
-
-                                </ul>
-                            </div>
 
                     </div>
                 </div>
