@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('nome');
             $table->string('email');
             $table->unsignedBigInteger('especialidade_id'); // Chave estrangeira
-            $table->foreign('especialidade_id')->references('id')->on('especialidade');
+            $table->foreign('especialidade_id')->references('id')->on('especialidades');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -27,6 +27,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('mensagens');
+        Schema::dropIfExists('formulario');
     }
 };
