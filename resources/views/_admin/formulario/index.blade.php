@@ -8,7 +8,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a class="btn btn-primary" href="{{ route('_admin.formulario.create') }}">
+                <a class="btn btn-primary" href="{{ route('formularios.create') }}">
                     <i class="fas fa-plus"></i> Novo Formulário
                 </a>
             </div>
