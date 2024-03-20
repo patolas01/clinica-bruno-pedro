@@ -33,7 +33,7 @@
 
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-                    <img src="{{ asset('img/Logo-PulseHub-Branco.png') }}" alt="" class="img-fluid">
+                    <img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="" class="img-fluid">
                 </a>
 
                 <!-- Divider -->
@@ -51,7 +51,7 @@
 
 
                 <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
                         aria-expanded="true" aria-controls="collapseUsers">
                         <i class="fas fa-users"></i>
@@ -65,9 +65,9 @@
                             <a class="collapse-item" href="">Novo Utilizador</a>
                         </div>
                     </div>
-                </li>
+                </li> --}}
                 <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePosts"
                         aria-expanded="true" aria-controls="collapsePosts">
                         <i class="fas fa-fw fa-list"></i>
@@ -90,78 +90,84 @@
                                 Planos</a>
                         </div>
                     </div>
-                </li>
+                </li> --}}
+
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                        data-target="#collapseModalidades" aria-expanded="true" aria-controls="collapseModalidades">
-                        <i class="fas fa-running"></i>
-                        <span>Modalidades</span>
-                    </a>
-                    <div id="collapseModalidades" class="collapse" aria-labelledby="headingModalidades"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Nova Modalidade</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                        data-target="#collapseEventos" aria-expanded="true" aria-controls="collapseEventos">
-                        <i class="fas fa-bell"></i>
-                        <span>Eventos</span>
-                    </a>
-                    <div id="collapseEventos" class="collapse" aria-labelledby="headingEventos"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Evento</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                        data-target="#collapseServicos" aria-expanded="true" aria-controls="collapseServicos">
-                        <i class="fas fa-lightbulb"></i>
-                        <span>Serviços</span>
-                    </a>
-                    <div id="collapseServicos" class="collapse" aria-labelledby="headingServicos"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Serviço</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                        data-target="#collapsePlanos" aria-expanded="true" aria-controls="collapsePlanos">
-                        <i class="fas fa-hourglass"></i>
-                        <span>Planos</span>
-                    </a>
-                    <div id="collapsePlanos" class="collapse" aria-labelledby="headingPlanos"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Plano</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlog"
-                        aria-expanded="true" aria-controls="collapseBlog">
+                        data-target="#collapseAvaliacoes" aria-expanded="true" aria-controls="collapseAvaliacoes">
                         <i class="fas fa-pencil-alt"></i>
-                        <span>Blog</span>
+                        <span>Avaliações</span>
                     </a>
-                    <div id="collapseBlog" class="collapse" aria-labelledby="headingBlog"
+                    <div id="collapseAvaliacoes" class="collapse" aria-labelledby="headingAvaliacoes"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Post</a>
+                            <a class="collapse-item" href="">Nova Avaliação</a>
                         </div>
                     </div>
                 </li>
+
                 <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                        data-target="#collapseEspecialidades" aria-expanded="true" aria-controls="collapseEspecialidades">
+                        <i class="fas fa-tag"></i>
+                        <span>Especialidades</span>
+                    </a>
+                    <div id="collapseEspecialidades" class="collapse" aria-labelledby="headingEspecialidades"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="">Listagem</a>
+                            <a class="collapse-item" href="">Nova Especialidade</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                        data-target="#collapseDetalhesEspecialidade" aria-expanded="true" aria-controls="collapseDetalhesEspecialidade">
+                        <i class="fas fa-asterisk"></i>
+                        <span>Detalhes Especialidade</span>
+                    </a>
+                    <div id="collapseDetalhesEspecialidade" class="collapse" aria-labelledby="headingDetalhes Especialidade"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="">Listagem</a>
+                            <a class="collapse-item" href="">Novo Detalhes Esp.</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                        data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
+                        <i class="fas fa-fw fa-list-ul"></i>
+                        <span>Formulário</span>
+                    </a>
+                    <div id="collapseFormulário" class="collapse" aria-labelledby="headingFormulário"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="">Listagem</a>
+                            <a class="collapse-item" href="">Novo Formulário</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGuiaSaude"
+                        aria-expanded="true" aria-controls="collapseGuiaSaude">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Guia Saúde</span>
+                    </a>
+                    <div id="collapseGuiaSaude" class="collapse" aria-labelledby="headingGuiaSaude"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="">Listagem</a>
+                            <a class="collapse-item" href="">Nova Publicação</a>
+                        </div>
+                    </div>
+                </li>
+
+                {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStaff"
                         aria-expanded="true" aria-controls="collapseStaff">
                         <i class="fas fa-hard-hat"></i>
@@ -174,7 +180,7 @@
                             <a class="collapse-item" href="">Novo Staff</a>
                         </div>
                     </div>
-                </li>
+                </li> --}}
 
 
                 <!-- Divider -->
@@ -203,7 +209,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Navbar -->
+                    {{-- <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
 
@@ -245,7 +251,7 @@
 
                         </li>
 
-                    </ul>
+                    </ul> --}}
 
                 </nav>
                 <!-- End of Topbar -->
@@ -277,7 +283,7 @@
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    
+
 
 
 
