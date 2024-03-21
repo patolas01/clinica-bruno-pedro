@@ -138,7 +138,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    <a class="nav-link collapsed" href="{{ route('formularios.index') }}" data-toggle="collapse"
                         data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
                         <i class="fas fa-fw fa-list-ul"></i>
                         <span>Formulário</span>
@@ -146,8 +146,8 @@
                     <div id="collapseFormulário" class="collapse" aria-labelledby="headingFormulário"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Formulário</a>
+                            <a class="collapse-item" href="{{ route('formularios.index') }}">Listagem</a>
+                            <a class="collapse-item" href="{{ route('formularios.create') }}">Novo Formulário</a>
                         </div>
                     </div>
                 </li>

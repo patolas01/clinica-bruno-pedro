@@ -13,7 +13,7 @@ class Especialidade extends Model
     protected $fillable=['nome','curt_desc'];
 
     public function detalhesesp(){
-        return $this->hasMany(Detalhes_esp::class,'especialidade_id','id');
+        return $this->hasMany(DetalheEsp::class,'especialidade_id','id');
     }
 
 }

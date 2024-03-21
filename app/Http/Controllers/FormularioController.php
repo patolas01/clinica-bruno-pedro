@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Formulario;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\FormularioRequest;
+use App\Models\Especialidade;
 
 class FormularioController extends Controller
 {
@@ -17,8 +18,9 @@ class FormularioController extends Controller
 
     public function create()
     {
+        $especialidades = Especialidade::all();
         $formulario = new Formulario;
-        return view('_admin.formulario.create', compact('formulario'));
+        return view('_admin.formulario.create', compact('formulario', 'especialidades'));
     }
 
     public function store(FormularioRequest $request)
