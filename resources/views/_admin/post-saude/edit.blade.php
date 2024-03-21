@@ -9,7 +9,7 @@
             </div>
             <div class="card-body">
 
-                <form method="POST" action="{{ route('posts-saude.update', $postSaude) }}" class="form-group" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('posts-saude.update', $posts_saude) }}" class="form-group" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     @include('_admin.post-saude.partials.add-edit')

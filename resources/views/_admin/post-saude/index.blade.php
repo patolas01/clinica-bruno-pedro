@@ -25,23 +25,23 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($postsSaude as $postSaude)
+                                @foreach ($postsSaude as $posts_saude)
                                     <tr>
-                                        <td>{{ $postSaude->id }}</td>
+                                        <td>{{ $posts_saude->id }}</td>
                                         <td>
-                                            <img src="{{ asset('storage/post_imagens/' . $postSaude->imagem) }}"
+                                            <img src="{{ asset('storage/post_imagens/' . $posts_saude->imagem) }}"
                                                 alt="Imagem do Post" style="max-height: 100px;">
                                         </td>
-                                        <td>{{ $postSaude->nome }}</td>
-                                        <td>{{ $postSaude->descricao }}</td>
+                                        <td>{{ $posts_saude->nome }}</td>
+                                        <td>{{ $posts_saude->descricao }}</td>
                                         <td nowrap>
                                             <a class="btn btn-xs btn-primary btn-p"
-                                                href="{{ route('posts-saude.show', $postSaude) }}"><i
+                                                href="{{ route('posts-saude.show', $posts_saude) }}"><i
                                                     class="fas fa-eye fa-xs"></i></a>
                                             <a class="btn btn-xs btn-warning btn-p"
-                                                href="{{ route('posts-saude.edit', $postSaude) }}"><i
+                                                href="{{ route('posts-saude.edit', $posts_saude) }}"><i
                                                     class="fas fa-pen fa-xs"></i></a>
-                                            <form method="POST" action="{{ route('posts-saude.destroy', $postSaude) }}"
+                                            <form method="POST" action="{{ route('posts-saude.destroy', $posts_saude) }}"
                                                 role="form" class="inline"
                                                 onsubmit="return confirm('Confirma que pretende eliminar este post de saúde?');">
                                                 @csrf

@@ -18,8 +18,8 @@ class PostSaudeController extends Controller
 
     public function create()
     {
-        $postSaude = new PostSaude;
-        return view('_admin.post-saude.create', compact('postSaude'));
+        $posts_saude = new PostSaude;
+        return view('_admin.post-saude.create', compact('posts_saude'));
     }
 
     public function store(PostSaudeRequest $request)
@@ -37,42 +37,42 @@ class PostSaudeController extends Controller
         }
 
         // Crie uma nova instância do modelo PostSaude com os dados preenchidos
-        $postSaude = new PostSaude($fields);
+        $posts_saude = new PostSaude($fields);
 
         // Salve o post de saúde no banco de dados
-        $postSaude->save();
+        $posts_saude->save();
 
         // Redirecione de volta para a página de índice com uma mensagem de sucesso
         return redirect()->route('posts-saude.index')->with('success', 'Publicação criada com sucesso');
     }
 
-    public function show(PostSaude $postSaude)
+    public function show(PostSaude $posts_saude)
     {
         /*dd($postSaude);*/
-        return view('_admin.post-saude.show', compact('postSaude'));
+        return view('_admin.post-saude.show', compact('posts_saude'));
     }
 
-    public function edit(PostSaude $postSaude)
+    public function edit(PostSaude $posts_saude)
     {
-        return view('_admin.post-saude.edit', compact('postSaude'));
+        return view('_admin.post-saude.edit', compact('posts_saude'));
     }
 
-    public function update(PostSaudeRequest $request, PostSaude $postSaude)
+    public function update(PostSaudeRequest $request, PostSaude $posts_saude)
     {
         $fields = $request->validated();
-        $postSaude->fill($fields);
+        $posts_saude->fill($fields);
         // Adicione aqui o código para lidar com o upload do arquivo, se necessário
 
-        $postSaude->save();
+        $posts_saude->save();
         return redirect()->route('posts-saude.index')
             ->with('success', 'Post de saúde atualizado com sucesso');
     }
 
-    public function destroy(PostSaude $postSaude)
+    public function destroy(PostSaude $posts_saude)
     {
         // Adicione aqui o código para excluir o arquivo, se necessário
 
-        $postSaude->delete();
+        $posts_saude->delete();
         return redirect()->route('posts-saude.index')
             ->with('success', 'Post de saúde eliminado com sucesso');
     }

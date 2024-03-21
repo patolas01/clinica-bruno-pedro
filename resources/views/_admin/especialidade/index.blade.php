@@ -33,7 +33,7 @@
                                         <td> <img height='100' src="{{ asset('storage/especialidade_imagens/' . $especialidade->icon) }}" alt="Imagem do Post"></td>
                                         <td>{{$especialidade->nome}}</td>
                                         <td>{{$especialidade->curta_desc}}</td>
-                                      
+
                                         <td nowrap>
                                             <a class="btn btn-xs btn-primary btn-p" href="{{route('especialidades.show',$especialidade)}}"><i class="fas fa-eye fa-xs"></i></a>
                                             <a class="btn btn-xs btn-warning btn-p" href="{{route('especialidades.edit',$especialidade)}}"><i class="fas fa-pen fa-xs"></i></a>
@@ -61,7 +61,7 @@
         $('#dataTable').dataTable({
             destroy: true,
             "order": [
-                [1, 'asc']
+                [0, 'asc']
             ],
             "columns": [
                 {
@@ -69,7 +69,7 @@
                 },
                 null,
                 null,
-                null,
+                
                 {
                     "orderable": false
                 }
