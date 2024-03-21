@@ -48,6 +48,7 @@ class PostSaudeController extends Controller
 
     public function show(PostSaude $postSaude)
     {
+        /*dd($postSaude);*/
         return view('_admin.post-saude.show', compact('postSaude'));
     }
 
