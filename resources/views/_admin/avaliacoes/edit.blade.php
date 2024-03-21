@@ -10,10 +10,10 @@
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{ route('avaliacoes.update', $avaliacoes)}}" class="form-group" enctype="multipart/form-data>
-				@csrf
-				@method("PUT")
-				@include('avaliacoes.partials.add-edit')
+			<form method="POST" action="{{route('avaliacoes.update', $avaliaco)}}" class="form-group" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+				@include('_admin.avaliacoes.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Guardar</button>
 
@@ -24,7 +24,6 @@
 			</form>
 
 		</div>
-
 	</div>
 </div>
 

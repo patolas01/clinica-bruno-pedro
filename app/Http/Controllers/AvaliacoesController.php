@@ -18,41 +18,41 @@ class AvaliacoesController extends Controller
 
     public function create()
     {
-        $avaliacoes = new Avaliacoes;
-        return view('_admin.avaliacoes.create', compact("avaliacoes"));
+        $avaliaco = new Avaliacoes;
+        return view('_admin.avaliacoes.create', compact("avaliaco"));
     }
 
     public function store(AvaliacoesRequest $request)
     {
         $fields = $request->validated();
-        $avaliacoes = new Avaliacoes();
-        $avaliacoes->fill($fields);
-        $avaliacoes->save();
+        $avaliaco = new Avaliacoes();
+        $avaliaco->fill($fields);
+        $avaliaco->save();
         return redirect()->route('avaliacoes.index')
             ->with('success', 'Avaliação criada com sucesso');
     }
 
-    public function show(Avaliacoes $avaliacoes)
+    public function show(Avaliacoes $avaliaco)
     {
-        return view('_admin.avaliacoes.show', compact("avaliacoes"));
+        return view('_admin.avaliacoes.show', compact("avaliaco"));
     }
 
-    public function edit(Avaliacoes $avaliacoes)
+    public function edit(Avaliacoes $avaliaco)
     {
-        return view('_admin.avaliacoes.edit', compact('avaliacoes'));
+        return view('_admin.avaliacoes.edit', compact('avaliaco'));
     }
 
-     public function update(AvaliacoesRequest $request, Avaliacoes $avaliacoes)
+     public function update(AvaliacoesRequest $request, Avaliacoes $avaliaco)
      {
         $fields = $request->validated();
-        $avaliacoes->fill($fields);
-        $avaliacoes->save();
-        return redirect()->route('admin.avaliacoes.index')->with('success', 'Avaliação atualizada com sucesso');
+        $avaliaco->fill($fields);
+        $avaliaco->save();
+        return redirect()->route('avaliacoes.index')->with('success', 'Avaliação atualizada com sucesso');
      }
 
-    public function destroy(Avaliacoes $avaliacoes)
+    public function destroy(Avaliacoes $avaliaco)
     {
-        $avaliacoes->delete();
+        $avaliaco->delete();
         return redirect()->route('avaliacoes.index')->with('success', 'Avaliação eliminada com sucesso.');
     }
 }

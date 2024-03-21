@@ -1,19 +1,32 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="container-fluid">
+    <div class="container-fluid">
 
-	<div class="card shadow mb-4">
-		<div class="card-header py-3">
-			Informação da Avaliação
-		</div>
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                Informação da Avaliação
+            </div>
+            <div class="card-body">
+                <div class="row">
 
-		<div class="card-body">
-			<div><strong>Classificação: </strong>{{$avaliacoes->classificacao}}</div>
-			<div><strong>Comentário: </strong>{{$avaliacoes->texto}}</div>
-			</div>
-			<a href="{{route('avaliacoes.index')}}" class="btn btn-default">Voltar</a>
-		</div>
-	</div>
-</div>
+
+                    <div class="col-md-9">
+                        <div class="mb-3">
+                            <strong>Classificação:</strong> {{ $avaliaco->classificacao }}
+                        </div>
+                        <div class="mb-3">
+                            <strong>Comentario</strong> {{$avaliaco->texto}}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
 @endsection
