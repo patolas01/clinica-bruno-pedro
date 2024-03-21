@@ -31,7 +31,7 @@ class FormularioController extends Controller
         // Adicione aqui o código para lidar com o upload do arquivo, se necessário
 
         $formulario->save();
-        return redirect()->route('admin.formulario.index')
+        return redirect()->route('formularios.index')
             ->with('success', 'Formulário criado com sucesso');
     }
 
@@ -52,7 +52,7 @@ class FormularioController extends Controller
         // Adicione aqui o código para lidar com o upload do arquivo, se necessário
 
         $formulario->save();
-        return redirect()->route('admin.formulario.index')
+        return redirect()->route('formularios.index')
             ->with('success', 'Formulário atualizado com sucesso');
     }
 
@@ -61,7 +61,7 @@ class FormularioController extends Controller
         // Adicione aqui o código para excluir o arquivo, se necessário
 
         $formulario->delete();
-        return redirect()->route('admin.formulario.index')
+        return redirect()->route('formularios.index')
             ->with('success', 'Formulário eliminado com sucesso');
     }
 }
