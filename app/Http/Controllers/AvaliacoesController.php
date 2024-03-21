@@ -55,5 +55,6 @@ class AvaliacoesController extends Controller
         $avaliaco->delete();
         return redirect()->route('avaliacoes.index')->with('success', 'Avaliação eliminada com sucesso.');
     }
+    
 }
 

@@ -8,9 +8,9 @@
 
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <a class="btn btn-primary" href="{{route('avaliacoes.create')}}">
-        <i class="fas fa-plus"></i>Nova Avaliação
-      </a>
+        <a class="btn btn-primary" href="{{ route('avaliacoes.create') }}">
+            <i class="fas fa-plus"></i> Nova Avaliação
+        </a>
     </div>
     <div class="card-body">
       @if (count($avaliacoes))
@@ -26,7 +26,11 @@
           <tbody>
             @foreach($avaliacoes as $avaliaco)
             <tr>
-              <td>{{$avaliaco->classificacao}}</td>
+              <td>
+                @for ($i = 0; $i < $avaliaco->classificacao; $i++)
+                    ⭐
+                @endfor
+              </td>
               <td>{{$avaliaco->texto}}</td>
               <td nowrap>
                 <a class="btn btn-xs btn-primary btn-p" href="{{route('avaliacoes.show',$avaliaco)}}"><i class="fas fa-eye fa-xs"></i></a>
