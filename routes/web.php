@@ -5,7 +5,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\EspecialidadeController;
 use App\Http\Controllers\FormularioController;
-use App\Http\Controllers\PostSaudeController;use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostSaudeController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\AvaliacoesController;
 
 /*

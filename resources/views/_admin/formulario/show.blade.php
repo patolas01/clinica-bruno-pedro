@@ -11,7 +11,7 @@
             <div><strong>Contacto:</strong> {{$formulario->contacto}}</div>
 			<div><strong>Nome:</strong> {{$formulario->nome}}</div>
 			<div><strong>Email:</strong> {{$formulario->email}}</div>
-			<div><strong>Especialidade:</strong> {{$formulario->especialidade}}</div>
+			<div><strong>Especialidade:</strong> {{$formulario->especialidade_id}}</div>
 		</div>
 	</div>
 </div>

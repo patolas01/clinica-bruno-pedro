@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PostSaude extends Model
 {
+
+    use HasFactory, SoftDeletes;
     protected $table = 'post_saude';
     protected $fillable = [
         'nome',
