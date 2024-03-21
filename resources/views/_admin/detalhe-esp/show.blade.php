@@ -17,9 +17,9 @@
 
                     <div class="col-md-9">
                         <div class="mb-3">
-                            <strong>Descrição:</strong> {{ $detalhe_esp->descricao }}
+                            <strong>Descrição:</strong> {{ $detalhe_esp->descriçao }}
                         </div>
-                       
+
 
                     </div>
                 </div>

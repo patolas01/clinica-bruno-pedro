@@ -27,7 +27,7 @@
             @foreach($detalhesps as  $detalhe_esp)
             <tr>
                 <td> <img height='100' src="{{ asset('storage/detalheesp_imagens/' . $detalhe_esp->imagem) }}" alt="Imagem do Post"></td>
-                <td>{{ $detalhe_esp->descricao}}</td>
+                <td>{{ $detalhe_esp->descriçao}}</td>
 
               <td nowrap>
                     <a class="btn btn-xs btn-primary btn-p" href="{{route('detalhe-esp.show', $detalhe_esp)}}"><i class="fas fa-eye fa-xs"></i></a>

@@ -33,12 +33,12 @@ class DetalheEspController extends Controller
 
 
 
-        $detalhe_esp = new detalhe_esp();
+        $detalhe_esp = new DetalheEsp();
         $detalhe_esp->fill($fields);
         if ($request->hasFile('imagem')) {
             $imagem_path =
                 $request->file('imagem')->store('public/detalheesp_imagens');
-            $detalhe_esp->icon = basename($imagem_path);
+            $detalhe_esp->imagem = basename($imagem_path);
         }
         $detalhe_esp->save();
         return redirect()->route('detalhe-esp.index')
@@ -73,7 +73,7 @@ class DetalheEspController extends Controller
             }
 
 
-            $imagem_path = $request->file('icon')->store('public/detalheesp_imagens');
+            $imagem_path = $request->file('imagem')->store('public/detalheesp_imagens');
             $detalhe_esp->imagem = basename($imagem_path);
         }
 

@@ -23,8 +23,8 @@ class DetalheEspRequest extends FormRequest
     {
         $currentId = $this->detalheesp ? $this->detalheesp->id : null;
         return [
-        "descricao" =>'required|min:15',
-        'imagem' => ($this->detalheesp ? 'required|' : '') . 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+        "descriçao" =>'required|min:15',
+        'imagem' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 
