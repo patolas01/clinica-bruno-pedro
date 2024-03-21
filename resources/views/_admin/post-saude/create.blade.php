@@ -5,7 +5,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                Novo Post Saúde
+                Nova Publicação
             </div>
             <div class="card-body">
 
@@ -14,7 +14,7 @@
                     @csrf
                     @include('_admin.post-saude.partials.add-edit')
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success" name="ok">Salvar</button>
+                        <button type="submit" class="btn btn-success" name="ok">Guardar</button>
                         <a href="{{ route('posts-saude.index') }}" class="btn btn-default">Cancelar</a>
                     </div>
                 </form>

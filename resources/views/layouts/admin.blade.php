@@ -29,29 +29,29 @@
 
         <!-- Sidebar -->
 
-            <ul class="navbar-nav dark sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-                    <img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="" class="img-fluid">
-                </a>
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+                <img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="" class="img-fluid">
+            </a>
 
-                <!-- Divider -->
-                <hr class="sidebar-divider my-0">
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
 
-                <!-- Nav Item - Dashboard -->
-                <li class="nav-item">
-                    <a class="nav-link" href="">
-                        <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span></a>
-                </li>
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span></a>
+            </li>
 
-                <!-- Divider -->
-                <hr class="sidebar-divider">
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
 
 
-                <!-- Nav Item - Pages Collapse Menu -->
-                {{-- <li class="nav-item">
+            <!-- Nav Item - Pages Collapse Menu -->
+            {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
                         aria-expanded="true" aria-controls="collapseUsers">
                         <i class="fas fa-users"></i>
@@ -66,8 +66,8 @@
                         </div>
                     </div>
                 </li> --}}
-                <!-- Nav Item - Pages Collapse Menu -->
-                {{-- <li class="nav-item">
+            <!-- Nav Item - Pages Collapse Menu -->
+            {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePosts"
                         aria-expanded="true" aria-controls="collapsePosts">
                         <i class="fas fa-fw fa-list"></i>
@@ -92,82 +92,83 @@
                     </div>
                 </li> --}}
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                        data-target="#collapseAvaliacoes" aria-expanded="true" aria-controls="collapseAvaliacoes">
-                        <i class="fas fa-pencil-alt"></i>
-                        <span>Avaliações</span>
-                    </a>
-                    <div id="collapseAvaliacoes" class="collapse" aria-labelledby="headingAvaliacoes"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="{{ route('avaliacoes.index') }}">Listagem</a>
-                            <a class="collapse-item" href="{{ route('avaliacoes.create') }}">Nova Avaliação</a>
-                        </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAvaliacoes"
+                    aria-expanded="true" aria-controls="collapseAvaliacoes">
+                    <i class="fas fa-pencil-alt"></i>
+                    <span>Avaliações</span>
+                </a>
+                <div id="collapseAvaliacoes" class="collapse" aria-labelledby="headingAvaliacoes"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('avaliacoes.index') }}">Listagem</a>
+                        <a class="collapse-item" href="{{ route('avaliacoes.create') }}">Nova Avaliação</a>
                     </div>
-                </li>
+                </div>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                        data-target="#collapseEspecialidades" aria-expanded="true" aria-controls="collapseEspecialidades">
-                        <i class="fas fa-tag"></i>
-                        <span>Especialidades</span>
-                    </a>
-                    <div id="collapseEspecialidades" class="collapse" aria-labelledby="headingEspecialidades"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="{{ route('especialidades.index') }}">Listagem</a>
-                            <a class="collapse-item" href="{{ route('especialidades.create') }}">Nova Especialidade</a>
-                        </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    data-target="#collapseEspecialidades" aria-expanded="true" aria-controls="collapseEspecialidades">
+                    <i class="fas fa-tag"></i>
+                    <span>Especialidades</span>
+                </a>
+                <div id="collapseEspecialidades" class="collapse" aria-labelledby="headingEspecialidades"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('especialidades.index') }}">Listagem</a>
+                        <a class="collapse-item" href="{{ route('especialidades.create') }}">Nova Especialidade</a>
                     </div>
-                </li>
+                </div>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                        data-target="#collapseDetalhesEspecialidade" aria-expanded="true" aria-controls="collapseDetalhesEspecialidade">
-                        <i class="fas fa-asterisk"></i>
-                        <span>Detalhes Especialidade</span>
-                    </a>
-                    <div id="collapseDetalhesEspecialidade" class="collapse" aria-labelledby="headingDetalhes Especialidade"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Detalhes Esp.</a>
-                        </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                    data-target="#collapseDetalhesEspecialidade" aria-expanded="true"
+                    aria-controls="collapseDetalhesEspecialidade">
+                    <i class="fas fa-asterisk"></i>
+                    <span>Detalhes Especialidade</span>
+                </a>
+                <div id="collapseDetalhesEspecialidade" class="collapse" aria-labelledby="headingDetalhes Especialidade"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="">Listagem</a>
+                        <a class="collapse-item" href="">Novo Detalhes Esp.</a>
                     </div>
-                </li>
+                </div>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="{{ route('formularios.index') }}" data-toggle="collapse"
-                        data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
-                        <i class="fas fa-fw fa-list-ul"></i>
-                        <span>Formulário</span>
-                    </a>
-                    <div id="collapseFormulário" class="collapse" aria-labelledby="headingFormulário"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="{{ route('formularios.index') }}">Listagem</a>
-                            <a class="collapse-item" href="{{ route('formularios.create') }}">Novo Formulário</a>
-                        </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('formularios.index') }}" data-toggle="collapse"
+                    data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
+                    <i class="fas fa-fw fa-list-ul"></i>
+                    <span>Formulário</span>
+                </a>
+                <div id="collapseFormulário" class="collapse" aria-labelledby="headingFormulário"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('formularios.index') }}">Listagem</a>
+                        <a class="collapse-item" href="{{ route('formularios.create') }}">Novo Formulário</a>
                     </div>
-                </li>
+                </div>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGuiaSaude"
-                        aria-expanded="true" aria-controls="collapseGuiaSaude">
-                        <i class="fas fa-clipboard-list"></i>
-                        <span>Guia Saúde</span>
-                    </a>
-                    <div id="collapseGuiaSaude" class="collapse" aria-labelledby="headingGuiaSaude"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Nova Publicação</a>
-                        </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{{ route('posts-saude.index') }}" data-toggle="collapse"
+                    data-target="#collapseGuiaSaude" aria-expanded="true" aria-controls="collapseGuiaSaude">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>Guia Saúde</span>
+                </a>
+                <div id="collapseGuiaSaude" class="collapse" aria-labelledby="headingGuiaSaude"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('posts-saude.index') }}">Listagem</a>
+                        <a class="collapse-item" href="{{ route('posts-saude.create') }}">Nova Publicação</a>
                     </div>
-                </li>
+                </div>
+            </li>
 
-                {{-- <li class="nav-item">
+            {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStaff"
                         aria-expanded="true" aria-controls="collapseStaff">
                         <i class="fas fa-hard-hat"></i>
@@ -183,15 +184,15 @@
                 </li> --}}
 
 
-                <!-- Divider -->
-                <hr class="sidebar-divider d-none d-md-block">
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
 
-                <!-- Sidebar Toggler (Sidebar) -->
-                <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                </div>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
 
-            </ul>
+        </ul>
 
         <!-- End of Sidebar -->
 
