@@ -1,6 +1,5 @@
 @extends ("layouts.admin")
 
-
 @section('content')
     <div class="container-fluid">
         <!-- Page Heading -->
@@ -19,6 +18,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Imagem</th>
                                     <th>Nome</th>
                                     <th>Descrição</th>
                                     <th>Editar</th>
@@ -28,6 +28,10 @@
                                 @foreach ($postsSaude as $postSaude)
                                     <tr>
                                         <td>{{ $postSaude->id }}</td>
+                                        <td>
+                                            <img src="{{ asset('storage/post_imagens/' . $postSaude->imagem) }}"
+                                                alt="Imagem do Post" style="max-height: 100px;">
+                                        </td>
                                         <td>{{ $postSaude->nome }}</td>
                                         <td>{{ $postSaude->descricao }}</td>
                                         <td nowrap>
@@ -37,9 +41,8 @@
                                             <a class="btn btn-xs btn-warning btn-p"
                                                 href="{{ route('posts-saude.edit', $postSaude) }}"><i
                                                     class="fas fa-pen fa-xs"></i></a>
-                                            <form method="POST"
-                                                action="{{ route('posts-saude.destroy', $postSaude) }}" role="form"
-                                                class="inline"
+                                            <form method="POST" action="{{ route('posts-saude.destroy', $postSaude) }}"
+                                                role="form" class="inline"
                                                 onsubmit="return confirm('Confirma que pretende eliminar este post de saúde?');">
                                                 @csrf
                                                 @method('DELETE')
@@ -70,6 +73,7 @@
             "columns": [{
                     "orderable": false
                 },
+                null,
                 null,
                 null,
                 null,
