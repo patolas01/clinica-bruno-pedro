@@ -5,7 +5,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use App\Http\Controllers\EspecialidadeController;
 use App\Http\Controllers\FormularioController;
-use App\Http\Controllers\PostSaudeController;use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostSaudeController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\AvaliacoesController;
 
 /*
@@ -19,7 +20,6 @@ use App\Http\Controllers\AvaliacoesController;
 |
 */
 
-
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/index1', [PageController::class, 'index1'])->name('index1');
 Route::get('/area-clinica', [PageController::class, 'areaClinica'])->name('areaClinica');
@@ -31,10 +31,6 @@ Route::get('/equipa', [PageController::class, 'equipa'])->name('equipa');
 Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes'])->name('termosCondicoes');
 Route::get('/politicaprivacidade', [PageController::class, 'politicaprivacidade'])->name('politicaprivacidade');
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
-
-
-
-
 
 /* avaliações
 Route::get('/_admin/avaliacoes', [AvaliacoesController::class, 'index'])->name('admin.avaliacoes.index');
@@ -62,8 +58,6 @@ Route::get('/_admin/post-saude/show', [PostSaudeController::class, 'show'])->nam
 Route::get('/_admin/post-saude/edit', [PostSaudeController::class, 'edit'])->name('_admin.post-saude.edit');
 Route::post('/_admin/post-saude', [PostSaudeController::class, 'store'])->name('_admin.post-saude.store');
 Route::post('/_admin/post-saude', [PostSaudeController::class, 'update'])->name('_admin.post-saude.update');*/
-
-
 
 
     Route::resource('especialidades', EspecialidadeController::class);
