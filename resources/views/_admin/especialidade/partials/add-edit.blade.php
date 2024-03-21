@@ -4,8 +4,8 @@
 </div>
 
 <div class="form-group">
-    <label for="inputDescription">Curta_Descrição</label>
-    <textarea class="form-control" name="curta_desc" id="inputDescription">{{ old('curta_desc', $especialidade->curta_desc) }}</textarea>
+    <label for="inputDescription">Curta Descriçao</label>
+    <textarea class="form-control" name="curta_desc" id="inputDescription">{{old('curta_desc', $especialidade->curta_desc)}}</textarea>
 </div>
 
 <div class="form-group">

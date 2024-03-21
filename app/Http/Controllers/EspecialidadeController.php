@@ -73,23 +73,27 @@ class EspecialidadeController extends Controller
      * Update the specified resource in storage.
      */
 
-    public function update(EspecialidadeRequest $request, Especialidade $especialidade)
-    {
-        $fields = $request->validated();
-        $especialidade->fill($fields);
-        if ($request->hasFile('icon')) {
-            if (!empty($especialidade->icon)) {
-                Storage::disk('public')->delete('especialidade_imagens/' .
-                    $especialidade->icon);
-            }
-            $imagem_path =
-                $request->file('icon')->store('public/especialidade_imagens');
-            $especialidade->icon = basename($imagem_path);
-        }
-        $especialidade->save();
-        return redirect()->route('especialidades.index')->with('success', 'Especialidade atualizada com sucesso');
-    }
+     public function update(EspecialidadeRequest $request, Especialidade $especialidade)
+     {
+         $fields = $request->validated();
+         $especialidade->fill($fields);
 
+         // Verificar se uma nova imagem foi enviada
+         if ($request->hasFile('icon')) {
+             // Excluir a imagem existente, se houver
+             if (!empty($especialidade->icon)) {
+                 Storage::disk('public')->delete('especialidade_imagens/' . $especialidade->icon);
+             }
+
+             // Salvar a nova imagem
+             $imagem_path = $request->file('icon')->store('public/especialidade_imagens');
+             $especialidade->icon = basename($imagem_path);
+         }
+
+         $especialidade->save();
+
+         return redirect()->route('especialidades.index')->with('success', 'Especialidade atualizada com sucesso');
+     }
 
     /**
      * Remove the specified resource from storage.
