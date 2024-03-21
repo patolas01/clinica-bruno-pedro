@@ -10,7 +10,7 @@
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{route('detalhe-esp.update', $tipopost)}}" class="form-group">
+			<form method="POST" action="{{route('detalhe-esp.update', $detalhe_esp)}}" class="form-group">
                 @csrf
                 @method('PUT')
 				@include('_admin.detalhe-esp.partials.add-edit')

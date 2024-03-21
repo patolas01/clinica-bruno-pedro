@@ -11,21 +11,21 @@ use App\Models\DetalheEsp;
 class DetalheEspController extends Controller
 {
     public function index()
-    {
-        $detalhesps = DetalheEsp::all();
-        return view('detalhe-esp.index', compact('$detalhesps'));
-    }
+{
+    $detalhesps = DetalheEsp::all();
+    return view('_admin.detalhe-esp.index', compact('detalhesps'));
+}
 
     /**
      * Show the form for creating a new resource.
      */
 
-    public function create()
-    {
-        $detalhe_esp = new DetalheEsp;
-        $especialidades = Especialidade::all();
-        return view('_admin.detalhe-esp.create', compact("detalhe_esp","especialidades"));
-    }
+     public function create()
+     {
+         $detalhe_esp = new DetalheEsp;
+         $especialidades = Especialidade::all();
+         return view('_admin.detalhe-esp.create', compact("detalhe_esp", "especialidades"));
+     }
 
     public function store(DetalheEspRequest $request)
     {
