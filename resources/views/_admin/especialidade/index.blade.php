@@ -30,14 +30,14 @@
                             <tbody>
                                 @foreach($especialidades as $especialidade)
                                     <tr>
-                                        <td> <img height='100' src="{{asset('storage/especialidade_imagens/'. $especialidade->icon )}}" alt="Imagem do Post"></td>
+                                        <td> <img height='100' src="{{ asset('storage/especialidade_imagens/' . $especialidade->icon) }}" alt="Imagem do Post"></td>
                                         <td>{{$especialidade->nome}}</td>
                                         <td>{{$especialidade->curta_desc}}</td>
-                                          <td></td>
+                                      
                                         <td nowrap>
-                                            <a class="btn btn-xs btn-primary btn-p" href="{{route('admin.especialidade.show',$especialidade)}}"><i class="fas fa-eye fa-xs"></i></a>
-                                            <a class="btn btn-xs btn-warning btn-p" href="{{route('admin.especialidade.edit',$especialidade)}}"><i class="fas fa-pen fa-xs"></i></a>
-                                            <form method="POST" action="{{route('admin.especialidade.destroy',$especialidade)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar esta especialidade?');">
+                                            <a class="btn btn-xs btn-primary btn-p" href="{{route('especialidades.show',$especialidade)}}"><i class="fas fa-eye fa-xs"></i></a>
+                                            <a class="btn btn-xs btn-warning btn-p" href="{{route('especialidades.edit',$especialidade)}}"><i class="fas fa-pen fa-xs"></i></a>
+                                            <form method="POST" action="{{route('especialidades.destroy',$especialidade)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar esta especialidade?');">
                                                 @csrf
                                                 @method("DELETE")
                                                 <button type="submit" class="btn btn-xs btn-danger btn-p"> <i class="fas fa-trash fa-xs"> </i></button>

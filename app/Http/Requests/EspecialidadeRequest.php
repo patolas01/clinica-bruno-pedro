@@ -25,7 +25,7 @@ class EspecialidadeRequest extends FormRequest
         return [
         "nome" => 'required|min:3|max:80|unique:especialidades,nome,' . $currentId . '|regex:/^[A-ZÀ-úa-z\s]+$/',
         "curta_desc" =>'required|min:15',
-        'icon' =>$this->especialidade ? 'nullable':'required'.'|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+        'icon' => ($this->especialidade ? 'required|' : '') . 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ];
     }
 

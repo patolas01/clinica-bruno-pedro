@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nome', 70);
-            $table->text('curt_desc');
+            $table->text('curta_desc');
             $table->string('icon');
             $table->softDeletes();
         });
