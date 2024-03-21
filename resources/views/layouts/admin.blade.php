@@ -122,36 +122,35 @@
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse"
-                    data-target="#collapseDetalhesEspecialidade" aria-expanded="true"
-                    aria-controls="collapseDetalhesEspecialidade">
-                    <i class="fas fa-asterisk"></i>
-                    <span>Detalhes Especialidade</span>
-                </a>
-                <div id="collapseDetalhesEspecialidade" class="collapse" aria-labelledby="headingDetalhes Especialidade"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="">Listagem</a>
-                        <a class="collapse-item" href="">Novo Detalhes Esp.</a>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse"
+                        data-target="#collapseDetalhesEspecialidade" aria-expanded="true" aria-controls="collapseDetalhesEspecialidade">
+                        <i class="fas fa-asterisk"></i>
+                        <span>Detalhes Especialidade</span>
+                    </a>
+                    <div id="collapseDetalhesEspecialidade" class="collapse" aria-labelledby="headingDetalhes Especialidade"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="">Listagem</a>
+                            <a class="collapse-item" href="">Novo Detalhes Esp.</a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('formularios.index') }}" data-toggle="collapse"
-                    data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
-                    <i class="fas fa-fw fa-list-ul"></i>
-                    <span>Formulário</span>
-                </a>
-                <div id="collapseFormulário" class="collapse" aria-labelledby="headingFormulário"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('formularios.index') }}">Listagem</a>
-                        <a class="collapse-item" href="{{ route('formularios.create') }}">Novo Formulário</a>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="{{ route('formularios.index') }}" data-toggle="collapse"
+                        data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
+                        <i class="fas fa-fw fa-list-ul"></i>
+                        <span>Formulário</span>
+                    </a>
+                    <div id="collapseFormulário" class="collapse" aria-labelledby="headingFormulário"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="{{ route('formularios.index') }}">Listagem</a>
+                            <a class="collapse-item" href="{{ route('formularios.create') }}">Novo Formulário</a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('posts-saude.index') }}" data-toggle="collapse"
@@ -168,20 +167,37 @@
                 </div>
             </li>
 
-            {{-- <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStaff"
                         aria-expanded="true" aria-controls="collapseStaff">
                         <i class="fas fa-hard-hat"></i>
                         <span>Staff</span>
                     </a>
-                    <div id="collapseStaff" class="collapse" aria-labelledby="headingStaff"
+                    <div id="collapseGaleria" class="collapse" aria-labelledby="headingGaleria"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Staff</a>
+                            <a class="collapse-item" href="">Listagem de Fotos </a>
+                            <a class="collapse-item" href="">Adicionar Foto</a>
                         </div>
                     </div>
-                </li> --}}
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('formularios.index') }}">
+                        <i class="fas fa-fw fa-tachometer-alt"></i> <span>Formulário</span></a>
+                    {{-- <a href="{{ route('formularios.index') }}" data-toggle="collapse"
+                        data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
+                        <i class="fas fa-fw fa-list-ul"></i>
+                        <span>Formulário</span>
+                    </a>
+                    <div id="collapseFormulário" class="collapse" aria-labelledby="headingFormulário"
+                        data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="{{ route('formularios.index') }}">Listagem</a>
+                            <a class="collapse-item" href="{{ route('formularios.create') }}">Novo Formulário</a>
+                        </div>
+                    </div> --}}
+                </li>
 
 
             <!-- Divider -->
