@@ -1,4 +1,4 @@
-@extends('layout.admin')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -6,18 +6,18 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Editar Tipo de Post
+			Editar Detalhe da especialidade
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{route('admin.tipopost.update', $tipopost)}}" class="form-group">
+			<form method="POST" action="{{route('detalhe-esp.update', $tipopost)}}" class="form-group">
                 @csrf
                 @method('PUT')
-				@include('_admin.tipopost.partials.add-edit')
+				@include('_admin.detalhe-esp.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Guardar</button>
 
-					<a href="{{route('admin.tipopost.index')}}" class="btn btn-default">Cancelar</a>
+					<a href="{{route('detalhe-esp.index')}}" class="btn btn-default">Cancelar</a>
 
 				</div>
 
