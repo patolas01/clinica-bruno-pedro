@@ -137,7 +137,7 @@
                     </div>
                 </li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link collapsed" href="{{ route('formularios.index') }}" data-toggle="collapse"
                         data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
                         <i class="fas fa-fw fa-list-ul"></i>
@@ -150,7 +150,7 @@
                             <a class="collapse-item" href="{{ route('formularios.create') }}">Novo Formulário</a>
                         </div>
                     </div>
-                </li>
+                </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('posts-saude.index') }}" data-toggle="collapse"
@@ -167,11 +167,11 @@
                 </div>
             </li>
 
-                {{-- <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStaff"
-                        aria-expanded="true" aria-controls="collapseStaff">
-                        <i class="fas fa-hard-hat"></i>
-                        <span>Staff</span>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGaleria"
+                        aria-expanded="true" aria-controls="collapseGaleria">
+                        <i class="fas fa-image"></i>
+                        <span>Galeria</span>
                     </a>
                     <div id="collapseGaleria" class="collapse" aria-labelledby="headingGaleria"
                         data-parent="#accordionSidebar">
