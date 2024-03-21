@@ -12,5 +12,6 @@ class PostSaude extends Model
     protected $fillable = [
         'nome',
         'descricao',
+        'imagem',
     ];
 }

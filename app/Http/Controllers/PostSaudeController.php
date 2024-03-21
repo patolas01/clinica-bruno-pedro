@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\PostSaude;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
 use App\Http\Requests\PostSaudeRequest;
 
 class PostSaudeController extends Controller
@@ -24,13 +25,25 @@ class PostSaudeController extends Controller
     public function store(PostSaudeRequest $request)
     {
         $fields = $request->validated();
-        $postSaude = new PostSaude();
-        $postSaude->fill($fields);
-        // Adicione aqui o código para lidar com o upload do arquivo, se necessário
 
+        // Verifique se uma imagem foi enviada
+        if ($request->hasFile('imagem')) {
+            // Obtenha o arquivo da solicitação
+            $imagem = $request->file('imagem');
+            // Salve a imagem no armazenamento
+            $caminhoImagem = $imagem->store('public/post_imagens');
+            // Salve apenas o nome do arquivo no banco de dados
+            $fields['imagem'] = basename($caminhoImagem);
+        }
+
+        // Crie uma nova instância do modelo PostSaude com os dados preenchidos
+        $postSaude = new PostSaude($fields);
+
+        // Salve o post de saúde no banco de dados
         $postSaude->save();
-        return redirect()->route('posts-saude.index')
-            ->with('success', 'Publicação criado com sucesso');
+
+        // Redirecione de volta para a página de índice com uma mensagem de sucesso
+        return redirect()->route('posts-saude.index')->with('success', 'Publicação criada com sucesso');
     }
 
     public function show(PostSaude $postSaude)
