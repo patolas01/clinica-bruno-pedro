@@ -36,7 +36,7 @@ class EspecialidadeController extends Controller
     public function store(EspecialidadeRequest $request)
     {
         $fields = $request->validated();
-        \Log::info('Dados validados:', $fields);
+
 
 
         $especialidade = new especialidade();
@@ -44,11 +44,10 @@ class EspecialidadeController extends Controller
         if ($request->hasFile('icon')) {
             $imagem_path =
                 $request->file('icon')->store('public/especialidade_imagens');
-            $especialidade->imagem = basename($imagem_path);
+            $especialidade->icon = basename($imagem_path);
         }
         $especialidade->save();
-        \Log::info('Especialidade criada com sucesso:', $especialidade);
-        return redirect()->route('especialidade.index')
+        return redirect()->route('especialidades.index')
             ->with('success', 'Especialidade criada com sucesso');
     }
 
@@ -79,16 +78,16 @@ class EspecialidadeController extends Controller
         $fields = $request->validated();
         $especialidade->fill($fields);
         if ($request->hasFile('icon')) {
-            if (!empty($especialidade->imagem)) {
+            if (!empty($especialidade->icon)) {
                 Storage::disk('public')->delete('especialidade_imagens/' .
-                    $especialidade->imagem);
+                    $especialidade->icon);
             }
             $imagem_path =
                 $request->file('icon')->store('public/especialidade_imagens');
-            $especialidade->imagem = basename($imagem_path);
+            $especialidade->icon = basename($imagem_path);
         }
         $especialidade->save();
-        return redirect()->route('especialidade.index')->with('success', 'Especialidade atualizada com sucesso');
+        return redirect()->route('especialidades.index')->with('success', 'Especialidade atualizada com sucesso');
     }
 
 
@@ -98,9 +97,9 @@ class EspecialidadeController extends Controller
 
     public function destroy(Especialidade $especialidade)
     {
-        Storage::disk('public')->delete('especialidade_imagens/' . $especialidade->imagem);
+        Storage::disk('public')->delete('especialidade_imagens/' . $especialidade->icon);
         $especialidade->delete();
-        return redirect()->route('especialidade.index')->with(
+        return redirect()->route('especialidades.index')->with(
             'success',
             'Especialidade eliminada com sucesso'
         );

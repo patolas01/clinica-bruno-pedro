@@ -10,7 +10,7 @@ class Especialidade extends Model
 {
     use HasFactory, SoftDeletes;
     protected $table='especialidades';
-    protected $fillable=['nome','curt_desc'];
+    protected $fillable=['nome','curta_desc'];
 
     public function detalhesesp(){
         return $this->hasMany(DetalheEsp::class,'especialidade_id','id');
