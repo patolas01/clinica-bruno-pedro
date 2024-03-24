@@ -13,7 +13,7 @@
       </a>
     </div>
     <div class="card-body">
-      @if (count($detalhesps))
+      @if ($detalhes_esps !== null && count($detalhes_esps))
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
@@ -24,7 +24,7 @@
             </tr>
           </thead>
           <tbody>
-            @foreach($detalhesps as  $detalhe_esp)
+            @foreach($detalhes_esps as  $detalhe_esp)
             <tr>
                 <td> <img height='100' src="{{ asset('storage/detalheesp_imagens/' . $detalhe_esp->imagem) }}" alt="Imagem do Post"></td>
                 <td>{{ $detalhe_esp->descriçao}}</td>

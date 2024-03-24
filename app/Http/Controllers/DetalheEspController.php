@@ -12,8 +12,8 @@ class DetalheEspController extends Controller
 {
     public function index()
 {
-    $detalhesps = DetalheEsp::all();
-    return view('_admin.detalhe-esp.index', compact('detalhesps'));
+    $detalhes_esps = DetalheEsp::all();
+    return view('_admin.detalhe-esp.index', compact('detalhes_esps'));
 }
 
     /**
