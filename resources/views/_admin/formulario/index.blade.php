@@ -82,6 +82,6 @@
                     "orderable": false
                 }
             ]
-        });
+        }); 
     </script>
 @endsection

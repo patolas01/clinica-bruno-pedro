@@ -55,7 +55,7 @@
         <div class="form-row">
             <div class="form-column">
                 <label for="nome">Nome</label>
-                <input type="text" id="name" name="name" placeholder="Nome" required>
+                <input type="text" id="name" name="nome" placeholder="Nome" required>
 
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Email" required>
@@ -90,4 +90,19 @@
 @section('moreScripts')
         <script src="{{ asset('js/form.js') }}"></script>
         <script src="{{ asset('js/upbuton.js') }}"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let inputNome = document.getElementById('name');
+                inputNome.addEventListener('input', function(event) {
+                    // Remove qualquer número que seja inserido no campo "Nome"
+                    this.value = this.value.replace(/[0-9]/g, '');
+                });
+                let inputContacto = document.getElementById('contacto');
+                inputContacto.addEventListener('input', function(event) {
+                    // Remove qualquer caractere que não seja número do campo "Contacto"
+                    this.value = this.value.replace(/\D/g, '');
+    });
+            });
+            </script>
     @endsection
