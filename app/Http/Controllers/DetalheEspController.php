@@ -88,16 +88,18 @@ class DetalheEspController extends Controller
 
 
     public function destroy(DetalheEsp $detalhe_esp)
-    {
-        if ( $detalhe_esp->especialidades()->exists()) {
-             return redirect()->route('detalhe-esp.index')->withErrors(
-                 ['delete' => 'detalhe da especialidade que tentou eliminar tem projetos associados']
-             );
-         }
-         $detalhe_esp->delete();
-         return redirect()->route('detalhe-esp.index')->with(
-             'success',
-             'detalhe da especialidade eliminado com sucesso'
-         );
-     }
+{
+    if ($detalhe_esp->especialidade) {
+        return redirect()->route('detalhe-esp.index')->withErrors(
+            ['delete' => 'O detalhe da especialidade que você está tentando excluir está associado a outras entidades.']
+        );
+    }
+
+    $detalhe_esp->delete();
+
+    return redirect()->route('detalhe-esp.index')->with(
+        'success',
+        'Detalhe da especialidade excluído com sucesso'
+    );
+}
 }

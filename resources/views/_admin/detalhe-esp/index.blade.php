@@ -20,6 +20,7 @@
             <tr>
             <th>Imagem</th>
             <th>Descrição</th>
+            <th>Id</th>
             <th>Editar</th>
             </tr>
           </thead>
@@ -28,7 +29,7 @@
             <tr>
                 <td> <img height='100' src="{{ asset('storage/detalheesp_imagens/' . $detalhe_esp->imagem) }}" alt="Imagem do Post"></td>
                 <td>{{ $detalhe_esp->descriçao}}</td>
-
+                <td>{{ $detalhe_esp->especialidade->id }}</td>
               <td nowrap>
                     <a class="btn btn-xs btn-primary btn-p" href="{{route('detalhe-esp.show', $detalhe_esp)}}"><i class="fas fa-eye fa-xs"></i></a>
                     <a class="btn btn-xs btn-warning btn-p" href="{{route('detalhe-esp.edit', $detalhe_esp)}}"><i class="fas fa-pen fa-xs"></i></a>
