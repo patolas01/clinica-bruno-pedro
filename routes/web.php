@@ -65,4 +65,4 @@ Route::post('/_admin/post-saude', [PostSaudeController::class, 'update'])->name(
     Route::resource('formularios', FormularioController::class);
     Route::resource('posts-saude', PostSaudeController::class);
     Route::resource('avaliacoes', AvaliacoesController::class);
-    Route::resource('detalheesp', DetalheEspController::class);
+    Route::resource('detalhes-esp', DetalheEspController::class);

@@ -12,8 +12,8 @@ class DetalheEspController extends Controller
 {
     public function index()
 {
-    $detalhesesps = DetalheEsp::all();
-    return view('_admin.detalhe-esp.index', compact('detalhesesps'));
+    $detalhesEsp = DetalheEsp::all();
+    return view('_admin.detalhe-esp.index', compact('detalhesEsp'));
 }
 
     /**
@@ -22,9 +22,9 @@ class DetalheEspController extends Controller
 
      public function create()
      {
-         $detalheesp = new DetalheEsp;
+         $detalhes_esp = new DetalheEsp;
          $especialidades = Especialidade::all();
-         return view('_admin.detalhe-esp.create', compact("detalheesp", "especialidades"));
+         return view('_admin.detalhe-esp.create', compact("detalhes_esp", "especialidades"));
      }
 
     public function store(DetalheEspRequest $request)
@@ -33,53 +33,53 @@ class DetalheEspController extends Controller
 
 
 
-        $detalheesp = new DetalheEsp();
-        $detalheesp->fill($fields);
+        $detalhes_esp = new DetalheEsp();
+        $detalhes_esp->fill($fields);
         if ($request->hasFile('imagem')) {
             $imagem_path =
                 $request->file('imagem')->store('public/detalheesp_imagens');
-            $detalheesp->imagem = basename($imagem_path);
+            $detalhes_esp->imagem = basename($imagem_path);
         }
-        $detalheesp->save();
-        return redirect()->route('detalheesp.index')
+        $detalhes_esp->save();
+        return redirect()->route('detalhes-esp.index')
             ->with('success', 'Detalhe da especialidade criada com sucesso');
     }
 
 
 
-    public function show(DetalheEsp $detalheesp)
+    public function show(DetalheEsp $detalhes_esp)
     {
-        return view('_admin.detalhe-esp.show', compact('detalheesp'));
+        return view('_admin.detalhe-esp.show', compact('detalhes_esp'));
     }
 
 
-    public function edit(DetalheEsp $detalheesp)
+    public function edit(DetalheEsp $detalhes_esp)
     {
-        return view('_admin.detalhe-esp.edit', compact('detalheesp'));
+        return view('_admin.detalhe-esp.edit', compact('detalhes_esp'));
     }
 
 
 
-    public function update(DetalheEspRequest $request, DetalheEsp $detalheesp)
+    public function update(DetalheEspRequest $request, DetalheEsp $detalhes_esp)
     {
         $fields = $request->validated();
-        $detalheesp->fill($fields);
+        $detalhes_esp->fill($fields);
 
 
         if ($request->hasFile('imagem')) {
 
-            if (!empty($detalheesp->imagem)) {
-                Storage::disk('public')->delete('detalheesp_imagens/' . $detalheesp->imagem);
+            if (!empty($detalhes_esp->imagem)) {
+                Storage::disk('public')->delete('detalheesp_imagens/' . $detalhes_esp->imagem);
             }
 
 
             $imagem_path = $request->file('imagem')->store('public/detalheesp_imagens');
-            $detalheesp->imagem = basename($imagem_path);
+            $detalhes_esp->imagem = basename($imagem_path);
         }
 
-        $detalheesp->save();
+        $detalhes_esp->save();
 
-        return redirect()->route('detalheesp.index')->with('success', 'Detalhe da especialidade atualizada com sucesso');
+        return redirect()->route('detalhes-esp.index')->with('success', 'Detalhe da especialidade atualizada com sucesso');
     }
 
    /**
@@ -87,17 +87,17 @@ class DetalheEspController extends Controller
     */
 
 
-    public function destroy(DetalheEsp $detalheesp)
+    public function destroy(DetalheEsp $detalhes_esp)
 {
-    if ($detalheesp->especialidade) {
-        return redirect()->route('detalheesp.index')->withErrors(
+    if ($detalhes_esp->especialidade) {
+        return redirect()->route('detalhes-esp.index')->withErrors(
             ['delete' => 'O detalhe da especialidade que você está tentando excluir está associado a outras entidades.']
         );
     }
 
-    $detalheesp->delete();
+    $detalhes_esp->delete();
 
-    return redirect()->route('detalheesp.index')->with(
+    return redirect()->route('detalhes-esp.index')->with(
         'success',
         'Detalhe da especialidade excluído com sucesso'
     );

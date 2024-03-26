@@ -11,7 +11,7 @@
                 <a class="btn btn-primary" href="{{ route('especialidades.create') }}">
                     <i class="fas fa-plus"></i> Nova Especialidade
                 </a>
-                <a class="btn btn-primary" href="{{ route('detalheesp.create') }}">
+                <a class="btn btn-primary" href="{{ route('detalhes-esp.create') }}">
                     <i class="fas fa-plus"></i> Novo detalhe especialidade
                 </a>
             </div>
