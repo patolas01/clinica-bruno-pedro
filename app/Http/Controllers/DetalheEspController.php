@@ -12,8 +12,8 @@ class DetalheEspController extends Controller
 {
     public function index()
 {
-    $detalhes_esps = DetalheEsp::all();
-    return view('_admin.detalhe-esp.index', compact('detalhes_esps'));
+    $detalhesesps = DetalheEsp::all();
+    return view('_admin.detalhe-esp.index', compact('detalhesesps'));
 }
 
     /**
@@ -22,9 +22,9 @@ class DetalheEspController extends Controller
 
      public function create()
      {
-         $detalhe_esp = new DetalheEsp;
+         $detalheesp = new DetalheEsp;
          $especialidades = Especialidade::all();
-         return view('_admin.detalhe-esp.create', compact("detalhe_esp", "especialidades"));
+         return view('_admin.detalhe-esp.create', compact("detalheesp", "especialidades"));
      }
 
     public function store(DetalheEspRequest $request)
@@ -33,53 +33,53 @@ class DetalheEspController extends Controller
 
 
 
-        $detalhe_esp = new DetalheEsp();
-        $detalhe_esp->fill($fields);
+        $detalheesp = new DetalheEsp();
+        $detalheesp->fill($fields);
         if ($request->hasFile('imagem')) {
             $imagem_path =
                 $request->file('imagem')->store('public/detalheesp_imagens');
-            $detalhe_esp->imagem = basename($imagem_path);
+            $detalheesp->imagem = basename($imagem_path);
         }
-        $detalhe_esp->save();
-        return redirect()->route('detalhe-esp.index')
+        $detalheesp->save();
+        return redirect()->route('detalheesp.index')
             ->with('success', 'Detalhe da especialidade criada com sucesso');
     }
 
 
 
-    public function show(DetalheEsp $detalhe_esp)
+    public function show(DetalheEsp $detalheesp)
     {
-        return view('_admin.detalhe-esp.show', compact('detalhe_esp'));
+        return view('_admin.detalhe-esp.show', compact('detalheesp'));
     }
 
 
-    public function edit(DetalheEsp $detalhe_esp)
+    public function edit(DetalheEsp $detalheesp)
     {
-        return view('_admin.detalhe-esp.edit', compact('detalhe_esp'));
+        return view('_admin.detalhe-esp.edit', compact('detalheesp'));
     }
 
 
 
-    public function update(DetalheEspRequest $request, DetalheEsp $detalhe_esp)
+    public function update(DetalheEspRequest $request, DetalheEsp $detalheesp)
     {
         $fields = $request->validated();
-        $detalhe_esp->fill($fields);
+        $detalheesp->fill($fields);
 
 
         if ($request->hasFile('imagem')) {
 
-            if (!empty($detalhe_esp->imagem)) {
-                Storage::disk('public')->delete('detalheesp_imagens/' . $detalhe_esp->imagem);
+            if (!empty($detalheesp->imagem)) {
+                Storage::disk('public')->delete('detalheesp_imagens/' . $detalheesp->imagem);
             }
 
 
             $imagem_path = $request->file('imagem')->store('public/detalheesp_imagens');
-            $detalhe_esp->imagem = basename($imagem_path);
+            $detalheesp->imagem = basename($imagem_path);
         }
 
-        $detalhe_esp->save();
+        $detalheesp->save();
 
-        return redirect()->route('detalhe-esp.index')->with('success', 'Detalhe da especialidade atualizada com sucesso');
+        return redirect()->route('detalheesp.index')->with('success', 'Detalhe da especialidade atualizada com sucesso');
     }
 
    /**
@@ -87,17 +87,17 @@ class DetalheEspController extends Controller
     */
 
 
-    public function destroy(DetalheEsp $detalhe_esp)
+    public function destroy(DetalheEsp $detalheesp)
 {
-    if ($detalhe_esp->especialidade) {
-        return redirect()->route('detalhe-esp.index')->withErrors(
+    if ($detalheesp->especialidade) {
+        return redirect()->route('detalheesp.index')->withErrors(
             ['delete' => 'O detalhe da especialidade que você está tentando excluir está associado a outras entidades.']
         );
     }
 
-    $detalhe_esp->delete();
+    $detalheesp->delete();
 
-    return redirect()->route('detalhe-esp.index')->with(
+    return redirect()->route('detalheesp.index')->with(
         'success',
         'Detalhe da especialidade excluído com sucesso'
     );

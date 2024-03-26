@@ -8,12 +8,12 @@
 
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <a class="btn btn-primary" href="{{route('detalhe-esp.create')}}">
+      <a class="btn btn-primary" href="{{route('detalheesp.create')}}">
         <i class="fas fa-plus"></i> Novo Tipo de Post
       </a>
     </div>
     <div class="card-body">
-      @if ($detalhes_esps !== null && count($detalhes_esps))
+      @if ($detalhesesps !== null && count($detalhesesps))
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
@@ -25,15 +25,15 @@
             </tr>
           </thead>
           <tbody>
-            @foreach($detalhes_esps as  $detalhe_esp)
+            @foreach($detalhesesps as  $detalheesp)
             <tr>
-                <td> <img height='100' src="{{ asset('storage/detalheesp_imagens/' . $detalhe_esp->imagem) }}" alt="Imagem do Post"></td>
-                <td>{{ $detalhe_esp->descriçao}}</td>
-                <td>{{ $detalhe_esp->especialidade->id }}</td>
+                <td> <img height='100' src="{{ asset('storage/detalheesp_imagens/' . $detalheesp->imagem) }}" alt="Imagem do Post"></td>
+                <td>{{ $detalheesp->descriçao}}</td>
+                <td>{{ $detalheesp->especialidade->id }}</td>
               <td nowrap>
-                    <a class="btn btn-xs btn-primary btn-p" href="{{route('detalhe-esp.show', $detalhe_esp)}}"><i class="fas fa-eye fa-xs"></i></a>
-                    <a class="btn btn-xs btn-warning btn-p" href="{{route('detalhe-esp.edit', $detalhe_esp)}}"><i class="fas fa-pen fa-xs"></i></a>
-                    <form method="POST" action="{{route('detalhe-esp.destroy', $detalhe_esp)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar este detalhe da especilidade?');">
+                    <a class="btn btn-xs btn-primary btn-p" href="{{route('detalheesp.show', $detalheesp)}}"><i class="fas fa-eye fa-xs"></i></a>
+                    <a class="btn btn-xs btn-warning btn-p" href="{{route('detalheesp.edit', $detalheesp)}}"><i class="fas fa-pen fa-xs"></i></a>
+                    <form method="POST" action="{{route('detalheesp.destroy', $detalheesp)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar este detalhe da especilidade?');">
                         @csrf
                         @method("DELETE")
                         <button type="submit" class="btn btn-xs btn-danger btn-p">
