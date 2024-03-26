@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Formulario;
-use App\Models\PostSaude;use App\Models\Avaliacoes;
+use App\Models\PostSaude;
+use App\Models\Avaliacoes;
 
 
 class PageController extends Controller
 {
     public function index()
     {
-        return view('index'); // Update with the actual path to your Blade view.
+        // $especialidade = Especialidade::all();
+        $avaliacoes = Avaliacoes::all();
+        return view('index', compact('avaliacoes'));
     }
-    
+
     public function areaClinica()
     {
         return view('area-clinica');

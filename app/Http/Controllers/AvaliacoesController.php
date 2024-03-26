@@ -12,8 +12,8 @@ class AvaliacoesController extends Controller
 
     public function index()
     {
-        $avaliacoes = Avaliacoes::all();
-        return view('_admin.avaliacoes.index', compact('avaliacoes'));
+        $avaliaco = Avaliacoes::all();
+        return view('_admin.avaliacoes.index', compact('avaliaco'));
     }
 
     public function create()
@@ -55,6 +55,6 @@ class AvaliacoesController extends Controller
         $avaliaco->delete();
         return redirect()->route('avaliacoes.index')->with('success', 'Avaliação eliminada com sucesso.');
     }
-    
+
 }
 

@@ -96,7 +96,7 @@
         </div>
     </section>
 
-    <div class="container">
+    {{-- <div class="container">
         <h2>Opiniões dos nossos Clientes</h2>
         <p class="description">Onde cada Doente é um Amigo!</p>
 
@@ -161,6 +161,39 @@
                     <p>29 Jul. 2019</p>
                 </article>
             </div>
+        </div>
+    </div> --}}
+
+    <div class="container">
+        <h2>Opiniões dos nossos Clientes</h2>
+        <p class="description">Onde cada Doente é um Amigo!</p>
+
+        <div class="reviewSection">
+
+            @if (!is_null($avaliacoes) && count($avaliacoes) > 0)
+                @foreach ($avaliacoes as $avaliaco)
+                <div class="reviewItem">
+                    <div class="top">
+                        <div class="clientImage">
+                            <img src="{{ asset('img/favicon preto.png') }}" alt="">
+                            <span>{{ $avaliaco->nome }}</span>
+                        </div>
+                    </div>
+                    <ul class="stars">
+                        @for($i = 0; $i < $avaliaco->rating; $i++)
+                            <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                        @endfor
+                    </ul>
+                    <article>
+                        <p class="review">{{ $avaliaco->comentario }}</p>
+                        {{-- <p>{{ $avaliaco->data }}</p> --}}
+                    </article>
+                </div>
+
+                @endforeach
+            @else
+                <p>Nenhuma avaliação disponível no momento.</p>
+            @endif
         </div>
     </div>
 
