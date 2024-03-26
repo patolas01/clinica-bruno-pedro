@@ -1,4 +1,9 @@
 <div class="form-group">
+    <label for="inputName">Nome</label>
+    <input type="text" class="form-control" name="nome" id="inputName" value="{{old('nome',$avaliaco->nome)}}" />
+</div>
+
+<div class="form-group">
     <label for="inputName">Classificação</label>
     <select class="form-control" name="classificacao" id="inputName">
         <option value="1" {{ old('classificacao', $avaliaco->classificacao) == 1 ? 'selected' : '' }}>⭐</option>

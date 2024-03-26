@@ -12,8 +12,8 @@ class AvaliacoesController extends Controller
 
     public function index()
     {
-        $avaliaco = Avaliacoes::all();
-        return view('_admin.avaliacoes.index', compact('avaliaco'));
+        $avaliacoes = Avaliacoes::all();
+        return view('_admin.avaliacoes.index', compact('avaliacoes'));
     }
 
     public function create()

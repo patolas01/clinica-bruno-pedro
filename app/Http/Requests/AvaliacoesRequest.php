@@ -21,6 +21,7 @@ class AvaliacoesRequest extends FormRequest
 {
     $currentId = $this->avaliacoes ? $this->avaliacoes->id : null;
     return [
+        'nome'=> 'required|string|max:50',
         'classificacao' => 'required|in:0,1,2,3,4,5',
         'texto' => 'required|string|max:150',
     ];
@@ -31,6 +32,7 @@ public function messages()
         return [
             'classificacao' => 'Avalie de 1 a 5',
             'texto' => 'O comentário não pode ter mais de 150 caracteres.',
+            'nome' => 'O nome não pode ter mais de 50 caracteres.',
         ];
     }
 

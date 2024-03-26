@@ -12,6 +12,9 @@
 
                     <div class="col-md-9">
                         <div class="mb-3">
+                            <strong>Nome:</strong> {{ stars($avaliaco->nome) }}
+                        </div>
+                        <div class="mb-3">
                             <strong>Classificação:</strong> {{ stars($avaliaco->classificacao) }}
                         </div>
                         <div class="mb-3">
@@ -34,5 +37,5 @@
             return $stars;
         }
     @endphp
-    
+
 @endsection

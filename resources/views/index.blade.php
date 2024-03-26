@@ -175,17 +175,18 @@
                 <div class="reviewItem">
                     <div class="top">
                         <div class="clientImage">
-                            <img src="{{ asset('img/favicon preto.png') }}" alt="">
-                            <span>{{ $avaliaco->nome }}</span>
+                            <img src="{{ asset('img/favicon preto.png') }}" alt="estrela">
+                           <span>{{ $avaliaco->nome }}</span>
+
                         </div>
                     </div>
                     <ul class="stars">
-                        @for($i = 0; $i < $avaliaco->rating; $i++)
+                        @for($i = 0; $i < $avaliaco->classificacao; $i++)
                             <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
                         @endfor
                     </ul>
                     <article>
-                        <p class="review">{{ $avaliaco->comentario }}</p>
+                        <p class="review">{{ $avaliaco->texto }}</p>
                         {{-- <p>{{ $avaliaco->data }}</p> --}}
                     </article>
                 </div>

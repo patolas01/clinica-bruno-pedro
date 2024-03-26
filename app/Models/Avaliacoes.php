@@ -10,7 +10,9 @@ class Avaliacoes extends Model
 {
     protected $table = 'avaliacoes';
     protected $fillable = [
+        'nome',
         'classificacao',
         'texto',
+
     ];
 }

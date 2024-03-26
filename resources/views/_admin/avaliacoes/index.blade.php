@@ -13,11 +13,12 @@
         </a>
     </div>
     <div class="card-body">
-      @if (count($avaliacoes))
+        @if ($avaliacoes !== null && count($avaliacoes))
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
+            <th>Nome</th>
               <th>Classificação</th>
               <th>Comentário</th>
               <th>Editar</th>
@@ -26,6 +27,7 @@
           <tbody>
             @foreach($avaliacoes as $avaliaco)
             <tr>
+                <td>{{$avaliaco->nome}}</td>
               <td>
                 @for ($i = 0; $i < $avaliaco->classificacao; $i++)
                     ⭐
@@ -64,6 +66,7 @@
       [0, 'asc']
     ],
     "columns": [
+      null,
       null,
       null,
       {
