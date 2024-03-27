@@ -28,16 +28,25 @@
     <section class="servicos">
         <div class="container flex-center">
             <div class="grid-servicos">
-                <div class="servicos-card">
-                    <img src="{{ asset('img/Ortodontia.svg') }}" alt="icon de corpo laranja">
-                    <div></div>
-                    <h5>Ortodontia</h5>
-                    <p>Programas de condicionamento físico específicos para diferentes níveis de aptidão.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
+                @if (!is_null($especialidades) && count($especialidades) > 0)
+                    @foreach ($especialidades as $especialidades)
+                        <div class="servicos-card">
+                            <img src="{{ asset('storage/especialidade_imagens/' . $especialidades->icon) }}" alt="icon de corpo laranja">
+                            <div></div>
+                            <h5>{{ $especialidades->nome }}</h5>
+                            <p>{{ $especialidades->curta_desc }}</p>
+                            <div class="button-wrapper">
+                                <a href="" class="button">Saber Mais</a>
+                            </div>
+                        </div>
+                        @endforeach
+                        @else
+                            <p>Nenhuma especialidade disponível no momento.</p>
+                        @endif
+            </div>
+        </div>
+    </section>
+    {{--
                 <div class="servicos-card">
                     <img src="{{ asset('img/HigieneOralicon.svg') }}" alt="icon de corpo laranja">
                     <h5>Higiene Oral</h5>
@@ -129,48 +138,12 @@
                         <a href="" class="button">Saber Mais</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+
+                --}}
+
 
 @endsection
-{{--
-<div class="categorias">
 
-    <div class="rowcategoria">
-
-    <div class="cardcategoria">
-        <div class="imgcat">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        </div>
-        <div class="categoria-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    <div class="cardcategoria">
-        <div class="imgcat">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        </div>
-        <div class="categoria-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    <div class="cardcategoria">
-        <div class="imgcat">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        </div>
-        <div class="categoria-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    </div>
---}}
 
 
 @section('moreScripts')

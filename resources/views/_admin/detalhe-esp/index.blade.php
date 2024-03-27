@@ -9,7 +9,7 @@
   <div class="card shadow mb-4">
     <div class="card-header py-3">
       <a class="btn btn-primary" href="{{route('detalhes-esp.create')}}">
-        <i class="fas fa-plus"></i> Novo Tipo de Post
+        <i class="fas fa-plus"></i> Novo Detalhe da Especialidade
       </a>
     </div>
     <div class="card-body">

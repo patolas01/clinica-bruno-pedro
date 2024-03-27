@@ -25,7 +25,7 @@ class DetalheEspRequest extends FormRequest
         return [
             "descriçao" =>'required|min:15',
             'imagem' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'especialidade_id' => 'required|exists:especialidades,id',
+            'especialidade_id' => 'required',
         ];
     }
 

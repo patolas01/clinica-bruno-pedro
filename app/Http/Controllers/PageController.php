@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Formulario;
 use App\Models\PostSaude;
 use App\Models\Avaliacoes;
+use App\Models\Especialidade;
 
 
 class PageController extends Controller
@@ -19,7 +20,8 @@ class PageController extends Controller
 
     public function areaClinica()
     {
-        return view('area-clinica');
+        $especialidades = Especialidade::all();
+        return view('area-clinica', compact('especialidades'));
     }
 
     public function contactos()
