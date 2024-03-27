@@ -1,0 +1,72 @@
+/* Top Graphs Section */
+.top-graphs {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+
+/* Individual Graph Bar */
+.graph.bar {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 1%;
+}
+
+/* Graph Title */
+.graph-title {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+/* Graph Info Section */
+.graph-info {
+    background-color: antiquewhite;
+
+
+}
+
+/* Individual Graph Info Item */
+.graph-info-item {
+    margin-bottom: 0.8rem;
+}
+
+/* Graph Info Title */
+.graph-info-title {
+    padding-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* Graph Info Bar */
+.graph-info-bar {
+    transition: width 0.5s ease-in-out;
+    width: 0;
+    contain: content;
+    border-radius: 0 0.5rem 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    background-color: blue;
+}
+
+/* Graph Info Value */
+.graph-info-value {
+    color: white;
+    line-height: 100%;
+    margin: 0;
+    contain: content;
+}
+
+/* Middle Graphs Section*/
+/*.mid-graphs {
+    Styles for the middle graphs section
+}*/
+
+/* Timeline Graph*/
+/*.graph.timeline {
+    Styles for the timeline graph
+}*/

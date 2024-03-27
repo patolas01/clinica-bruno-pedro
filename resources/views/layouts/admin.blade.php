@@ -21,6 +21,8 @@
 
     <!-- Custom styles for this page -->
     <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
+    @yield('moreCSS')
 </head>
 
 <body id="page-top">
@@ -32,7 +34,7 @@
         <ul class="navbar-nav dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('index') }}">
                 <img src="{{ asset('img/Logo BrunoPedro.png') }}" alt="" class="img-fluid">
             </a>
 
@@ -41,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i> <span>Dashboard</span></a>
             </li>
 
