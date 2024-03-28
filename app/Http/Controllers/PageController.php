@@ -7,15 +7,30 @@ use App\Models\Formulario;
 use App\Models\PostSaude;
 use App\Models\Avaliacoes;
 use App\Models\Especialidade;
+use App\Models\Detalhe;
 
 
 class PageController extends Controller
 {
     public function index()
     {
-        $avaliacoes = Avaliacoes::all();
+        // Retrieve all especialidades
         $especialidades = Especialidade::all();
-        return view('index', compact('avaliacoes', 'especialidades'));
+
+        // Define an array to store the detalhes for each especialidade
+        $detalhesByEspecialidade = [];
+
+        // Loop through each especialidade and retrieve its associated detalhes
+        foreach ($especialidades as $especialidade) {
+            // Retrieve the associated detalhes for the current especialidade
+            $detalhe = Detalhe::where('especialidade_id', $especialidade->id)->first();
+
+            // Add the retrieved detalhe to the array
+            $detalhesByEspecialidade[$especialidade->id] = $detalhe;
+        }
+
+        $avaliacoes = Avaliacoes::all();
+        return view('index', compact('avaliacoes', 'especialidades', 'detalhesByEspecialidade'));
     }
 
     public function areaClinica()

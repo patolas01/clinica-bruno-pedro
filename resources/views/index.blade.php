@@ -25,8 +25,10 @@
         <ul class="carousel">
             @foreach ($especialidades as $especialidade)
                 <li class="card">
-                    <div class="img"><img src="{{ asset('storage/especialidade_imagens/' . $especialidade->icon) }}"
-                            alt="img" draggable="false">
+
+                    <div class="img">
+                        <img src="{{ asset('storage/detalheesp_imagens/' . $detalhesByEspecialidade[$especialidade->id]->imagem) }}"
+                        alt="{{ $especialidade->nome }}" draggable="false">
                     </div>
                     <h3>{{ $especialidade->nome }}</h3>
                 </li>
