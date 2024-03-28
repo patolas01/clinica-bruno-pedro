@@ -61,16 +61,20 @@ class PageController extends Controller
 
     public function dashboard()
     {
-        // Fetch data from the database
-        $data = Formulario::select('especialidade_id', Formulario::raw('count(*) as total'))
+        // Fetch data from the database for Formulários
+        $formularioData = Formulario::select('especialidade_id', Formulario::raw('count(*) as total'))
             ->groupBy('especialidade_id')
             ->pluck('total', 'especialidade_id');
 
-        // Get the names of especialidades
-        $especialidades = Especialidade::whereIn('id', $data->keys())->pluck('nome', 'id');
+        // Get the names of especialidades for Formulários
+        $especialidades = Especialidade::whereIn('id', $formularioData->keys())->pluck('nome', 'id');
 
+        // Fetch data from the database for Avaliações
+        $avaliacaoData = Avaliacoes::select('classificacao', Avaliacoes::raw('count(*) as total'))
+            ->groupBy('classificacao')
+            ->pluck('total', 'classificacao');
 
-        return view('_admin.dashboard', compact('data', 'especialidades'));
+        return view('_admin.dashboard', compact('formularioData', 'especialidades', 'avaliacaoData'));
     }
 
     public function Error()

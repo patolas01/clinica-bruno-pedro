@@ -33,21 +33,67 @@
                 <h3 class="graph-title">Formulários</h3>
                 {{-- bars section --}}
                 <div class="graph-info">
+                    @php
+                        $colors = ['#e9724d', '#d6d727', '	#92cad1', '#79ccb3', '	#868686'];
+                        $colorIndex = 0; // Initialize color index
+                    @endphp
                     {{-- iterate over the data --}}
-                    @foreach ($data as $especialidadeId => $total)
+                    @foreach ($formularioData as $especialidadeId => $total)
                         {{-- get the nome of especialidade --}}
                         @php
                             $especialidadeNome = $especialidades[$especialidadeId];
+                            // Calculate percentage
+                            $percentage = ($total / $formularioData->sum()) * 100;
                         @endphp
                         {{-- each bar --}}
                         <div class="graph-info-item">
                             {{-- title of the item --}}
                             <p class="graph-info-title">{{ $especialidadeNome }}</p>
                             {{-- horizontal bar with value --}}
-                            <div class="graph-info-bar" style="width: {{ $total }}%;">
+                            <div class="graph-info-bar"
+                                style="width: {{ $percentage }}%; background-color: {{ $colors[$colorIndex % count($colors)] }};">
                                 <p class="graph-info-value">{{ $total }}</p>
                             </div>
                         </div>
+                        {{-- increment color index --}}
+                        @php
+                            $colorIndex++;
+                        @endphp
+                    @endforeach
+                </div>
+            </div>
+
+
+            {{-- each graph --}}
+            <div class="graph bar">
+                {{-- main title --}}
+                <h3 class="graph-title">Avaliações</h3>
+                {{-- bars section --}}
+                <div class="graph-info">
+                    @php
+                        $colors = ['#e9724d', '#d6d727', '	#92cad1', '#79ccb3', '	#868686'];
+                        $colorIndex = 0; // Initialize color index
+                    @endphp
+                    {{-- iterate over the data --}}
+                    @foreach ($avaliacaoData as $classificacao => $total)
+                        {{-- each bar --}}
+                        <div class="graph-info-item">
+                            {{-- title of the item --}}
+                            <p class="graph-info-title">
+                                @for ($i = 0; $i < $classificacao; $i++)
+                                    ⭐
+                                @endfor
+                            </p>
+                            {{-- horizontal bar with value --}}
+                            <div class="graph-info-bar"
+                                style="width: {{ ($total / $avaliacaoData->sum()) * 100 }}%; background-color: {{ $colors[$colorIndex % count($colors)] }};">
+                                <p class="graph-info-value">{{ $total }}</p>
+                            </div>
+                        </div>
+                        {{-- increment color index --}}
+                        @php
+                            $colorIndex++;
+                        @endphp
                     @endforeach
                 </div>
             </div>
@@ -57,26 +103,26 @@
 
             <!--
 
-                           {{-- {{-- each graph --}}
-                            <div class="graph bar">
-                                {{-- main title --}}
-                                <h3 class="graph-title">Graph 1</h3>
-                                {{-- bars section --}}
-                                <div class="graph-info">
+                                                                           {{-- {{-- each graph --}}
+                                                                            <div class="graph bar">
+                                                                                {{-- main title --}}
+                                                                                <h3 class="graph-title">Graph 1</h3>
+                                                                                {{-- bars section --}}
+                                                                                <div class="graph-info">
 
-                                    {{-- each bar --}}
-                                    <div class="graph-info-item">
-                                        {{-- title of the item --}}
-                                        <p class="graph-info-title">Value 1</p>
-                                        {{-- horizontal bar with value --}}
-                                        <div class="graph-info-bar">
-                                            <p class="graph-info-value">12345</p>
-                                        </div>
-                                    </div>
+                                                                                    {{-- each bar --}}
+                                                                                    <div class="graph-info-item">
+                                                                                        {{-- title of the item --}}
+                                                                                        <p class="graph-info-title">Value 1</p>
+                                                                                        {{-- horizontal bar with value --}}
+                                                                                        <div class="graph-info-bar">
+                                                                                            <p class="graph-info-value">12345</p>
+                                                                                        </div>
+                                                                                    </div>
 
-                                </div>
-                            </div>
-                        !-->
+                                                                                </div>
+                                                                            </div>
+                                                                        !-->
 
         </div>
 
