@@ -193,7 +193,7 @@
 
                 @endforeach
             @else
-                <p>Nenhuma avaliação disponível no momento.</p>
+                <p class="erro-message">Nenhuma avaliação disponível no momento.</p>
             @endif
         </div>
     </div>

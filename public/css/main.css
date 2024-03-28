@@ -49,6 +49,15 @@ a {
 
 }
 
+.erro-message{
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #30383B;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 /* banner */
 
 .content {
@@ -451,6 +460,7 @@ h2 {
 
 .reviewSection {
     padding: 1rem;
+    padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
