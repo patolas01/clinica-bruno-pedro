@@ -30,7 +30,7 @@
                                     <tr>
                                         <td> <img height='100' src="{{ asset('storage/detalheesp_imagens/' . $detalhe->imagem) }}" alt="Imagem do Post"></td>
                                         <td>{{$detalhe->descriçao}}</td>
-                                        <td>{{ $detalhe->especialidades->id ?? 'N/A' }}</td>
+                                        <td>{{ $detalhe->especialidade->id }}</td>
 
                                         <td nowrap>
                                             <a class="btn btn-xs btn-primary btn-p" href="{{route('detalhes.show',$detalhe)}}"><i class="fas fa-eye fa-xs"></i></a>

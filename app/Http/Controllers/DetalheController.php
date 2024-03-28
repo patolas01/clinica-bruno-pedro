@@ -24,13 +24,12 @@ class DetalheController extends Controller
      * Show the form for creating a new resource.
      */
 
-    public function create()
-    {
-        $especialidades = Especialidade::all();
-        $detalhe = new Detalhe;
-        return view('_admin.detalhe.create', compact("detalhe",'especialidades'));
-    }
-
+     public function create()
+{
+    $especialidades = Especialidade::all();
+    $detalhe = new Detalhe;
+    return view('_admin.detalhe.create', compact('detalhe', 'especialidades'));
+}
     /**
      * Store a newly created resource in storage.
      */
@@ -67,8 +66,10 @@ class DetalheController extends Controller
      */
 
     public function edit(Detalhe $detalhe)
+
     {
-        return view('_admin.detalhe.edit', compact('detalhe'));
+        $especialidades = Especialidade::all();
+        return view('_admin.detalhe.edit', compact('detalhe','especialidades'));
     }
 
     /**
@@ -98,17 +99,17 @@ class DetalheController extends Controller
      * Remove the specified resource from storage.
      */
 
-    public function destroy(Detalhe $detalhe)
-    {
-       if ($detalhe->especialidades()->exists()) {
-            return redirect()->route('detalhes.index')->withErrors(
-                ['delete' => 'O detalhe que tentou eliminar tem projetos associados']
-            );
-        }
-        $detalhe->delete();
-        return redirect()->route('detalhes.index')->with(
-            'success',
-            'detalhe eliminado com sucesso'
-        );
-    }
+     public function destroy(Detalhe $detalhe)
+     {
+         if ($detalhe->especialidade) {
+             return redirect()->route('detalhes.index')->withErrors(
+                 ['delete' => 'O detalhe que tentou eliminar está associado a uma especialidade']
+             );
+         }
+         $detalhe->delete();
+         return redirect()->route('detalhes.index')->with(
+             'success',
+             'Detalhe eliminado com sucesso'
+         );
+     }
 }
