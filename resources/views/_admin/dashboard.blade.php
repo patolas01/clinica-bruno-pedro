@@ -1,6 +1,10 @@
 @extends ("layouts.admin")
 
 
+@section('moreCSS')
+    <link rel="stylesheet" href="{{ asset('css/graphs.css') }}">
+@endsection
+
 @section('content')
     <div class="container-fluid">
         <!-- Page Heading -->
@@ -15,49 +19,86 @@
     <a href="" class="button2">6</a> --}}
 
 
+    <div class="container-fluid">
 
 
 
 
-    <!-- DONUT CHART BLOCK (LEFT-CONTAINER) -->
-    <div class="donut-chart-block block">
-        <h2 class="titular">OS AUDIENCE STATS</h2>
-        <div class="donut-chart">
-            <!-- PORCIONES GRAFICO CIRCULAR
-          ELIMINADO #donut-chart
-          MODIFICADO CSS de .donut-chart -->
-            <div id="porcion1" class="recorte">
-                <div class="quesito ios" data-rel="21"></div>
+        {{-- graph section (top) --}}
+        <div class="top-graphs">
+
+            {{-- each graph --}}
+            <div class="graph bar">
+                {{-- main title --}}
+                <h3 class="graph-title">Formulários</h3>
+                {{-- bars section --}}
+                <div class="graph-info">
+                    {{-- iterate over the data --}}
+                    @foreach ($data as $especialidadeId => $total)
+                        {{-- get the nome of especialidade --}}
+                        @php
+                            $especialidadeNome = $especialidades[$especialidadeId];
+                        @endphp
+                        {{-- each bar --}}
+                        <div class="graph-info-item">
+                            {{-- title of the item --}}
+                            <p class="graph-info-title">{{ $especialidadeNome }}</p>
+                            {{-- horizontal bar with value --}}
+                            <div class="graph-info-bar" style="width: {{ $total }}%;">
+                                <p class="graph-info-value">{{ $total }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
-            <div id="porcion2" class="recorte">
-                <div class="quesito mac" data-rel="39"></div>
-            </div>
-            <div id="porcion3" class="recorte">
-                <div class="quesito win" data-rel="31"></div>
-            </div>
-            <div id="porcionFin" class="recorte">
-                <div class="quesito linux" data-rel="9"></div>
-            </div>
-            <!-- FIN AÑADIDO GRÄFICO -->
-            <p class="center-date">JUNE<br><span class="scnd-font-color">2013</span></p>
+
+
+
+
+            <!--
+
+                           {{-- {{-- each graph --}}
+                            <div class="graph bar">
+                                {{-- main title --}}
+                                <h3 class="graph-title">Graph 1</h3>
+                                {{-- bars section --}}
+                                <div class="graph-info">
+
+                                    {{-- each bar --}}
+                                    <div class="graph-info-item">
+                                        {{-- title of the item --}}
+                                        <p class="graph-info-title">Value 1</p>
+                                        {{-- horizontal bar with value --}}
+                                        <div class="graph-info-bar">
+                                            <p class="graph-info-value">12345</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        !-->
+
         </div>
-        <ul class="os-percentages horizontal-list">
-            <li>
-                <p class="ios os scnd-font-color">iOS</p>
-                <p class="os-percentage">21<sup>%</sup></p>
-            </li>
-            <li>
-                <p class="mac os scnd-font-color">Mac</p>
-                <p class="os-percentage">39<sup>%</sup></p>
-            </li>
-            <li>
-                <p class="linux os scnd-font-color">Linux</p>
-                <p class="os-percentage">9<sup>%</sup></p>
-            </li>
-            <li>
-                <p class="win os scnd-font-color">Win</p>
-                <p class="os-percentage">31<sup>%</sup></p>
-            </li>
-        </ul>
+
+
+
+
+
+
+
+
+        {{-- graph section (middle) --}}
+        <div class="mid-graphs">
+            {{-- timeline graph --}}
+            <div class="graph timeline"></div>
+        </div>
+
+
+
+
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/graphs.js') }}"></script>
 @endsection
