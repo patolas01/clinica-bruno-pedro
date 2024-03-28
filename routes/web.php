@@ -8,7 +8,7 @@ use App\Http\Controllers\FormularioController;
 use App\Http\Controllers\PostSaudeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AvaliacoesController;
-use App\Http\Controllers\DetalheEspController;
+use App\Http\Controllers\DetalheController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,4 +65,4 @@ Route::post('/_admin/post-saude', [PostSaudeController::class, 'update'])->name(
     Route::resource('formularios', FormularioController::class);
     Route::resource('posts-saude', PostSaudeController::class);
     Route::resource('avaliacoes', AvaliacoesController::class);
-    Route::resource('detalhes-esp', DetalheEspController::class);
+    Route::resource('detalhes', DetalheController::class);

@@ -131,8 +131,8 @@
                     <div id="collapseDetalhesEspecialidade" class="collapse" aria-labelledby="headingDetalhes Especialidade"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="{{ route('detalhes-esp.index') }}">Listagem</a>
-                            <a class="collapse-item" href="">Novo Detalhes Esp.</a>
+                            <a class="collapse-item" href="{{ route('detalhes.index') }}">Listagem</a>
+                            <a class="collapse-item" href="{{ route('detalhes.create') }}">Novo Detalhes Esp.</a>
                         </div>
                     </div>
                 </li>

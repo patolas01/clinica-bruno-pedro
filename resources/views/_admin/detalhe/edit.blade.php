@@ -6,18 +6,18 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Editar Detalhe da especialidade
+			Editar detalhe
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{route('detalhe-esp.update', $detalhe_esp)}}" class="form-group">
+			<form method="POST" action="{{route('detalhes.update', $detalhe)}}" class="form-group" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-				@include('_admin.detalhe-esp.partials.add-edit')
+				@include('_admin.detalhe.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Guardar</button>
 
-					<a href="{{route('detalhe-esp.index')}}" class="btn btn-default">Cancelar</a>
+					<a href="{{route('detalhes.index')}}" class="btn btn-default">Cancelar</a>
 
 				</div>
 

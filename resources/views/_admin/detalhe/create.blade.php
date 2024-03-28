@@ -5,16 +5,16 @@
 
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			Novo Detalhe da especialidade
+			Novo detalhe
 		</div>
 		<div class="card-body">
 
-			<form method="POST" action="{{ route('detalhes-esp.store') }}" class="form-group">
+			<form method="POST" action="{{ route('detalhes.store') }}" class="form-group" enctype="multipart/form-data">
 				@csrf
-				@include('_admin.detalhe-esp.partials.add-edit')
+				@include('_admin.detalhe.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Salvar</button>
-					<a href="{{ route('detalhes-esp.index') }}" class="btn btndefault">Cancelar</a>
+					<a href="{{ route('detalhes.index') }}" class="btn btndefault">Cancelar</a>
 				</div>
 			</form>
 		</div>
