@@ -13,9 +13,9 @@ class PageController extends Controller
 {
     public function index()
     {
-        // $especialidade = Especialidade::all();
         $avaliacoes = Avaliacoes::all();
-        return view('index', compact('avaliacoes'));
+        $especialidades = Especialidade::all();
+        return view('index', compact('avaliacoes', 'especialidades'));
     }
 
     public function areaClinica()

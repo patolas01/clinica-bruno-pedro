@@ -23,54 +23,14 @@
     <div class="wrapper">
         <i id="left" class="fa-solid fa-angle-left"></i>
         <ul class="carousel">
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/dentisteria.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Dentisteria</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/estetica.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Estética</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/endodontia.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Endodontia</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/higieneoral.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Higiene Oral</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/periodontologia.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Periodontologia</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/protesefixa.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Prótese Fixa</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/proteseremovivel.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Prótese Removível</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/ortodontia.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Ortodontia</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/odontopediatria.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Odontopediatria</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/odontogeriatria.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Odontogeriatria</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/cirurgiaoral.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Cirurgia Oral</h3>
-          </li>
-          <li class="card">
-            <div class="img"><img src="{{ asset('img/implantes.jpg') }}" alt="img" draggable="false"></div>
-            <h3>Implantes</h3>
-          </li>
+            @foreach ($especialidades as $especialidade)
+                <li class="card">
+                    <div class="img"><img src="{{ asset('storage/especialidade_imagens/' . $especialidade->icon) }}"
+                            alt="img" draggable="false">
+                    </div>
+                    <h3>{{ $especialidade->nome }}</h3>
+                </li>
+            @endforeach
         </ul>
         <i id="right" class="fa-solid fa-angle-right"></i>
     </div>
@@ -172,25 +132,24 @@
 
             @if (!is_null($avaliacoes) && count($avaliacoes) > 0)
                 @foreach ($avaliacoes as $avaliaco)
-                <div class="reviewItem">
-                    <div class="top">
-                        <div class="clientImage">
-                            <img src="{{ asset('img/favicon preto.png') }}" alt="estrela">
-                           <span>{{ $avaliaco->nome }}</span>
+                    <div class="reviewItem">
+                        <div class="top">
+                            <div class="clientImage">
+                                <img src="{{ asset('img/favicon preto.png') }}" alt="estrela">
+                                <span>{{ $avaliaco->nome }}</span>
 
+                            </div>
                         </div>
+                        <ul class="stars">
+                            @for ($i = 0; $i < $avaliaco->classificacao; $i++)
+                                <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
+                            @endfor
+                        </ul>
+                        <article>
+                            <p class="review">{{ $avaliaco->texto }}</p>
+                            {{-- <p>{{ $avaliaco->data }}</p> --}}
+                        </article>
                     </div>
-                    <ul class="stars">
-                        @for($i = 0; $i < $avaliaco->classificacao; $i++)
-                            <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                        @endfor
-                    </ul>
-                    <article>
-                        <p class="review">{{ $avaliaco->texto }}</p>
-                        {{-- <p>{{ $avaliaco->data }}</p> --}}
-                    </article>
-                </div>
-
                 @endforeach
             @else
                 <p class="erro-message">Nenhuma avaliação disponível no momento.</p>
