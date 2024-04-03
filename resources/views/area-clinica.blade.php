@@ -29,14 +29,14 @@
         <div class="container flex-center">
             <div class="grid-servicos">
                 @if (!is_null($especialidades) && count($especialidades) > 0)
-                    @foreach ($especialidades as $especialidades)
+                    @foreach ($especialidades as $especialidade)
                         <div class="servicos-card">
-                            <img src="{{ asset('storage/especialidade_imagens/' . $especialidades->icon) }}" alt="icon de corpo laranja">
+                            <img src="{{ asset('storage/especialidade_imagens/' . $especialidade->icon) }}" alt="icon de corpo laranja">
                             <div></div>
-                            <h5>{{ $especialidades->nome }}</h5>
-                            <p>{{ $especialidades->curta_desc }}</p>
+                            <h5>{{ $especialidade->nome }}</h5>
+                            <p>{{ $especialidade->curta_desc }}</p>
                             <div class="button-wrapper">
-                                <a href="" class="button">Saber Mais</a>
+                                <a href="{{ route('especialidadeDetalhe', $especialidade) }}" class="button">Saber Mais</a>
                             </div>
                         </div>
                         @endforeach
