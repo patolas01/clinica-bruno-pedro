@@ -2,27 +2,38 @@
 @section('title', 'Área Clinica - Clínica Dentária Bruno & Pedro')
 
 @section('moreCSS')
-    <link rel="stylesheet" href="{{ asset('css/areaclinica.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/detalhe.css') }}">
 @endsection
 @section('content')
 
-<h1>{{ $especialidade->nome }}</h1>
+
+<div class="titulo">{{ $especialidade->nome }}</div>
+<div class="divisorbloco">
+    <div class="linha"></div>
+</div>
 {{--
 <p>Descrição: {{ $especialidade->descricao }}</p>
  --}}
-@if($detalhes->count() > 0)
-    <h2>Detalhes</h2>
-    <ul>
-        @foreach($detalhes as $detalhe)
-            <li>
-                <img src="{{ asset('storage/detalheesp_imagens/' . $detalhe->imagem) }}" alt="Imagem do Detalhe">
-                <p>Descrição: {{ $detalhe->descriçao }}</p>
-            </li>
-        @endforeach
-    </ul>
-@else
-    <p>Nenhum detalhe disponível para esta especialidade.</p>
-@endif
+
+ <section id="main">
+    <div id="detalhe">
+        @if($detalhes->count() > 0)
+            @foreach($detalhes as $detalhe)
+                <img class="det" src="{{ asset('storage/detalheesp_imagens/' . $detalhe->imagem) }}" alt="Imagem do Detalhe">
+                <div id="infodetalhe">
+                    <div class="info-bloco">
+                        <div class="info-content">
+                            <h6 class="info-titulo">Morada</h6>
+                            <p>{{ $detalhe->descriçao }}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        @else
+            <p>Nenhum detalhe disponível para esta especialidade.</p>
+        @endif
+
+</section>
 @endsection
 
 

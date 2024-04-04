@@ -30,5 +30,75 @@ body {
     font-style: normal;
     font-weight: bold;
     color: #30383B;
-    padding-top: 75px;
+    padding-top: 150px;
 }
+
+.divisorbloco {
+    width: 100%;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.divisorbloco .linha {
+    width: 100px;
+    height: 2px;
+    background: #0b86dd;
+    display: inline-block;
+}
+
+/********************* Card ****************************/
+
+#main2{
+    padding-bottom: 50px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+#detalhe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alterado para centralizar os itens sem espaço extra */
+    margin-top: 50px;
+    background-color: #ffffff;
+    padding-bottom: 50px;
+}
+
+.det{
+    height: 450px;
+    width: 600px;
+}
+
+#infodetalhe {
+    max-width: 1000px;
+
+    padding-bottom: 20px;
+ 
+    display: flex;
+    flex-direction: column;
+}
+
+.info-bloco {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 70px; /* Adicione margem à esquerda para separar os elementos */
+}
+
+.info-content h6 {
+    font-size: 16pt;
+    font-weight: 600;
+    color: #30383B;
+
+}
+
+.info-content p {
+    font-size: 14px;
+    color: #787c83;
+
+    margin-bottom: 5px; /* Remover a margem inferior */
+}
+
+
