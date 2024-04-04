@@ -41,107 +41,12 @@
                         </div>
                         @endforeach
                         @else
-                            <p>Nenhuma especialidade disponível no momento.</p>
+                            <p class="erro-message">Nenhuma especialidade disponível no momento.</p>
                         @endif
             </div>
         </div>
     </section>
-    {{--
-                <div class="servicos-card">
-                    <img src="{{ asset('img/HigieneOralicon.svg') }}" alt="icon de corpo laranja">
-                    <h5>Higiene Oral</h5>
-                    <p>O Pulse Hub oferece serviços de aconselhamento nutricional.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/Cirugiaoral.svg') }}" alt="icon de corpo laranja">
-                    <h5>Cirugia Oral</h5>
-                    <p>Realizar avaliações físicas iniciais e periódicas para rastrear o progresso dos membros.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/endodontiaa.svg') }}" alt="icon de corpo laranja">
-                    <h5>Endodontia</h5>
-                    <p>Planos de treino ajustados aos objetivos pessoais.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/Implantes.svg') }}" alt="icon de corpo laranja">
-                    <h5>Implantes</h5>
-                    <p>Planos de treino ajustados aos objetivos pessoais.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/denteicon.svg') }}" alt="icon de corpo laranja">
-                    <h5>Odontogeriatria</h5>
-                    <p>Planos de treino ajustados aos objetivos pessoais.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/Periodontologia.svg') }}" alt="icon de corpo laranja">
-                    <h5>Periodontologia</h5>
-                    <p>Planos de treino ajustados aos objetivos pessoais.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/ortopediatria.svg') }}" alt="icon de corpo laranja">
-                    <h5>Odontopediatria</h5>
-                    <p>Planos de treino ajustados aos objetivos pessoais.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/proteses.svg') }}" alt="icon de corpo laranja">
-                    <h5>Próteses</h5>
-                    <p>Planos de treino ajustados aos objetivos pessoais.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/chair.svg') }}" alt="icon de corpo laranja">
-                    <h5>Estética</h5>
-                    <p>Planos de treino ajustados aos objetivos pessoais.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-                <div class="servicos-card">
-                    <img src="{{ asset('img/toothbrush.svg') }}" alt="icon de corpo laranja">
-                    <h5>Dentisteria</h5>
-                    <p>Planos de treino ajustados aos objetivos pessoais.</p>
-                    <div class="button-wrapper">
-                        <a href="" class="button">Saber Mais</a>
-                    </div>
-                </div>
-
-                --}}
-
-
+    
 @endsection
 
 

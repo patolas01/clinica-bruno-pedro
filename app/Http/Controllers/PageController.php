@@ -39,12 +39,11 @@ class PageController extends Controller
         return view('area-clinica', compact('especialidades'));
     }
 
-    public function especialidadeDetalhe(Detalhe $detalhe)
-    {
-        $detalhe = $especialidade->detalhe;
-        return view('especialidade-detalhe', compact('especialidade', 'detalhe'));
-    }
-
+    public function especialidadeDetalhe(Especialidade $especialidade)
+{
+    $detalhes = Detalhe::where('especialidade_id', $especialidade->id)->get();
+    return view('especialidade-detalhe', compact('especialidade', 'detalhes'));
+}
 
 
     public function contactos()

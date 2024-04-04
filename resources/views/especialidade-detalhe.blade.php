@@ -7,8 +7,22 @@
 @section('content')
 
 <h1>{{ $especialidade->nome }}</h1>
-<img src="" alt="Detalhes">
-<p></p>
+{{--
+<p>Descrição: {{ $especialidade->descricao }}</p>
+ --}}
+@if($detalhes->count() > 0)
+    <h2>Detalhes</h2>
+    <ul>
+        @foreach($detalhes as $detalhe)
+            <li>
+                <img src="{{ asset('storage/detalheesp_imagens/' . $detalhe->imagem) }}" alt="Imagem do Detalhe">
+                <p>Descrição: {{ $detalhe->descriçao }}</p>
+            </li>
+        @endforeach
+    </ul>
+@else
+    <p>Nenhum detalhe disponível para esta especialidade.</p>
+@endif
 @endsection
 
 
