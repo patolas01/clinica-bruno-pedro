@@ -72,10 +72,8 @@ body {
 }
 
 #infodetalhe {
-    max-width: 1000px;
-
+    max-width: 650px;
     padding-bottom: 20px;
- 
     display: flex;
     flex-direction: column;
 }
@@ -84,7 +82,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    margin-left: 70px; /* Adicione margem à esquerda para separar os elementos */
+    margin-left: 30px; /* Adicione margem à esquerda para separar os elementos */
 }
 
 .info-content h6 {
@@ -97,7 +95,8 @@ body {
 .info-content p {
     font-size: 14px;
     color: #787c83;
-
+    word-wrap: break-word;
+    max-width: 60%;
     margin-bottom: 5px; /* Remover a margem inferior */
 }
 

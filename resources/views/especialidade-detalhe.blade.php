@@ -23,7 +23,7 @@
                 <div id="infodetalhe">
                     <div class="info-bloco">
                         <div class="info-content">
-                            <h6 class="info-titulo">Morada</h6>
+                            <h4 class="info-titulo">{{ $especialidade->nome }}</h4>
                             <p>{{ $detalhe->descriçao }}</p>
                         </div>
                     </div>
