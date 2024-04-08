@@ -9,7 +9,7 @@ use App\Http\Controllers\PostSaudeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AvaliacoesController;
 use App\Http\Controllers\DetalheController;
-
+use App\Http\Middleware\AdminMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,7 +32,10 @@ Route::get('/equipa', [PageController::class, 'equipa'])->name('equipa');
 Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes'])->name('termosCondicoes');
 Route::get('/politicaprivacidade', [PageController::class, 'politicaprivacidade'])->name('politicaprivacidade');
 Route::get('/especialidade-detalhe/{especialidade}', [PageController::class, 'especialidadeDetalhe'])->name('especialidadeDetalhe');
-Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
+
+Route::get('/dashboard', [PageController::class, 'dashboard'])
+    ->name('dashboard')
+    ->middleware(AdminMiddleware::class);
 
 
 
