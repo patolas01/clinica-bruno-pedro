@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'perm'
     ];
 
     /**
@@ -42,4 +43,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function roleToStr()
+    {
+        switch ($this->perm) {
+            case 'N':
+                return 'Normal';
+            case 'A':
+                return 'Admin';
+        }
+    }
+    public function isAdmin()
+{
+    return $this->perm === 'A'; // Considerando que 'A' representa o papel de administrador
+}
+
 }

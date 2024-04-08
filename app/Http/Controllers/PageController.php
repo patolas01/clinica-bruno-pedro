@@ -83,22 +83,32 @@ class PageController extends Controller
 
     public function dashboard()
     {
-        // Fetch data from the database for Formulários
+        // Verificar se o usuário está autenticado
+        if (!auth()->check()) {
+            // Se o usuário não está autenticado, redirecionar para a página de login
+            return redirect()->route('login');
+        }
+
+        // Verificar se o usuário é um administrador
+        if (!auth()->user()->isAdmin()) {
+            // Se o usuário não é um administrador, abortar com erro 403 (Acesso não autorizado)
+            abort(403, 'Acesso não autorizado.');
+        }
+
+        // Continuar com a lógica existente para buscar dados relacionados a Formulários e Avaliações
         $formularioData = Formulario::select('especialidade_id', Formulario::raw('count(*) as total'))
             ->groupBy('especialidade_id')
             ->pluck('total', 'especialidade_id');
 
-        // Get the names of especialidades for Formulários
         $especialidades = Especialidade::whereIn('id', $formularioData->keys())->pluck('nome', 'id');
 
-        // Fetch data from the database for Avaliações
         $avaliacaoData = Avaliacoes::select('classificacao', Avaliacoes::raw('count(*) as total'))
             ->groupBy('classificacao')
             ->pluck('total', 'classificacao');
 
+        // Retornar a view do dashboard com os dados buscados e os dados de formulários e avaliações
         return view('_admin.dashboard', compact('formularioData', 'especialidades', 'avaliacaoData'));
     }
-
     public function Error()
     {
         return view('partials.error');
