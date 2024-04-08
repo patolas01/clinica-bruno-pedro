@@ -101,15 +101,11 @@ class DetalheController extends Controller
 
      public function destroy(Detalhe $detalhe)
      {
-         if ($detalhe->especialidade) {
-             return redirect()->route('detalhes.index')->withErrors(
-                 ['delete' => 'O detalhe que tentou eliminar está associado a uma especialidade']
-             );
-         }
-         $detalhe->delete();
-         return redirect()->route('detalhes.index')->with(
-             'success',
-             'Detalhe eliminado com sucesso'
-         );
-     }
+        Storage::disk('public')->delete('detalheesp_imagens/' . $detalhe->imagem);
+        $detalhe->delete();
+        return redirect()->route('detalhes.index')->with(
+            'success',
+            'Detalhes eliminados com sucesso'
+        );
+    }
 }

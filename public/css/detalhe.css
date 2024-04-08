@@ -71,6 +71,11 @@ body {
     width: 600px;
 }
 
+.info-titulo{
+    font-weight: bold;
+    color: #419fe1;
+}
+
 #infodetalhe {
     max-width: 650px;
     padding-bottom: 20px;
