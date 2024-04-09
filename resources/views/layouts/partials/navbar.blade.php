@@ -63,13 +63,13 @@
                                             $fullName = auth()->user()->name;
                                             $nameParts = explode(' ', $fullName);
                                             $firstName = $nameParts[0];
-                                            $lastName = end($nameParts);
-                                            echo $firstName . ' ' . $lastName;
+                                            $lastName = count($nameParts) > 1 ? end($nameParts) : ''; // Check if there are multiple parts in the name
+                                            echo $firstName . ($lastName ? ' ' . $lastName : ''); // Only echo the last name if it exists
                                         @endphp
                                     </span>
                                     @if (empty(auth()->user()->img))
                                         <img class="img-profile rounded-circle" alt="User Photo"
-                                            src="{{ asset('storage/users_fotos/user.svg') }}">
+                                            src="{{ asset('storage/users_fotos/user.png') }}">
                                     @else
                                         <img class="img-profile rounded-circle" alt="User Photo"
                                             src="{{ asset('storage/users_fotos/' . auth()->user()->img) }}">
