@@ -36,7 +36,6 @@ body {
 
 .divisorbloco {
     width: 100%;
-    margin-bottom: 70px;
     text-align: center;
 }
 
@@ -47,6 +46,60 @@ body {
     display: inline-block;
 }
 
+.subtitulo {
+    font-size: 14pt;
+    text-align: center;
+    font-style: normal;
+    color: #787c83;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+
+/*---GALERIA---*/
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 70px;
+}
+
+.main-image {
+    margin-bottom: 20px;
+}
+
+.main-image img {
+    width: 600px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 200px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+
+.thumbnail img:hover{
+    opacity: 0.7;
+}
+
+/*
 ::selection{
     color: #fff;
     background: #0b86dd;

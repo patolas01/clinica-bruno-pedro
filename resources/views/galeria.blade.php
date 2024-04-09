@@ -12,6 +12,33 @@
     <div class="linha"></div>
 </div>
 
+<div class="subtitulo">Clique nas miniaturas abaixo para aumentar a imagem.</div>
+
+<div class="gallery">
+    <div class="main-image">
+        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Main Image">
+    </div>
+
+    <div class="thumbnails">
+        <div class="thumbnail">
+            <img src="{{ asset('img/endodontia.jpg') }}" alt="Thumbnail 1">
+        </div>
+        <div class="thumbnail">
+            <img src="{{ asset('img/cirurgiaoral.jpg') }}" alt="Thumbnail 2">
+        </div>
+        <div class="thumbnail">
+            <img src="{{ asset('img/periodontologia.jpg') }}" alt="Thumbnail 3">
+        </div>
+        <div class="thumbnail">
+            <img src="{{ asset('img/higieneoral.jpg') }}" alt="Thumbnail 4">
+        </div>
+        <div class="thumbnail">
+            <img src="{{ asset('img/implantes.jpg') }}" alt="Thumbnail 5">
+        </div>
+    </div>
+</div>
+
+{{--
 <div class="wrapper">
     <!-- filter Items -->
     <nav>
@@ -55,7 +82,7 @@
   <div class="shadow"></div>
 
 
-{{-- <div class="gallery2">
+ <div class="gallery2">
     <div class="gallery2-item">
         <a href="#">
             <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
