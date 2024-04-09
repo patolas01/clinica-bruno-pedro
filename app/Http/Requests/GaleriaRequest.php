@@ -19,10 +19,24 @@ class GaleriaRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
-    public function rules(): array
+    public function rules()
     {
         return [
-            //
+            'imagem' => 'required',
+            'nome' => 'required',
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'imagem.required' => 'O campo imagem é obrigatório.',
+            'nome.required' => 'O campo nome é obrigatório.',
         ];
     }
 }

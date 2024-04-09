@@ -178,8 +178,8 @@
                     <div id="collapseGaleria" class="collapse" aria-labelledby="headingGaleria"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="">Listagem de Fotos </a>
-                            <a class="collapse-item" href="">Adicionar Foto</a>
+                            <a class="collapse-item" href="{{ route('admin.galeria.index') }}">Listagem de Fotos </a>
+                            <a class="collapse-item" href="{{ route('admin.galeria.create') }}">Adicionar Foto</a>
                         </div>
                     </div>
                 </li>

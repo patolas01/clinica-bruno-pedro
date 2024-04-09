@@ -10,6 +10,7 @@ use App\Http\Controllers\PostSaudeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AvaliacoesController;
 use App\Http\Controllers\DetalheController;
+use App\Http\Controllers\GaleriaController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
 /*
@@ -53,7 +54,7 @@ Route::get('/dashboard', [PageController::class, 'dashboard'])
     Route::resource('posts-saude', PostSaudeController::class);
     Route::resource('avaliacoes', AvaliacoesController::class);
     Route::resource('detalhes', DetalheController::class);
-
+    Route::resource('galeria', GaleriaController::class);
     });
 
 Auth::routes();
