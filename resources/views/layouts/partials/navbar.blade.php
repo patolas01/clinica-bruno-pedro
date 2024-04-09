@@ -21,21 +21,21 @@
         <div class="all-list">
             <ul class="list">
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'areaClinica') active @endif"
-                    href="{{ route('areaClinica') }}">Área Clínica</a></li>
-                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'guiaSaude') active @endif"
+                        href="{{ route('areaClinica') }}">Área Clínica</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'guiaSaude') active @endif"
                         href="{{ route('guiaSaude') }}">Guia Saúde</a></li>
-                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
-                         href="{{ route('galeria') }}">Galeria</a></li>
-                         {{--
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
+                        href="{{ route('galeria') }}">Galeria</a></li>
+                {{--
                     <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
                         href="{{ route('equipa') }}">Equipa</a></li>
                         --}}
-                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
                         href="{{ route('sobre') }}">Sobre</a></li>
-                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
                         href="{{ route('contactos') }}">Contactos</a></li>
-                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'dashboard') active @endif"
-                            href="{{ route('dashboard') }}">Dashboard</a></li>
+                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'dashboard') active @endif"
+                        href="{{ route('dashboard') }}">Dashboard</a></li>
             </ul>
         </div>
 
@@ -50,11 +50,11 @@
 
 
                     <!-- Topbar Navbar -->
-                    {{-- <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto">
 
 
                         <!-- Nav Item - User Information -->
-                       <li class="nav-item dropdown no-arrow">
+                        <li class="nav-item dropdown no-arrow">
                             @if (auth()->check())
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -102,7 +102,7 @@
                             @endif
                         </li>
 
-                    </ul>--}}
+                    </ul>
 
                 </nav>
                 <!-- End of Topbar -->
@@ -132,7 +132,7 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-{{--
+
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -156,7 +156,7 @@
             </div>
         </div>
     </div>
---}}
+
 
 
 
@@ -170,18 +170,18 @@
 
         <ul class="list">
             <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'areaClinica') active @endif"
-                href="{{ route('areaClinica') }}">Área Clínica</a></li>
-                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'guiaSaude') active @endif"
+                    href="{{ route('areaClinica') }}">Área Clínica</a></li>
+            <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'guiaSaude') active @endif"
                     href="{{ route('guiaSaude') }}">Guia Saúde</a></li>
-                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
-                     href="{{ route('galeria') }}">Galeria</a></li>
-                     {{--
+            <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
+                    href="{{ route('galeria') }}">Galeria</a></li>
+            {{--
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
                     href="{{ route('equipa') }}">Equipa</a></li>
                     --}}
-                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
+            <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
                     href="{{ route('sobre') }}">Sobre</a></li>
-                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
+            <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
                     href="{{ route('contactos') }}">Contactos</a></li>
         </ul>
     </div>
