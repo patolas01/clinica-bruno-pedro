@@ -103,8 +103,8 @@
                 <div id="collapseAvaliacoes" class="collapse" aria-labelledby="headingAvaliacoes"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('avaliacoes.index') }}">Listagem</a>
-                        <a class="collapse-item" href="{{ route('avaliacoes.create') }}">Nova Avaliação</a>
+                        <a class="collapse-item" href="{{ route('admin.avaliacoes.index') }}">Listagem</a>
+                        <a class="collapse-item" href="{{ route('admin.avaliacoes.create') }}">Nova Avaliação</a>
                     </div>
                 </div>
             </li>
@@ -118,8 +118,8 @@
                 <div id="collapseEspecialidades" class="collapse" aria-labelledby="headingEspecialidades"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('especialidades.index') }}">Listagem</a>
-                        <a class="collapse-item" href="{{ route('especialidades.create') }}">Nova Especialidade</a>
+                        <a class="collapse-item" href="{{ route('admin.especialidades.index') }}">Listagem</a>
+                        <a class="collapse-item" href="{{ route('admin.especialidades.create') }}">Nova Especialidade</a>
                     </div>
                 </div>
             </li>
@@ -133,8 +133,8 @@
                     <div id="collapseDetalhesEspecialidade" class="collapse" aria-labelledby="headingDetalhes Especialidade"
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item" href="{{ route('detalhes.index') }}">Listagem</a>
-                            <a class="collapse-item" href="{{ route('detalhes.create') }}">Novo Detalhes Esp.</a>
+                            <a class="collapse-item" href="{{ route('admin.detalhes.index') }}">Listagem</a>
+                            <a class="collapse-item" href="{{ route('admin.detalhes.create') }}">Novo Detalhes Esp.</a>
                         </div>
                     </div>
                 </li>
@@ -155,7 +155,7 @@
                 </li> --}}
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('posts-saude.index') }}" data-toggle="collapse"
+                <a class="nav-link collapsed" href="{{ route('admin.posts-saude.index') }}" data-toggle="collapse"
                     data-target="#collapseGuiaSaude" aria-expanded="true" aria-controls="collapseGuiaSaude">
                     <i class="fas fa-clipboard-list"></i>
                     <span>Guia Saúde</span>
@@ -163,8 +163,8 @@
                 <div id="collapseGuiaSaude" class="collapse" aria-labelledby="headingGuiaSaude"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ route('posts-saude.index') }}">Listagem</a>
-                        <a class="collapse-item" href="{{ route('posts-saude.create') }}">Nova Publicação</a>
+                        <a class="collapse-item" href="{{ route('admin.posts-saude.index') }}">Listagem</a>
+                        <a class="collapse-item" href="{{ route('admin.posts-saude.create') }}">Nova Publicação</a>
                     </div>
                 </div>
             </li>
@@ -185,7 +185,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('formularios.index') }}">
+                    <a class="nav-link" href="{{ route('admin.formularios.index') }}">
                         <i class="fas fa-fw fa-tachometer-alt"></i> <span>Formulário</span></a>
                     {{-- <a href="{{ route('formularios.index') }}" data-toggle="collapse"
                         data-target="#collapseFormulário" aria-expanded="true" aria-controls="collapseFormulário">
