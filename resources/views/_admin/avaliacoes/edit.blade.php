@@ -10,14 +10,14 @@
         </div>
         <div class="card-body">
 
-			<form method="POST" action="{{route('avaliacoes.update', $avaliaco)}}" class="form-group" enctype="multipart/form-data">
+			<form method="POST" action="{{route('admin.avaliacoes.update', $avaliaco)}}" class="form-group" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 				@include('_admin.avaliacoes.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Guardar</button>
 
-					<a href="{{route('avaliacoes.index')}}" class="btn btn-default">Cancelar</a>
+					<a href="{{route('admin.avaliacoes.index')}}" class="btn btn-default">Cancelar</a>
 
 				</div>
 

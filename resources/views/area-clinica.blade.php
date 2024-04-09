@@ -7,7 +7,7 @@
 
 @section('content')
 
-    <div class="banner">
+    {{-- <div class="banner">
         <div class="content">
             <div class="title">Área Clínica</div>
             <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
@@ -15,6 +15,15 @@
             <div class="button-wrapper">
                 <a href="" class="button1">Saber Mais</a>
             </div>
+        </div>
+    </div> --}}
+
+    <div class="banner">
+        <div class="content">
+            <div class="title">Área Clínica</div>
+            <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
+            <div class="subtitle1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
+            <a href="{{ route('contactos') }}" class="button1">Saber Mais</a>
         </div>
     </div>
 
@@ -46,7 +55,7 @@
             </div>
         </div>
     </section>
-    
+
 @endsection
 
 

@@ -20,7 +20,7 @@
                         <div class="mb-3">
                             <strong>Comentário:</strong> {{$avaliaco->texto}}
                         </div>
-                        <a href="{{route('avaliacoes.index')}}" class="btn btn-default">Voltar</a>
+                        <a href="{{route('admin.avaliacoes.index')}}" class="btn btn-default">Voltar</a>
                     </div>
                 </div>
             </div>
