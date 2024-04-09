@@ -54,3 +54,7 @@ Route::get('/dashboard', [PageController::class, 'dashboard'])
     Route::resource('detalhes', DetalheController::class);
 
     });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
