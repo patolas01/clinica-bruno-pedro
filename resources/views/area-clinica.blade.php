@@ -7,17 +7,6 @@
 
 @section('content')
 
-    {{-- <div class="banner">
-        <div class="content">
-            <div class="title">Área Clínica</div>
-            <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
-            <div class="subtitle1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
-            <div class="button-wrapper">
-                <a href="" class="button1">Saber Mais</a>
-            </div>
-        </div>
-    </div> --}}
-
     <div class="banner">
         <div class="content">
             <div class="title">Área Clínica</div>
@@ -28,8 +17,7 @@
     </div>
 
 
-
-    <div class="titulo">Especialidades</div>
+    <div class="titulo1">Especialidades</div>
     <div class="divisorbloco">
         <div class="linha"></div>
     </div>

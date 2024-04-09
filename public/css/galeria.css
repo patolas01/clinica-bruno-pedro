@@ -25,13 +25,14 @@ body {
 
 /*---TITULO---*/
 
-.titulo {
+.titulo1 {
     font-size: 24pt;
     text-align: center;
     font-style: normal;
     font-weight: bold;
     color: #30383B;
     padding-top: 150px;
+    font-family: "Poppins", sans-serif;
 }
 
 .divisorbloco {

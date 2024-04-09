@@ -42,11 +42,10 @@ a {
     font-size: 24pt;
     text-align: center;
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     color: #30383B;
-    font-family: "Poppins", sans-serif;
     padding-top: 30px;
-
+    font-family: "Poppins", sans-serif;
 }
 
 .erro-message {
@@ -290,23 +289,6 @@ a {
 }
 
 
-
-
-/*---DIVISOR PRINCIPAL---
-
-.divisorblocoprincipal {
-    width: 100%;
-    text-align: center;
-}
-
-.divisorblocoprincipal .linhaprincipal {
-    width: 500px;
-    height: 1px;
-    background: #0b86dd;
-    display: inline-block;
-} */
-
-
 /*---SECÇÃO SOBRE---*/
 
 #main2 {
@@ -333,12 +315,13 @@ a {
     padding-left: 80px;
     padding: 20px;
     padding-left: 30px;
-    padding-top: 50px;
+    padding-top: 70px;
 }
 
 #nomeseccaoprincipal2 {
     font-size: 20pt;
-    font-weight: 600;
+    font-style: normal;
+    font-weight: bold;
     color: #30383B;
     font-family: "Poppins", sans-serif;
 }
@@ -431,15 +414,18 @@ h2 {
     font-size: 24pt;
     text-align: center;
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     color: #30383B;
+    padding-top: 50px;
     font-family: "Poppins", sans-serif;
     margin-bottom: 1rem;
 }
 
 .description {
-    color: #30383B;
+    font-size: 14pt;
     text-align: center;
+    font-style: normal;
+    color: #787c83;
     width: 43%;
     font-family: "Poppins", sans-serif;
 }

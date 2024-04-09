@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<div class="titulo">Contactos</div>
+<div class="titulo1">Contactos</div>
 <div class="divisorbloco">
     <div class="linha"></div>
 </div>
