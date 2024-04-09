@@ -85,7 +85,7 @@
                                         Perfil
                                     </a>
                                     @if (Auth::user()->perm == 'A')
-                                        <a class="dropdown-item" href="{{ route('dashboard') }}">
+                                        <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Dashboard
                                         </a>
