@@ -4,16 +4,26 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Auth\Access\AuthorizationException;
 
 class AdminMiddleware
 {
-    public function handle($request, Closure $next)
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle(Request $request, Closure $next)
     {
-        if (auth()->check() && auth()->user()->isAdmin()) {
+        // Verifica se há um usuário autenticado
+        if (Auth::check() && Auth::user()->isAdmin()) {
             return $next($request);
         }
 
-        abort(403, 'Acesso não autorizado.');
+        throw new AuthorizationException();
     }
 }

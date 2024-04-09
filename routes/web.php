@@ -9,6 +9,7 @@ use App\Http\Controllers\PostSaudeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AvaliacoesController;
 use App\Http\Controllers\DetalheController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
 /*
 |--------------------------------------------------------------------------
@@ -33,14 +34,23 @@ Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes'])->n
 Route::get('/politicaprivacidade', [PageController::class, 'politicaprivacidade'])->name('politicaprivacidade');
 Route::get('/especialidade-detalhe/{especialidade}', [PageController::class, 'especialidadeDetalhe'])->name('especialidadeDetalhe');
 
+Auth::routes(['verify' => true]);
+
+// Rota para editar e atualizar usuário apenas para administradores autenticados e verificados
+Route::resource('/admin/users', UserController::class, ['as' => 'admin', 'middleware' => ['auth', 'verified']])->only(['edit', 'update']);
+
+
 Route::get('/dashboard', [PageController::class, 'dashboard'])
     ->name('dashboard')
     ->middleware(AdminMiddleware::class);
 
 
-
+    Route::group(['middleware' => ['auth', 'verified', 'admin'] , 'as' => 'admin.', 'prefix' => 'admin'], function () {
+        
     Route::resource('especialidades', EspecialidadeController::class);
     Route::resource('formularios', FormularioController::class);
     Route::resource('posts-saude', PostSaudeController::class);
     Route::resource('avaliacoes', AvaliacoesController::class);
     Route::resource('detalhes', DetalheController::class);
+
+    });

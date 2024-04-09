@@ -58,7 +58,7 @@
 
     </div>
 
-
+<a href="{{ route('login') }}">Login</a>
 
 @endsection
 @section('moreScripts')
