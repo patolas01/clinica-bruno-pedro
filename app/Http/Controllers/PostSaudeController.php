@@ -43,7 +43,7 @@ class PostSaudeController extends Controller
         $posts_saude->save();
 
         // Redirecione de volta para a página de índice com uma mensagem de sucesso
-        return redirect()->route('posts-saude.index')->with('success', 'Publicação criada com sucesso');
+        return redirect()->route('admin.posts-saude.index')->with('success', 'Publicação criada com sucesso');
     }
 
     public function show(PostSaude $posts_saude)
@@ -64,7 +64,7 @@ class PostSaudeController extends Controller
         // Adicione aqui o código para lidar com o upload do arquivo, se necessário
 
         $posts_saude->save();
-        return redirect()->route('posts-saude.index')
+        return redirect()->route('admin.posts-saude.index')
             ->with('success', 'Post de saúde atualizado com sucesso');
     }
 
@@ -73,7 +73,7 @@ class PostSaudeController extends Controller
         // Adicione aqui o código para excluir o arquivo, se necessário
 
         $posts_saude->delete();
-        return redirect()->route('posts-saude.index')
+        return redirect()->route('admin.posts-saude.index')
             ->with('success', 'Post de saúde eliminado com sucesso');
     }
 }

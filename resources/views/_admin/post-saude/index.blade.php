@@ -7,7 +7,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a class="btn btn-primary" href="{{ route('posts-saude.create') }}">
+                <a class="btn btn-primary" href="{{ route('admin.posts-saude.create') }}">
                     <i class="fas fa-plus"></i> Novo Post Saúde
                 </a>
             </div>
@@ -36,12 +36,12 @@
                                         <td>{{ $posts_saude->descricao }}</td>
                                         <td nowrap>
                                             <a class="btn btn-xs btn-primary btn-p"
-                                                href="{{ route('posts-saude.show', $posts_saude) }}"><i
+                                                href="{{ route('admin.posts-saude.show', $posts_saude) }}"><i
                                                     class="fas fa-eye fa-xs"></i></a>
                                             <a class="btn btn-xs btn-warning btn-p"
-                                                href="{{ route('posts-saude.edit', $posts_saude) }}"><i
+                                                href="{{ route('admin.posts-saude.edit', $posts_saude) }}"><i
                                                     class="fas fa-pen fa-xs"></i></a>
-                                            <form method="POST" action="{{ route('posts-saude.destroy', $posts_saude) }}"
+                                            <form method="POST" action="{{ route('admin.posts-saude.destroy', $posts_saude) }}"
                                                 role="form" class="inline"
                                                 onsubmit="return confirm('Confirma que pretende eliminar este post de saúde?');">
                                                 @csrf

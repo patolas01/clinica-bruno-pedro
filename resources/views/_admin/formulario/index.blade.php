@@ -8,7 +8,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a class="btn btn-primary" href="{{ route('formularios.create') }}">
+                <a class="btn btn-primary" href="{{ route('admin.formularios.create') }}">
                     <i class="fas fa-plus"></i> Novo Formulário
                 </a>
             </div>
@@ -36,13 +36,13 @@
                                         <td>{{ $formulario->especialidade_id }}</td>
                                         <td nowrap>
                                             <a class="btn btn-xs btn-primary btn-p"
-                                                href="{{ route('formularios.show', $formulario) }}"><i
+                                                href="{{ route('admin.formularios.show', $formulario) }}"><i
                                                     class="fas fa-eye fa-xs"></i></a>
                                             <a class="btn btn-xs btn-warning btn-p"
-                                                href="{{ route('formularios.edit', $formulario) }}"><i
+                                                href="{{ route('admin.formularios.edit', $formulario) }}"><i
                                                     class="fas fa-pen fa-xs"></i></a>
                                             <form method="POST"
-                                                action="{{ route('formularios.destroy', $formulario) }}" role="form"
+                                                action="{{ route('admin.formularios.destroy', $formulario) }}" role="form"
                                                 class="inline"
                                                 onsubmit="return confirm('Confirma que pretende eliminar este formulário?');">
                                                 @csrf
@@ -82,6 +82,6 @@
                     "orderable": false
                 }
             ]
-        }); 
+        });
     </script>
 @endsection
