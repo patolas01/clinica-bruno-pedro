@@ -59,74 +59,6 @@
         </div>
     </section>
 
-    {{-- <div class="container">
-        <h2>Opiniões dos nossos Clientes</h2>
-        <p class="description">Onde cada Doente é um Amigo!</p>
-
-        <div class="reviewSection">
-
-            <div class="reviewItem">
-                <div class="top">
-                    <div class="clientImage">
-                        <img src="{{ asset('img/favicon preto.png') }}" alt="">
-                        <span>Ana Filipe Faveiro</span>
-                    </div>
-                </div>
-                <ul class="stars">
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                </ul>
-                <article>
-                    <p class="review">Profissional e atencioso, 5 estrelas!</p>
-                    <p>01 Fev. 2019</p>
-                </article>
-            </div>
-
-            <div class="reviewItem">
-                <div class="top">
-                    <div class="clientImage">
-                        <img src="{{ asset('img/favicon preto.png') }}" alt="">
-                        <span>Sonia Pereira</span>
-                    </div>
-                </div>
-                <ul class="stars">
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-regular fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                </ul>
-                <article>
-                    <p class="review">uma clinica com dentistas espetaculares, que continuem assim</p>
-                    <p>15 Jan. 2019</p>
-                </article>
-            </div>
-
-            <div class="reviewItem">
-                <div class="top">
-                    <div class="clientImage">
-                        <img src="{{ asset('img/favicon preto.png') }}" alt="">
-                        <span>Serginho Santos</span>
-                    </div>
-                </div>
-                <ul class="stars">
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                    <i class="fa-solid fa-star" style="color: #FFD43B; margin-left: 5px;"></i>
-                </ul>
-                <article>
-                    <p class="review">5 estrelas ⭐️ nada a apontar !!</p>
-                    <p>29 Jul. 2019</p>
-                </article>
-            </div>
-        </div>
-    </div> --}}
-
     <div class="container">
         <h2>Opiniões dos nossos Clientes</h2>
         <p class="description">Onde cada Doente é um Amigo!</p>
@@ -150,7 +82,6 @@
                         </ul>
                         <article>
                             <p class="review">{{ $avaliaco->texto }}</p>
-                            {{-- <p>{{ $avaliaco->data }}</p> --}}
                         </article>
                     </div>
                 @endforeach

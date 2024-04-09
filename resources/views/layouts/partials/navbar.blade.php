@@ -34,8 +34,7 @@
                         href="{{ route('sobre') }}">Sobre</a></li>
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
                         href="{{ route('contactos') }}">Contactos</a></li>
-                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'dashboard') active @endif"
-                        href="{{ route('dashboard') }}">Dashboard</a></li>
+
             </ul>
         </div>
 
@@ -86,7 +85,7 @@
                                         Perfil
                                     </a>
                                     @if (Auth::user()->perm == 'A')
-                                        <a class="dropdown-item" href="{{ route('dashboard') }}">
+                                        <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
                                             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                             Dashboard
                                         </a>
@@ -98,7 +97,7 @@
                                     </a>
                                 </div>
                             @else
-                                <a href="{{ route('login') }}" class="button-nav">Login</a>
+                                <a href="{{ route('login') }}" class="button-nav"><i class="fa-regular fa-user"></i></a>
                             @endif
                         </li>
 

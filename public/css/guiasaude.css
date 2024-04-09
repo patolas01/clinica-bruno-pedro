@@ -23,14 +23,14 @@ body {
     padding: 0;
 }
 
-
-.titulo {
+.titulo1 {
     font-size: 24pt;
     text-align: center;
     font-style: normal;
     font-weight: bold;
     color: #30383B;
-    padding-top: 150px;
+    padding-top: 70px;
+    font-family: "Poppins", sans-serif;
 }
 
 .divisorbloco {
@@ -45,36 +45,62 @@ body {
     background: #0b86dd;
     display: inline-block;
 }
-/************* Main ***********/
+
+.erro-message {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: #30383B;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* banner */
+
+.content {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-left: 70px;
+
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: auto;
+    z-index: 1;
+}
 
 .banner {
-    position: relative;
+    background-image: url('../img/guiasaude2.jpg');
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
-.banner::after {
-    content: '';
+.background-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/guiasaude2.jpg');
+    background-image: url('../guiasaude2.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.5; /* Opacidade da imagem de fundo */
-}
-.content {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px; /* Define a largura máxima do conteúdo */
-    position: relative; /* Para garantir que o conteúdo esteja sobreposto à imagem de fundo */
-    z-index: 1;
+    font-family: "Poppins", sans-serif;
 }
 
 .title {
@@ -82,28 +108,27 @@ body {
     font-size: 64px;
     color: #30383B;
     font-weight: bold;
-    margin-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 25px;
 }
 
 .subtitle,
 .subtitle1 {
-    font-size: 22px;
+    font-size: 24px;
     color: #30383B;
-    margin-left: 17px;
+    font-family: "Poppins", sans-serif;
 }
 
-.button1 {
+.button1{
     margin-top: 50px;
-    margin-left: 15px;
-    margin-bottom: 35px;
-    padding: 10px 40px;
+    padding: 15px 25px;
     background-color: #0b86dd;
-    color: #ffffff;
+    color: #fff;
     font-weight: bold;
     text-decoration: none !important;
     font-size: 16px;
     text-align: left;
-    border:1px solid #0b86dd;
+    border: 1px solid #0b86dd;
     cursor: pointer;
     display: inline-block;
     border-radius: 2rem;
@@ -116,11 +141,6 @@ body {
     color: #0b86dd;
     /*scale: 105%;*/
     border-radius: 2rem;
-}
-
-.button1-wrapper {
-    text-align: center;
-
 }
 
 /************* info ***********/
@@ -205,3 +225,47 @@ body {
     text-align: center;
 
 }
+
+@media screen and (max-width:700px) {
+    .container {
+        height: auto;
+    }
+}
+
+/*--responsive for mobile phone--*/
+@media(max-width:720px) {
+
+    .content {
+        margin-left: 0;
+    }
+
+    .title {
+        padding-top: 2svh;
+    }
+
+    .title,
+    .subtitle,
+    .subtitle1 {
+        font-size: 6svh;
+        text-align: center;
+
+    }
+
+    .subtitle,
+    .subtitle1 {
+        font-size: 3svh;
+    }
+
+    .content .button1 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+}
+
+

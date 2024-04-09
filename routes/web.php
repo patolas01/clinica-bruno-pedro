@@ -42,13 +42,13 @@ Auth::routes(['verify' => true]);
 Route::resource('/admin/users', UserController::class, ['as' => 'admin', 'middleware' => ['auth', 'verified']])->only(['edit', 'update']);
 
 
-Route::get('/dashboard', [PageController::class, 'dashboard'])
-    ->name('dashboard')
-    ->middleware(AdminMiddleware::class);
+
+
 
 
     Route::group(['middleware' => ['auth', 'verified', 'admin'] , 'as' => 'admin.', 'prefix' => 'admin'], function () {
 
+    Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
     Route::resource('especialidades', EspecialidadeController::class);
     Route::resource('formularios', FormularioController::class);
     Route::resource('posts-saude', PostSaudeController::class);

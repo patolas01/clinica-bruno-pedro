@@ -24,13 +24,14 @@ body {
 }
 
 
-.titulo {
+.titulo1 {
     font-size: 24pt;
     text-align: center;
     font-style: normal;
     font-weight: bold;
     color: #30383B;
-    padding-top: 75px;
+    padding-top: 70px;
+    font-family: "Poppins", sans-serif;
 }
 
 .divisorbloco {
@@ -63,6 +64,10 @@ body {
     text-align: left;
     padding-left: 20px;
     padding-right: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-left: 70px;
+
 }
 
 #logo {
@@ -119,8 +124,8 @@ body {
 .button1{
     margin-top: 50px;
     padding: 15px 25px;
-    background-color: white;
-    color: #0b86dd;
+    background-color: #0b86dd;
+    color: #fff;
     font-weight: bold;
     text-decoration: none !important;
     font-size: 16px;
@@ -134,15 +139,15 @@ body {
 }
 
 .button1:hover {
-    background-color: #0b86dd;
-    color: #fff;
+    background-color: white;
+    color: #0b86dd;
     /*scale: 105%;*/
     border-radius: 2rem;
 }
 
 
-/************* Categoria ***********/
 
+/************* Categoria ***********/
 
 .servicos {
     padding-bottom: 64px;
@@ -161,7 +166,7 @@ body {
     opacity: 0;
     display: flex;
     flex-direction: column;
-    width: 25rem; /* Aumentando a largura máxima dos cards */
+    width: 25rem;
     min-height: 15rem;
     height: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -176,8 +181,8 @@ body {
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    max-width: 90%; /* Defina uma largura máxima para o texto */
-    word-wrap: break-word; /* ou overflow-wrap: break-word; */
+    max-width: 90%;
+    word-wrap: break-word;
 }
 
 .servicos-card p {
@@ -236,98 +241,34 @@ body {
 }
 
 .button-wrapper {
-    text-align: center; /* Alinha o botão à esquerda */
+    text-align: center;
 
 }
 
 .button:hover {
     background-color: #0b86dd;
     color: #fff;
-    /*scale: 105%;*/
     border-radius: 2rem;
 }
 
 
 
-/*
-.rowcategoria{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto;
-    padding-bottom: 250px;
-}
-
-.cardcategoria {
-    width: 500;
-    margin-left: 15px;
-    margin-right: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.cardcategoria img{
-    width: 500px;
-    height: 300px;
-    border-bottom: 1px solid #ddd;
-    object-fit: cover;
-    transition-duration: 0.5s;
-}
-
-.imgcat {
-    width: 500px;
-    height: 300px;
-    overflow: hidden;
-}
-
-.cardcategoria:hover img {
-    scale: 115%;
-}
-
-.cardcategoria h2 {
-    padding-top: 10px;
-    text-align: center;
-    color: #0b86dd;
-
-}
-
-.cardcategoria p {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-  */
-
-/************* Especialifdades ***********/
+/************* Responsivo ***********/
 
 
 @media (max-width: 1360px) {
     .grid-servicos {
-        grid-template-columns: repeat(2, auto); /* Dois cards por linha em telas menores */
+        grid-template-columns: repeat(2, auto);
         gap: 1rem;
     }
 }
 
 @media (max-width: 992px) {
     .grid-servicos {
-        grid-template-columns: repeat(1, auto); /* Dois cards por linha em telas menores */
+        grid-template-columns: repeat(1, auto);
 
     }
 }
-/*
-@media (max-width: 1200px) {
-    .rowequipa {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    .cardequipa {
-        width: 300px ;
-        margin: 20px;
-    }
-}
-*/
 
 @media screen and (max-width:700px) {
     .container {
@@ -337,6 +278,10 @@ body {
 
 /*--responsive for mobile phone--*/
 @media(max-width:720px) {
+
+    .content {
+        margin-left: 0;
+    }
 
     .title {
         padding-top: 2svh;
