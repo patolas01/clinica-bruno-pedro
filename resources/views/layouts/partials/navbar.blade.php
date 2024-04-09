@@ -34,8 +34,7 @@
                         href="{{ route('sobre') }}">Sobre</a></li>
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
                         href="{{ route('contactos') }}">Contactos</a></li>
-                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'dashboard') active @endif"
-                        href="{{ route('dashboard') }}">Dashboard</a></li>
+
             </ul>
         </div>
 
