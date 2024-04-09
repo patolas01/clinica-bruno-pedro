@@ -28,7 +28,7 @@ class AvaliacoesController extends Controller
         $avaliaco = new Avaliacoes();
         $avaliaco->fill($fields);
         $avaliaco->save();
-        return redirect()->route('avaliacoes.index')
+        return redirect()->route('admin.avaliacoes.index')
             ->with('success', 'Avaliação criada com sucesso');
     }
 
@@ -47,13 +47,13 @@ class AvaliacoesController extends Controller
         $fields = $request->validated();
         $avaliaco->fill($fields);
         $avaliaco->save();
-        return redirect()->route('avaliacoes.index')->with('success', 'Avaliação atualizada com sucesso');
+        return redirect()->route('admin.avaliacoes.index')->with('success', 'Avaliação atualizada com sucesso');
      }
 
     public function destroy(Avaliacoes $avaliaco)
     {
         $avaliaco->delete();
-        return redirect()->route('avaliacoes.index')->with('success', 'Avaliação eliminada com sucesso.');
+        return redirect()->route('admin.avaliacoes.index')->with('success', 'Avaliação eliminada com sucesso.');
     }
 
 }

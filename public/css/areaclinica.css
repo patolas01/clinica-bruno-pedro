@@ -46,38 +46,6 @@ body {
     display: inline-block;
 }
 
-/************* Main ***********/
-
-.banner {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.banner::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/serv.jpeg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; /* Opacidade da imagem de fundo */
-}
-.content {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px; /* Define a largura máxima do conteúdo */
-    position: relative; /* Para garantir que o conteúdo esteja sobreposto à imagem de fundo */
-    z-index: 1;
-}
-
 .erro-message {
     font-size: 18px;
     font-family: "Poppins", sans-serif;
@@ -87,33 +55,77 @@ body {
     text-transform: uppercase;
 }
 
+
+
+/* banner */
+
+.content {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: auto;
+    z-index: 1;
+}
+
+.banner {
+    background-image: url('../img/areaclinicabanner.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../areaclinicabanner.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Poppins", sans-serif;
+}
+
 .title {
     padding-top: 100px;
     font-size: 64px;
     color: #30383B;
     font-weight: bold;
-    margin-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 25px;
 }
 
 .subtitle,
 .subtitle1 {
-    font-size: 22px;
+    font-size: 24px;
     color: #30383B;
-    margin-left: 17px;
+    font-family: "Poppins", sans-serif;
 }
 
-.button1 {
+.button1{
     margin-top: 50px;
-    margin-left: 15px;
-    margin-bottom: 35px;
-    padding: 10px 40px;
-    background-color: #0b86dd;
-    color: #ffffff;
+    padding: 15px 25px;
+    background-color: white;
+    color: #0b86dd;
     font-weight: bold;
     text-decoration: none !important;
     font-size: 16px;
     text-align: left;
-    border:1px solid #0b86dd;
+    border: 1px solid #0b86dd;
     cursor: pointer;
     display: inline-block;
     border-radius: 2rem;
@@ -122,16 +134,13 @@ body {
 }
 
 .button1:hover {
-    background-color: white;
-    color: #0b86dd;
+    background-color: #0b86dd;
+    color: #fff;
     /*scale: 105%;*/
     border-radius: 2rem;
 }
 
-.button1-wrapper {
-    text-align: center; /* Alinha o botão à esquerda */
 
-}
 /************* Categoria ***********/
 
 
@@ -205,9 +214,6 @@ body {
         opacity: 100%;
     }
 }
-
-
-
 
 
 .button {
@@ -322,3 +328,42 @@ body {
     }
 }
 */
+
+@media screen and (max-width:700px) {
+    .container {
+        height: auto;
+    }
+}
+
+/*--responsive for mobile phone--*/
+@media(max-width:720px) {
+
+    .title {
+        padding-top: 2svh;
+    }
+
+    .title,
+    .subtitle,
+    .subtitle1 {
+        font-size: 6svh;
+        text-align: center;
+
+    }
+
+    .subtitle,
+    .subtitle1 {
+        font-size: 3svh;
+    }
+
+    .content .button1 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+}
+
