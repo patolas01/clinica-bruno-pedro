@@ -47,7 +47,7 @@ class EspecialidadeController extends Controller
             $especialidade->icon = basename($imagem_path);
         }
         $especialidade->save();
-        return redirect()->route('especialidades.index')
+        return redirect()->route('admin.especialidades.index')
             ->with('success', 'Especialidade criada com sucesso');
     }
 
@@ -80,7 +80,7 @@ class EspecialidadeController extends Controller
 
 
          if ($request->hasFile('icon')) {
-             
+
              if (!empty($especialidade->icon)) {
                  Storage::disk('public')->delete('especialidade_imagens/' . $especialidade->icon);
              }
@@ -92,7 +92,7 @@ class EspecialidadeController extends Controller
 
          $especialidade->save();
 
-         return redirect()->route('especialidades.index')->with('success', 'Especialidade atualizada com sucesso');
+         return redirect()->route('admin.especialidades.index')->with('success', 'Especialidade atualizada com sucesso');
      }
 
     /**
@@ -103,7 +103,7 @@ class EspecialidadeController extends Controller
     {
         Storage::disk('public')->delete('especialidade_imagens/' . $especialidade->icon);
         $especialidade->delete();
-        return redirect()->route('especialidades.index')->with(
+        return redirect()->route('admin.especialidades.index')->with(
             'success',
             'Especialidade eliminada com sucesso'
         );

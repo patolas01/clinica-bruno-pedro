@@ -48,7 +48,7 @@ class DetalheController extends Controller
         }
 
         $detalhe->save();
-        return redirect()->route('detalhes.index')
+        return redirect()->route('admin.detalhes.index')
             ->with('success', 'detalhes criado com sucesso');
     }
 
@@ -91,7 +91,7 @@ class DetalheController extends Controller
         }
 
         $detalhe->save();
-        return redirect()->route('detalhes.index')->with('success', 'detalhe atualizado com sucesso');
+        return redirect()->route('admin.detalhes.index')->with('success', 'detalhe atualizado com sucesso');
     }
 
 
@@ -103,7 +103,7 @@ class DetalheController extends Controller
      {
         Storage::disk('public')->delete('detalheesp_imagens/' . $detalhe->imagem);
         $detalhe->delete();
-        return redirect()->route('detalhes.index')->with(
+        return redirect()->route('admin.detalhes.index')->with(
             'success',
             'Detalhes eliminados com sucesso'
         );

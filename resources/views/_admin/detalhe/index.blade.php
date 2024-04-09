@@ -8,7 +8,7 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a class="btn btn-primary" href="{{ route('detalhes.create') }}">
+                <a class="btn btn-primary" href="{{ route('admin.detalhes.create') }}">
                     <i class="fas fa-plus"></i> Novo detalhe Especialidade
                 </a>
 
@@ -33,9 +33,9 @@
                                         <td>{{ $detalhe->especialidade->id }}</td>
 
                                         <td nowrap>
-                                            <a class="btn btn-xs btn-primary btn-p" href="{{route('detalhes.show',$detalhe)}}"><i class="fas fa-eye fa-xs"></i></a>
-                                            <a class="btn btn-xs btn-warning btn-p" href="{{route('detalhes.edit',$detalhe)}}"><i class="fas fa-pen fa-xs"></i></a>
-                                            <form method="POST" action="{{route('detalhes.destroy',$detalhe)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar esta especialidade?');">
+                                            <a class="btn btn-xs btn-primary btn-p" href="{{route('admin.detalhes.show',$detalhe)}}"><i class="fas fa-eye fa-xs"></i></a>
+                                            <a class="btn btn-xs btn-warning btn-p" href="{{route('admin.detalhes.edit',$detalhe)}}"><i class="fas fa-pen fa-xs"></i></a>
+                                            <form method="POST" action="{{route('admin.detalhes.destroy',$detalhe)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar esta especialidade?');">
                                                 @csrf
                                                 @method("DELETE")
                                                 <button type="submit" class="btn btn-xs btn-danger btn-p"> <i class="fas fa-trash fa-xs"> </i></button>
