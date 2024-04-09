@@ -8,8 +8,8 @@ use App\Models\PostSaude;
 use App\Models\Avaliacoes;
 use App\Models\Especialidade;
 use App\Models\Detalhe;
+use App\Models\Galeria;
 use App\Models\User;
-
 
 class PageController extends Controller
 {
