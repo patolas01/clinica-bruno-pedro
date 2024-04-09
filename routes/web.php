@@ -46,7 +46,7 @@ Route::get('/dashboard', [PageController::class, 'dashboard'])
 
 
     Route::group(['middleware' => ['auth', 'verified', 'admin'] , 'as' => 'admin.', 'prefix' => 'admin'], function () {
-        
+
     Route::resource('especialidades', EspecialidadeController::class);
     Route::resource('formularios', FormularioController::class);
     Route::resource('posts-saude', PostSaudeController::class);
