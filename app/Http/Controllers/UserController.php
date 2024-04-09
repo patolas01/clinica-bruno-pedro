@@ -45,6 +45,7 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8',
+            'img',
             'perm' => 'required|in:N,A', // 'N' para normal, 'A' para admin
         ]);
 
@@ -92,7 +93,8 @@ class UserController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email,'.$user->id,
-            'password' => 'nullable|string|min:8', // Senha é opcional ao atualizar
+            'password' => 'nullable|string|min:8',
+            'img', // Senha é opcional ao atualizar
             'perm' => 'required|in:N,A', // 'N' para normal, 'A' para admin
         ]);
 
