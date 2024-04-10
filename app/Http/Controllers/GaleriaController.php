@@ -27,10 +27,11 @@ class GaleriaController extends Controller
      public function create()
      {
          if (Gate::allows('create', Galeria::class)) {
-             // O usuário tem permissão para criar uma nova galeria
-             return view('_admin.galeria.create');
+
+             $galeria = new Galeria();
+             return view('_admin.galeria.create', compact('galeria'));
          } else {
-             abort(403); // Negar acesso se o usuário não tiver permissão
+             abort(403); 
          }
      }
 

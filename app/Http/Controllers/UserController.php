@@ -33,19 +33,12 @@ class UserController extends Controller
         return view('_admin.users.index', compact("users"));
     }
 
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         $user = new User();
         return view('_admin.users.create', compact('user'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(UserRequest $request)
     {
         $fields = $request->validated();
@@ -60,22 +53,19 @@ class UserController extends Controller
             $user->img = basename($img_path);
         }
         $user->save();
-        $user->sendEmailVerificationNotification();
+
+         /*$user->sendEmailVerificationNotification();*/
         return redirect()->route('admin.users.index')
             ->with('success', 'Utilizador criado com sucesso');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(User $user)
     {
         return view('_admin.users.show', compact('user'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(User $user)
     {
         return view('_admin.users.edit', compact('user'));
@@ -115,9 +105,7 @@ class UserController extends Controller
             ->with('success', 'Utilizador atualizado com sucesso');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+   
     public function destroy(User $user)
     {
         $user->delete();

@@ -25,7 +25,6 @@ use App\Http\Middleware\AdminMiddleware;
 */
 
 Route::get('/', [PageController::class, 'index'])->name('index');
-Route::get('/index1', [PageController::class, 'index1'])->name('index1');
 Route::get('/area-clinica', [PageController::class, 'areaClinica'])->name('areaClinica');
 Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
 Route::get('/galeria', [PageController::class, 'galeria'])->name('galeria');
@@ -60,4 +59,4 @@ Route::resource('/admin/users', UserController::class, ['as' => 'admin', 'middle
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

@@ -86,7 +86,7 @@
                                     </a>
                                     @if (Auth::user()->perm == 'A')
                                         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
-                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            <i class="fas fa-fw fa-tachometer-alt"></i>
                                             Dashboard
                                         </a>
                                     @endif
@@ -131,7 +131,7 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-
+{{--
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -155,7 +155,7 @@
             </div>
         </div>
     </div>
-
+--}}
 
 
 

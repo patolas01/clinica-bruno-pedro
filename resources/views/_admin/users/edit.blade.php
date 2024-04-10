@@ -34,8 +34,7 @@
                     </form>
                 @endif
 
-                <a href="{{ route('admin.users.sendActivationEmail', $user) }}" class="btn btn-primary">Enviar
-                    email de ativação</a>
+               
             </div>
         </div>
     </div>
