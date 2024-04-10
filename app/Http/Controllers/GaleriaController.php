@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Galeria;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\GaleriaRequest;
 
 class GaleriaController extends Controller
@@ -23,11 +24,15 @@ class GaleriaController extends Controller
      * Show the form for creating a new resource.
      */
 
-    public function create()
-    {
-        $galeria = new Galeria;
-        return view('_admin.galeria.create', compact("galeria"));
-    }
+     public function create()
+     {
+         if (Gate::allows('create', Galeria::class)) {
+             // O usuário tem permissão para criar uma nova galeria
+             return view('_admin.galeria.create');
+         } else {
+             abort(403); // Negar acesso se o usuário não tiver permissão
+         }
+     }
 
     /**
      * Store a newly created resource in storage.

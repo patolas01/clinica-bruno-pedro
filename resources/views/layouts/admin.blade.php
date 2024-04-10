@@ -53,7 +53,7 @@
 
 
             <!-- Nav Item - Pages Collapse Menu -->
-            {{-- <li class="nav-item">
+            <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
                         aria-expanded="true" aria-controls="collapseUsers">
                         <i class="fas fa-users"></i>
@@ -63,36 +63,12 @@
                         data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
 
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Utilizador</a>
+                            <a class="collapse-item" href="{{ route('admin.users.index') }}">Listagem</a>
+                            <a class="collapse-item" href="{{ route('admin.users.create') }}">Novo Utilizador</a>
                         </div>
                     </div>
-                </li> --}}
+                </li>
             <!-- Nav Item - Pages Collapse Menu -->
-            {{-- <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePosts"
-                        aria-expanded="true" aria-controls="collapsePosts">
-                        <i class="fas fa-fw fa-list"></i>
-                        <span>Tipos</span>
-                    </a>
-                    <div id="collapsePosts" class="collapse" aria-labelledby="headingPosts"
-                        data-parent="#accordionSidebar">
-                        <div class="bg-white py-2 collapse-inner rounded">
-                            <div class="collapse-divider"></div>
-                            <h6 class="collapse-header">Tipo Eventos/Mod:</h6>
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Tipo
-                                Event/Mod</a>
-                            <h6 class="collapse-header">Tipo Post:</h6>
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Tipo Post</a>
-                            <h6 class="collapse-header">Tipo Planos:</h6>
-                            <a class="collapse-item" href="">Listagem</a>
-                            <a class="collapse-item" href="">Novo Tipo
-                                Planos</a>
-                        </div>
-                    </div>
-                </li> --}}
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAvaliacoes"

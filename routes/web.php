@@ -50,6 +50,7 @@ Route::resource('/admin/users', UserController::class, ['as' => 'admin', 'middle
 
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
     Route::resource('especialidades', EspecialidadeController::class);
+    Route::resource('users', UserController::class);
     Route::resource('formularios', FormularioController::class);
     Route::resource('posts-saude', PostSaudeController::class);
     Route::resource('avaliacoes', AvaliacoesController::class);

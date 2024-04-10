@@ -10,12 +10,6 @@
 </div>
 
 <div class="form-group">
-    <label for="inputAge">Data de nascimento</label>
-    <input type="date" class="form-control" name="data_nasc" id="inputAge" placeholder="Enter your age"
-        value="{{ old('data_nasc', $user->data_nasc) }}" />
-</div>
-
-<div class="form-group">
     <label for="inputPhoto">Foto</label>
     <input type="file" class="form-control-file" name="img" id="inputPhoto" aria-describedby="fileHelp" />
     <small id="fileHelp" class="form-text text-muted"> Por favor carregue um ficheiro de imagem válido. O tamanho da
