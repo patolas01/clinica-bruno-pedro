@@ -105,14 +105,14 @@
 
                 </nav>
                 <!-- End of Topbar -->
-                <div class="container-fluid">
+                {{-- <div class="container-fluid">
                     @if ($errors->any())
-                        @include ('layout.partials.error')
+                        @include ('layouts.partials.error')
                     @endif
                     @if (!empty(session('success')))
-                        @include ('layout.partials.success')
+                        @include ('layouts.partials.success')
                     @endif
-                </div>
+                </div> --}}
 
 
 

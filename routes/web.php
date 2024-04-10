@@ -13,6 +13,7 @@ use App\Http\Controllers\DetalheController;
 use App\Http\Controllers\GaleriaController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\AdminMiddleware;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +29,11 @@ Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/index1', [PageController::class, 'index1'])->name('index1');
 Route::get('/area-clinica', [PageController::class, 'areaClinica'])->name('areaClinica');
 Route::get('/contactos', [PageController::class, 'contactos'])->name('contactos');
+Route::get('/contactos', function () {
+    $especialidades = App\Models\Especialidade::all();
+    return view('contactos', compact('especialidades'));
+})->name('contactos');
+Route::post('/contactos-form', [FormularioController::class, 'contactosForm'])->name('contactos-form');
 Route::get('/galeria', [PageController::class, 'galeria'])->name('galeria');
 Route::get('/guia-saude', [PageController::class, 'guiaSaude'])->name('guiaSaude');
 Route::get('/sobre', [PageController::class, 'sobre'])->name('sobre');
@@ -46,7 +52,7 @@ Route::resource('/admin/users', UserController::class, ['as' => 'admin', 'middle
 
 
 
-    Route::group(['middleware' => ['auth', 'verified', 'admin'] , 'as' => 'admin.', 'prefix' => 'admin'], function () {
+Route::group(['middleware' => ['auth', 'verified', 'admin'], 'as' => 'admin.', 'prefix' => 'admin'], function () {
 
     Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
     Route::resource('especialidades', EspecialidadeController::class);
@@ -56,7 +62,7 @@ Route::resource('/admin/users', UserController::class, ['as' => 'admin', 'middle
     Route::resource('avaliacoes', AvaliacoesController::class);
     Route::resource('detalhes', DetalheController::class);
     Route::resource('galeria', GaleriaController::class);
-    });
+});
 
 Auth::routes();
 

@@ -23,6 +23,20 @@ class FormularioController extends Controller
         return view('_admin.formulario.create', compact('formulario', 'especialidades'));
     }
 
+    public function contactosForm(FormularioRequest $request)
+    {
+        $fields = $request->validated();
+        $formulario = new Formulario();
+        $formulario->fill($fields);
+        // Additional logic for file upload, if necessary
+
+        $formulario->save();
+
+        // Redirect back to the contactos page with a success message
+        return redirect()->route('contactos')
+            ->with('success', 'Formulário enviado com sucesso');
+    }
+
     public function store(FormularioRequest $request)
     {
         $fields = $request->validated();
