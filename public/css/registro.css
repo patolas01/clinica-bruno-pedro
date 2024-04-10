@@ -25,11 +25,11 @@ body {
     padding: 0;
 }
 
-#logologin {
+#logoregistro {
     max-width: 270px;
     max-height: 120px;
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
     height: auto;
     object-fit: cover;
     display: block;
@@ -51,7 +51,7 @@ body {
     font-style: normal;
     font-weight: bold;
     color: #30383B;
-    padding-bottom: 30px;
+    padding-bottom: 0;
 }
 
 .center p {
@@ -62,15 +62,6 @@ body {
 
 .center form {
     box-sizing: border-box;
-}
-
-#nome {
-    font-size: 24pt;
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    color: #30383B;
-    padding-bottom: 0;
 }
 
 .txt_field {
@@ -199,6 +190,7 @@ body {
     align-items: center;
     margin-top: 20px;
 }
+
 
 input[type="submit"] {
     width: 100%;

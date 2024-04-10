@@ -95,12 +95,10 @@
             document.addEventListener('DOMContentLoaded', function() {
                 let inputNome = document.getElementById('name');
                 inputNome.addEventListener('input', function(event) {
-                    // Remove qualquer número que seja inserido no campo "Nome"
                     this.value = this.value.replace(/[0-9]/g, '');
                 });
                 let inputContacto = document.getElementById('contacto');
                 inputContacto.addEventListener('input', function(event) {
-                    // Remove qualquer caractere que não seja número do campo "Contacto"
                     this.value = this.value.replace(/\D/g, '');
     });
             });

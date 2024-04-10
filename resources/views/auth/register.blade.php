@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulsehub - Registo</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Registro - Clinica Dentária Bruno & Pedro Lda.</title>
+    <link rel="stylesheet" href="css/registro.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
@@ -15,6 +15,7 @@
 <body>
     <div class="background">
         <div class="center">
+            <img src="{{ asset('img/Logo BrunoPedro escuro.png') }}" alt="Logo Login" id="logoregistro">
             <h1>Registo</h1>
             <form method="POST" method="{{ route('register') }}">
                 @csrf
@@ -68,6 +69,7 @@
             </form>
         </div>
     </div>
+
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -97,6 +99,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>
