@@ -14,7 +14,7 @@
             <div class="title">Clínica Dentária Bruno & Pedro</div>
             <div class="subtitle">Tratamentos de qualidade ao nivel da Medicina Oral.</div>
             <div class="subtitle1">Onde cada Doente é um Amigo e o sorriso é levado muito a sério.</div>
-            <a href="{{ route('contactos') }}#formtodo" class="button">Pedido de Marcação</a>
+            <a href="{{ route('contactos') }}#formtodo" class="button1">Pedido de Marcação</a>
         </div>
     </div>
 
