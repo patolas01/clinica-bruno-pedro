@@ -2,121 +2,146 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
     /**
-     * Display a listing of users.
-     *
-     * @return \Illuminate\Http\Response
+     * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        // Busca todos os usuários
-        $users = User::all();
-
-        // Retorna a view com a lista de usuários
-        return view('users.index', ['users' => $users]);
+        if (count($request->all()) == 0) {
+            $users = User::all();
+        } else {
+            $users = User::query();
+            if ($request->filled('name')) {
+                $users->where('name', 'like', '%' . $request->name . '%');
+            }
+            if ($request->filled('email')) {
+                $users->where('email', 'like', '%' . $request->email . '%');
+            }
+            if ($request->filled('perm')) {
+                $users->where('perm', $request->perm);
+            }
+            $users = $users->get();
+        }
+        return view('_admin.users.index', compact("users"));
     }
 
+
     /**
-     * Show the form for creating a new user.
-     *
-     * @return \Illuminate\Http\Response
+     * Show the form for creating a new resource.
      */
     public function create()
     {
-        // Retorna a view para criar um novo usuário
-        return view('users.create');
+        $user = new User();
+        return view('_admin.users.create', compact('user'));
     }
 
     /**
-     * Store a newly created user in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        // Valida os dados do formulário
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:8',
-            'img',
-            'perm' => 'required|in:N,A', // 'N' para normal, 'A' para admin
-        ]);
-
-        // Cria um novo usuário com os dados validados
-        $user = User::create($validatedData);
-
-        // Redireciona para a página de lista de usuários
-        return redirect()->route('users.index')->with('success', 'Usuário criado com sucesso!');
+        $fields = $request->validated();
+        /*$user =User::create($fields); */
+        $user = new User();
+        $user->fill($fields);
+        $user->password = Hash::make('password');
+        if ($request->hasFile('img')) {
+            $img_path = $request->file('img')->store(
+                'public/users_fotos'
+            );
+            $user->img = basename($img_path);
+        }
+        $user->save();
+        $user->sendEmailVerificationNotification();
+        return redirect()->route('admin.users.index')
+            ->with('success', 'Utilizador criado com sucesso');
     }
 
     /**
-     * Display the specified user.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * Display the specified resource.
      */
     public function show(User $user)
     {
-        // Retorna a view com os detalhes de um usuário específico
-        return view('users.show', ['user' => $user]);
+        return view('_admin.users.show', compact('user'));
     }
 
     /**
-     * Show the form for editing the specified user.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * Show the form for editing the specified resource.
      */
     public function edit(User $user)
     {
-        // Retorna a view para editar um usuário específico
-        return view('users.edit', ['user' => $user]);
+        return view('_admin.users.edit', compact('user'));
     }
 
-    /**
-     * Update the specified user in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, User $user)
+
+    public function __construct()
     {
-        // Valida os dados do formulário
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,'.$user->id,
-            'password' => 'nullable|string|min:8',
-            'img', // Senha é opcional ao atualizar
-            'perm' => 'required|in:N,A', // 'N' para normal, 'A' para admin
-        ]);
+        $this->authorizeResource(User::class, 'user');
+    }
 
-        // Atualiza os dados do usuário com os dados validados
-        $user->update($validatedData);
 
-        // Redireciona de volta para a página de detalhes do usuário
-        return redirect()->route('users.show', ['user' => $user])->with('success', 'Usuário atualizado com sucesso!');
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(UserRequest $request, User $user)
+    {
+        if (auth()->user()->can('updateRole', $user)) {
+            $fields = $request->validated();
+        } else {
+            $fields = $request->except("perm");
+        }
+        $fields = $request->validated();
+        $user->fill($fields);
+        if ($request->hasFile('img')) {
+            if (!empty($user->img)) {
+                Storage::disk('public')->delete('users_fotos/' .
+                    $user->img);
+            }
+            $img_path =
+                $request->file('img')->store('public/users_fotos');
+            $user->img = basename($img_path);
+        }
+
+        $user->save();
+        return redirect()->route('admin.users.index')
+            ->with('success', 'Utilizador atualizado com sucesso');
     }
 
     /**
-     * Remove the specified user from storage.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * Remove the specified resource from storage.
      */
     public function destroy(User $user)
     {
-        // Remove o usuário do banco de dados
         $user->delete();
-
-        // Redireciona para a página de lista de usuários
-        return redirect()->route('users.index')->with('success', 'Usuário excluído com sucesso!');
+        return redirect()->route('admin.users.index')->with(
+            'success',
+            'Utilizador eliminado com sucesso'
+        );
+    }
+    public function destroy_photo(User $user)
+    {
+        Storage::disk('public')->delete('user_fotos/' . $user->img);
+        $user->img = null;
+        $user->save();
+        return redirect()->route('admin.users.edit', $user)->with(
+            'success',
+            'A foto do utilizador foi apagada com sucesso.'
+        );
+    }
+    public function send_reactivate_email(User $user)
+    {
+        $user->sendEmailVerificationNotification();
+        return redirect()->route('admin.users.edit', $user)->with(
+            'success',
+            'O email foi enviado com sucesso para o utilizador'
+        );
     }
 }
