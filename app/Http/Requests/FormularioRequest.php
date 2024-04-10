@@ -28,6 +28,7 @@ class FormularioRequest extends FormRequest
             'nome' => 'required',
             'email' => 'required|email',
             'especialidade_id' => 'required|exists:especialidades,id',
+            'mensagem' => 'required|string',
         ];
     }
 
@@ -45,6 +46,7 @@ class FormularioRequest extends FormRequest
             'email.email' => 'Por favor, insira um endereço de email válido.',
             'especialidade_id.required' => 'O campo especialidade é obrigatório.',
             'especialidade_id.exists' => 'A especialidade selecionada é inválida.',
+            'mensagem.required' => 'O campo mensagem é obrigatório.',
         ];
     }
 }

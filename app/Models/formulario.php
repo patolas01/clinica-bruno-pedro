@@ -14,6 +14,7 @@ class Formulario extends Model
         'nome',
         'email',
         'especialidade_id',
+        'mensagem',
     ];
 
     public function especialidade()
