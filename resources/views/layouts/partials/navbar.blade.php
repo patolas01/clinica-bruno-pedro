@@ -59,7 +59,7 @@
                             @if (auth()->check())
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-200 small">
+                                    <span class="mr-2 d-none d-lg-inline text-gray-200 small nomeuser">
                                         @php
                                             $fullName = auth()->user()->name;
                                             $nameParts = explode(' ', $fullName);
@@ -174,10 +174,11 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
+          <img src="{{ asset('img/favicon preto.png') }}" alt="Logo Login" id="logoregistro">
           <h5 class="modal-title" id="exampleModalLongTitle">Terminar Sessão</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="font-weight: bold;">×</span>
+        </button>
         </div>
         <div class="modal-body">
             Clique no botão "Logout" se confirma que pretende terminar a sua sessão nesta página.
@@ -192,6 +193,8 @@
       </div>
     </div>
   </div>
+
+
 
  <!-- Drop down menu -->
     <div class="dropdown_menu open">

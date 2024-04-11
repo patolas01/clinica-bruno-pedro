@@ -516,6 +516,8 @@ article p {
     color: #30383B;
     font-size: 15px;
     margin-bottom: 1rem;
+    word-wrap: break-word;
+    max-width: 100%;
     font-family: "Poppins", sans-serif;
 }
 

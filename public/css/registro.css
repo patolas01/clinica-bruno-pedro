@@ -232,3 +232,45 @@ button#reset {
     background-color: #0b86dd;
     border-color: #0b86dd;
 }
+
+/*****RESPONSIVO*****/
+
+@media only screen and (max-width: 720px) {
+    .center {
+        width: 90%;
+    }
+
+    #logologin {
+        max-width: 200px;
+        padding-bottom: 20px;
+    }
+
+    .center h1 {
+        font-size: 20pt;
+    }
+
+    .center p {
+        font-size: 14px;
+    }
+
+    .txt_field input {
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .txt_field label {
+        top: 12px;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .signup_link {
+        margin: 20px 0 0;
+        font-size: 14px;
+    }
+}
+

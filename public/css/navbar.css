@@ -110,13 +110,15 @@ h6 {
     top: 0;
     justify-content: space-between;
     background-color: var(--cl--black);
-    padding: 20px;
+    padding: 10px;
     padding-inline: 5%;
     font-family: "Poppins", sans-serif !important;
-    /*   max-width: 1440px;
-    margin-inline: auto; */
+}
 
-
+.nomeuser {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-weight: bold;
 }
 
 .toggle_btn {
@@ -278,11 +280,44 @@ li {
 }
 
 
-/* Modal Logout */
+
+/****MODAL LOGOUT*/
+
 .modal-title {
-    color: #0b86dd;
-    font-family: "Poppins", sans-serif !important;
+    font-size: 16pt;
+    font-style: normal;
+    font-weight: bold;
+    color: #30383B;
+    font-family: "Poppins", sans-serif;
 }
+
+#logoregistro {
+    margin-right: 10px;
+}
+
+.modal-header-content {
+    display: flex;
+    align-items: center;
+}
+
+.close {
+    margin-left: auto;
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+    border: none;
+    background-color: #fff;
+    font-size: 18pt;
+}
+
+.close:hover {
+    color: #30383B;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 16px;
+}
+
 
 
 /* mobile Navbar */
