@@ -107,6 +107,7 @@
 
                 </nav>
                 <!-- End of Topbar -->
+                {{--
                  <div class="container-fluid">
                     @if ($errors->any())
                         @include ('layouts.partials.error')
@@ -115,7 +116,7 @@
                         @include ('layouts.partials.success')
                     @endif
                 </div>
-
+--}}
 
 
 

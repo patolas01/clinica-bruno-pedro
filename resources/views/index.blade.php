@@ -26,11 +26,14 @@
             @foreach ($especialidades as $especialidade)
                 <li class="card">
                     @if (isset($detalhesByEspecialidade[$especialidade->id]))
-                        <div class="img">
-                            <img src="{{ asset('storage/detalheesp_imagens/' . $detalhesByEspecialidade[$especialidade->id]->imagem) }}"
-                                alt="{{ $especialidade->nome }}" draggable="false">
-                        </div>
-                        <h3>{{ $especialidade->nome }}</h3>
+                        <!-- Use <a> como link em volta da <div> da imagem -->
+                        <a href="{{ route('especialidadeDetalhe', $especialidade) }}">
+                            <div class="img">
+                                <img src="{{ asset('storage/detalheesp_imagens/' . $detalhesByEspecialidade[$especialidade->id]->imagem) }}"
+                                    alt="{{ $especialidade->nome }}" draggable="false">
+                            </div>
+                            <h3>{{ $especialidade->nome }}</h3>
+                        </a>
                     @endif
                 </li>
             @endforeach
@@ -98,9 +101,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/slider.js') }}"></script>
     <script src="{{ asset('js/animation-scroll.js') }}"></script>
-
+    <script src="{{ asset('js/upbuton.js') }}"></script>
+    <script src="{{ asset('js/form.js') }}"></script>
 @endsection
 @section('moreScripts')
-    <script src="{{ asset('js/form.js') }}"></script>
-    <script src="{{ asset('js/upbuton.js') }}"></script>
+
 @endsection
