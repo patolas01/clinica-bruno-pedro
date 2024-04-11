@@ -59,7 +59,8 @@ class PageController extends Controller
 
     public function guiaSaude()
     {
-        return view('guia-saude');
+        $posts = PostSaude::all();
+        return view('guia-saude',compact('posts'));
     }
 
     public function sobre()
