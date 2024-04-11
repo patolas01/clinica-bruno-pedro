@@ -92,8 +92,7 @@
                                             Dashboard
                                         </a>
                                     @endif
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#logoutModal">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalCenter">
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Logout
                                     </a>
@@ -106,6 +105,12 @@
                     </ul>
 
                 </nav>
+
+<!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+  </button>-->
+
                 <!-- End of Topbar -->
                 {{--
                  <div class="container-fluid">
@@ -136,6 +141,7 @@
 
 
     <!-- Logout Modal-->
+    {{--
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -159,10 +165,35 @@
         </div>
     </div>
 </div>
+--}}
 
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Terminar Sessão</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            Clique no botão "Logout" se confirma que pretende terminar a sua sessão nesta página.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <form id="logoutForm" action="{{ route('logout') }}" method="post" class="inline">
+            @csrf
+            <button type="submit" class="btn btn-primary">Logout</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
+ <!-- Drop down menu -->
     <div class="dropdown_menu open">
         <div class="subnav">
             <div class="logo">
@@ -193,5 +224,17 @@
 </nav>
 
 
+<!-- Bootstrap core JavaScript-->
+<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-@yield('scripts')
+<!-- Core plugin JavaScript-->
+<script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{{ asset('vendor/jquery/sb-admin-2.min.js') }}"></script>
+
+<!-- Page level plugins -->
+<script src="{{ asset('vendor/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+

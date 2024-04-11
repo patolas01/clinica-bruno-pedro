@@ -278,6 +278,13 @@ li {
 }
 
 
+/* Modal Logout */
+.modal-title {
+    color: #0b86dd;
+    font-family: "Poppins", sans-serif !important;
+}
+
+
 /* mobile Navbar */
 
 @media(max-width:1150px) {
