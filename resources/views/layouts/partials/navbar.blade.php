@@ -106,11 +106,6 @@
 
                 </nav>
 
-<!-- Button trigger modal
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-    Launch demo modal
-  </button>-->
-
                 <!-- End of Topbar -->
                 {{--
                  <div class="container-fluid">
@@ -141,35 +136,6 @@
 
 
     <!-- Logout Modal-->
-    {{--
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Terminar Sessão?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Clique no botão "Logout" se confirma que pretende terminar a sua sessão nesta página.
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                <form action="{{ route('logout') }}" method="post" class="inline">
-                    @csrf
-                    <button class="btn btn-primary" type="submit">Logout</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
---}}
-
-
-
-  <!-- Modal -->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">

@@ -24,39 +24,23 @@
 <div class="categorias">
 
     <div class="rowcategoria">
-
+        @if (!is_null($posts) && count($posts) > 0)
+        @foreach ($posts as $post)
     <div class="cardcategoria">
         <div class="imgcat">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
+        <img src="{{ asset('storage/post_imagens/'. $post->imagem) }}" alt="Post">
         </div>
         <div class="categoria-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
+        <h2>{{ $post->nome }}</h2>
+        <p>{{ $post->descricao }}</p>
         </div>
     </div>
-
-    <div class="cardcategoria">
-        <div class="imgcat">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        </div>
-        <div class="categoria-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
+    @endforeach
+    @else
+        <p class="erro-message">Nenhum post disponível no momento.</p>
+    @endif
     </div>
-
-    <div class="cardcategoria">
-        <div class="imgcat">
-        <img src="{{ asset('img/dentist-2589771.jpg') }}" alt="Musculação">
-        </div>
-        <div class="categoria-conteudo">
-        <h2>Card 1</h2>
-        <p>Conteúdo do Card 1</p>
-        </div>
-    </div>
-
-    </div>
-
+</div>
 @endsection
 @section('moreScripts')
         <script src="{{ asset('js/form.js') }}"></script>

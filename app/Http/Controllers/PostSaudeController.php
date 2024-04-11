@@ -26,13 +26,13 @@ class PostSaudeController extends Controller
     {
         $fields = $request->validated();
 
-        // Verifique se uma imagem foi enviada
+
         if ($request->hasFile('imagem')) {
-            // Obtenha o arquivo da solicitação
+
             $imagem = $request->file('imagem');
-            // Salve a imagem no armazenamento
+
             $caminhoImagem = $imagem->store('public/post_imagens');
-            // Salve apenas o nome do arquivo no banco de dados
+       
             $fields['imagem'] = basename($caminhoImagem);
         }
 
