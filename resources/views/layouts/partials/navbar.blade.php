@@ -10,6 +10,8 @@
 <!-- Custom styles for this page -->
 {{-- <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet"> --}}
 
+
+
 <nav class="barra-nav">
     <div class="container-nav">
         <a href="{{ route('index') }}">
@@ -105,14 +107,14 @@
 
                 </nav>
                 <!-- End of Topbar -->
-                {{-- <div class="container-fluid">
+                 <div class="container-fluid">
                     @if ($errors->any())
                         @include ('layouts.partials.error')
                     @endif
                     @if (!empty(session('success')))
                         @include ('layouts.partials.success')
                     @endif
-                </div> --}}
+                </div>
 
 
 
@@ -131,31 +133,32 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-{{--
+
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Terminar Sessão?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Clique no botão "Logout" se confirma que pretende terminar a sua sessão nesta
-                    página.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <form action="{{ route('logout') }}" method="post" class="inline">
-                        @csrf
-                        <button class="btn btn-primary" type="submit">Logout</button>
-                    </form>
-                </div>
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Terminar Sessão?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Clique no botão "Logout" se confirma que pretende terminar a sua sessão nesta página.
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                <form action="{{ route('logout') }}" method="post" class="inline">
+                    @csrf
+                    <button class="btn btn-primary" type="submit">Logout</button>
+                </form>
             </div>
         </div>
     </div>
---}}
+</div>
+
 
 
 
@@ -187,5 +190,7 @@
 
 
 </nav>
+
+
 
 @yield('scripts')
