@@ -239,13 +239,18 @@ li {
 }
 
 .button-nav {
+    padding: 8px 10px;
+    border-radius: .75rem;
     cursor: pointer;
     color: white;
     font-size: 20px;
+    border: 2px solid #fff;
+    font-size: 12pt;
 }
 
 .button-nav:hover {
     color: #6dffe9;
+    border: 2px solid #6dffe9;
 }
 
 .all-list {

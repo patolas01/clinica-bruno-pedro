@@ -98,7 +98,7 @@
                                     </a>
                                 </div>
                             @else
-                                <a href="{{ route('login') }}" class="button-nav"><i class="fa-regular fa-user"></i></a>
+                                <a href="{{ route('login') }}" class="button-nav"><i class="fa-regular fa-user" style="margin-right: 10px;"></i>Aceder</a>
                             @endif
                         </li>
 
