@@ -83,6 +83,11 @@ class PageController extends Controller
         return view('politicaprivacidade');
     }
 
+    public function perfil()
+    {
+        return view('perfil');
+    }
+
     public function dashboard()
     {
         // Verificar se o usuário está autenticado
