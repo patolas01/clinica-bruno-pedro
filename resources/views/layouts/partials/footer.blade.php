@@ -56,12 +56,7 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-
-        {{-- <img class="line" src="{{ asset('img/Line_2.svg') }}" alt="white line footer"> --}}
 
 </footer>
 
