@@ -260,7 +260,7 @@ select:focus {
 button {
     padding: 10px 30px;
     margin-top: 50px !important;
-    background-color: #0b86dd;
+    background: linear-gradient(8deg, #0b86dd 15.1%, #419fe1 100%);
     color: #fff;
     font-weight: bold;
     text-decoration: none !important;
@@ -270,8 +270,13 @@ button {
     cursor: pointer;
     display: inline-block;
     border-radius: 2rem;
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease;
+}
+
+
+button:hover {
+    background: #fff;
+    color: #0b86dd;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 30px 25px -5px, rgba(0, 0, 0, 0.04) 0px 20px 10px -5px;
 }
 
 .centralizarbotao{
@@ -280,15 +285,6 @@ button {
     margin-right: auto;
     display: block;
 }
-
-
-button:hover {
-    background-color: #fff;
-    color: #0b86dd;
-    /*scale: 105%;*/
-    border-radius: 2rem;
-}
-
 
 .tudoform{
     background-color: #f5f5f5;

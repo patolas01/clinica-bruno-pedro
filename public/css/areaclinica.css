@@ -124,25 +124,21 @@ body {
 .button1{
     margin-top: 50px;
     padding: 15px 25px;
-    background-color: #0b86dd;
+    background: linear-gradient(8deg, #0b86dd 15.1%, #419fe1 100%);
     color: #fff;
     font-weight: bold;
     text-decoration: none !important;
     font-size: 16px;
     text-align: left;
-    border: 1px solid #0b86dd;
     cursor: pointer;
     display: inline-block;
     border-radius: 2rem;
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease;
 }
 
 .button1:hover {
-    background-color: white;
+    background: #fff;
     color: #0b86dd;
-    /*scale: 105%;*/
-    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 30px 25px -5px, rgba(0, 0, 0, 0.04) 0px 20px 10px -5px;
 }
 
 
