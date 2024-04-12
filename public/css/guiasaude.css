@@ -143,35 +143,36 @@ body {
 /************* info ***********/
 
 
-.rowcategoria{
+.rowcategoria {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     margin: 0 auto;
     padding-bottom: 250px;
+    max-width: 1400px;
 }
 
 .cardcategoria {
-    width: 500;
-    margin-left: 15px;
-    margin-right: 15px;
+    width: calc(33.33% - 30px);
+    margin: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
     margin-bottom: 25px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
 }
 
-.cardcategoria img{
-    width: 500px;
+.cardcategoria img {
+    width: 100%;
     height: 300px;
-    border-bottom: 1px solid #ddd;
     object-fit: cover;
     transition-duration: 0.5s;
 }
 
 .imgcat {
-    width: 500px;
     height: 300px;
     overflow: hidden;
 }
@@ -180,17 +181,24 @@ body {
     scale: 115%;
 }
 
-.cardcategoria h2 {
+.cardcategoria h3 {
     padding-top: 10px;
     text-align: center;
     color: #0b86dd;
 
 }
 
+.categoria-conteudo {
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1; /* Permite que o conteúdo se expanda verticalmente */
+}
+
 .cardcategoria p {
     padding-left: 10px;
     padding-right: 10px;
-    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona reticências (...) se o texto for muito longo */
     word-wrap: break-word;
 }
 
@@ -233,39 +241,21 @@ body {
 }
 
 /*--responsive for mobile phone--*/
-@media(max-width:720px) {
-
-    .content {
-        margin-left: 0;
+@media (max-width: 1250px) {
+    .cardcategoria {
+        width: calc(50% - 30px); /* 2 cards por linha em telas menores que 1200px */
     }
-
-    .title {
-        padding-top: 2svh;
-    }
-
-    .title,
-    .subtitle,
-    .subtitle1 {
-        font-size: 6svh;
-        text-align: center;
-
-    }
-
-    .subtitle,
-    .subtitle1 {
-        font-size: 3svh;
-    }
-
-    .content .button1 {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
+    .rowcategoria {
+        max-width: 850px;
     }
 }
 
+@media (max-width: 900px) {
+    .cardcategoria {
+        width: calc(100% - 30px); /* 1 card por linha em telas menores que 768px */
+    }
+    .rowcategoria {
+        max-width: 400px;
+    }
+}
 
