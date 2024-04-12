@@ -102,7 +102,6 @@
     <script src="{{ asset('js/slider.js') }}"></script>
     <script src="{{ asset('js/animation-scroll.js') }}"></script>
     <script src="{{ asset('js/upbuton.js') }}"></script>
-    <script src="{{ asset('js/form.js') }}"></script>
 @endsection
 @section('moreScripts')
 

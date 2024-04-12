@@ -31,7 +31,7 @@
         <img src="{{ asset('storage/post_imagens/'. $post->imagem) }}" alt="Post">
         </div>
         <div class="categoria-conteudo">
-        <h2>{{ $post->nome }}</h2>
+        <h3>{{ $post->nome }}</h3>
         <p>{{ $post->descricao }}</p>
         </div>
     </div>
@@ -43,6 +43,6 @@
 </div>
 @endsection
 @section('moreScripts')
-        <script src="{{ asset('js/form.js') }}"></script>
+        
         <script src="{{ asset('js/upbuton.js') }}"></script>
     @endsection
