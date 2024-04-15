@@ -85,7 +85,13 @@ class PageController extends Controller
 
     public function perfil()
     {
-        return view('perfil');
+        // Obtenha o usuário autenticado
+        $user = auth()->user();
+
+        // Verifique se o usuário está autenticado
+        if ($user) {
+            return view('perfil', compact('user'));
+        } 
     }
 
     public function dashboard()
