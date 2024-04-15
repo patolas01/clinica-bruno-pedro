@@ -40,6 +40,7 @@ Route::get('/equipa', [PageController::class, 'equipa'])->name('equipa');
 Route::get('/termos-e-condicoes', [PageController::class, 'termosCondicoes'])->name('termosCondicoes');
 Route::get('/politicaprivacidade', [PageController::class, 'politicaprivacidade'])->name('politicaprivacidade');
 Route::get('/especialidade-detalhe/{especialidade}', [PageController::class, 'especialidadeDetalhe'])->name('especialidadeDetalhe');
+Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
 
 Auth::routes(['verify' => true]);
 

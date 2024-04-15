@@ -82,23 +82,34 @@
 
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                     aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="{{ route('admin.users.edit', auth()->user()) }}">
-                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Perfil
-                                    </a>
+                                    @if (Auth::check())
+                                        @php
+                                            $user = auth()->user();
+                                            $route = $user->perm === 'A'
+                                                    ? route('admin.users.edit', $user)
+                                                    : route('perfil');
+                                        @endphp
+
+                                        <a class="dropdown-item" href="{{ $route }}">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Perfil
+                                        </a>
+                                    @endif
                                     @if (Auth::user()->perm == 'A')
                                         <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
                                             <i class="fas fa-fw fa-tachometer-alt"></i>
                                             Dashboard
                                         </a>
                                     @endif
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalCenter">
+                                    <a class="dropdown-item" href="#" data-toggle="modal"
+                                        data-target="#exampleModalCenter">
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Logout
                                     </a>
                                 </div>
                             @else
-                                <a href="{{ route('login') }}" class="button-nav"><i class="fa-regular fa-user" style="margin-right: 10px;"></i>Aceder</a>
+                                <a href="{{ route('login') }}" class="button-nav"><i class="fa-regular fa-user"
+                                        style="margin-right: 10px;"></i>Aceder</a>
                             @endif
                         </li>
 
@@ -136,33 +147,34 @@
 
 
     <!-- Logout Modal-->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <img src="{{ asset('img/favicon preto.png') }}" alt="Logo Login" id="logoregistro">
-          <h5 class="modal-title" id="exampleModalLongTitle">Terminar Sessão</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" style="font-weight: bold;">×</span>
-        </button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="{{ asset('img/favicon preto.png') }}" alt="Logo Login" id="logoregistro">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Terminar Sessão</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="font-weight: bold;">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Clique no botão "Logout" se confirma que pretende terminar a sua sessão nesta página.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <form id="logoutForm" action="{{ route('logout') }}" method="post" class="inline">
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            Clique no botão "Logout" se confirma que pretende terminar a sua sessão nesta página.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <form id="logoutForm" action="{{ route('logout') }}" method="post" class="inline">
-            @csrf
-            <button type="submit" class="btn btn-primary">Logout</button>
-        </form>
-        </div>
-      </div>
     </div>
-  </div>
 
 
 
- <!-- Drop down menu -->
+    <!-- Drop down menu -->
     <div class="dropdown_menu open">
         <div class="subnav">
             <div class="logo">
@@ -206,4 +218,3 @@
 <!-- Page level plugins -->
 <script src="{{ asset('vendor/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
-

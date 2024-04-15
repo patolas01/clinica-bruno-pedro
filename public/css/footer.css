@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --ff--montserrat: 'Montserrat', sans-serif;
-    --ff--Roboto: 'Roboto', sans-serif;
 
     --fw--400: 400;
     --fw--500: 500;
@@ -41,7 +38,7 @@
     */
 body {
     line-height: 1.5;
-    font-family: 'HT Modern Hand Sans', sans-serif;
+    font-family: "Poppins", sans-serif !important;
 }
 
 /*
@@ -50,11 +47,10 @@ body {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
     display: block;
     height: 50px;
-    width: auto;
+    max-width: auto;
 }
 
 html {
@@ -81,14 +77,9 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
-    font-family: var(--ff--montserrat);
     color: var(--cl--yellow);
 }
 
-/* p {
-    font-family: var(--ff--source-pro);
-    color: white;
-  } */
 
 /*
       8. Create a root stacking context
@@ -101,6 +92,7 @@ h6 {
 .footer{
     background-color: var(--cl--black);
 }
+
 .container-footer{
     max-width: 1280px;
     margin-inline: auto;
@@ -114,9 +106,8 @@ h6 {
 .descricao1 {
     font-size: 14px;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
     text-align: left;
-    max-width: 100%; /* Define uma largura máxima para evitar que o texto ultrapasse o contêiner pai */
+    max-width: 100%;
 }
 
 
@@ -186,7 +177,6 @@ h6 {
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .list-footer {
@@ -204,7 +194,6 @@ h6 {
     font-size: 14px;
     text-decoration: none !important;
     margin-bottom: 0.5rem;
-    font-family: 'Montserrat', sans-serif !important;
 }
 
 .list-footer a:hover {
@@ -224,7 +213,6 @@ h6 {
     flex-direction: column;
     align-items: flex-start;
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     padding-top: 15px;
     gap: 0.5rem;
@@ -258,10 +246,6 @@ h6 {
 
 /********************************************** Lower footer *****************************************************/
 
-.line{
-    width: 100%;
-}
-
 .lower-footer{
     display: flex;
     justify-content: center;
@@ -273,7 +257,6 @@ h6 {
     color: #ffffff;
     padding-top: 15px;
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 @media(max-width: 1050px) {

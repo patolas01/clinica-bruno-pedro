@@ -44,6 +44,7 @@
             <div class="signup_link">
                 Não tem conta? <a href="{{ route('register') }}">Registar</a>
             </div>
+
         </div>
 
 @endsection
