@@ -105,7 +105,7 @@ class UserController extends Controller
             ->with('success', 'Utilizador atualizado com sucesso');
     }
 
-   
+
     public function destroy(User $user)
     {
         $user->delete();

@@ -22,16 +22,17 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         return [
-          'name'=>'required|min:3|max:40|regex:/^[A-ZÀ-úa-z\s]+$/',
-           'email' =>'required|email|unique:users,email,'.
-                    ($this->user?$this->user->id:''),
-           'img' =>'nullable|image|mimes:jpg,png,jpeg,gif|max:2048',
-           'perm' => 'sometimes|in:A,N',
+            'name' => 'required|min:3|max:40|regex:/^[A-ZÀ-úa-z\s]+$/',
+            'email' => 'required|email|unique:users,email,' .
+                ($this->user ? $this->user->id : ''),
+            'img' => 'nullable|image|mimes:jpg,png,jpeg,gif|max:2048',
+            'contacto' => 'nullable|string|max:20',
+            'perm' => 'sometimes|in:A,N',
         ];
     }
     public function messages(): array
     {
-        return[
+        return [
             'img.max' => 'O ficheiro não é uma imagem'
         ];
     }
