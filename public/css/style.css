@@ -55,112 +55,125 @@ body {
     text-transform: uppercase;
 }
 /****************** info ************************/
-.ui-w-80 {
-    width : 80px !important;
-    height: auto;
+
+.carduser{
+    padding-bottom: 150px;
+
 }
 
-.btn-default {
-    border-color: rgba(24, 28, 33, 0.1);
-    background  : rgba(0, 0, 0, 0);
-    color       : #4E5155;
+.perfildados{
+    background-color: #f5f5f5;
+}
+
+.userimage {
+    width : 150px !important;
+    height: 150px;
+    border-radius: 5rem;
+}
+
+.botaoins {
+    padding: 10px 30px;
+    margin-top: 20px !important;
+    background: linear-gradient(8deg, #0b86dd 15.1%, #419fe1 100%);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none !important;
+    font-size: 16px;
+    text-align: left;
+    border:1px solid #0b86dd;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2rem;
 }
 
 label.btn {
     margin-bottom: 0;
 }
 
-.btn-outline-primary {
-    border-color: #26B4FF;
-    background  : transparent;
-    color       : #26B4FF;
+.custom-file-input {
+    padding: 10px 30px;
+    margin-top: 20px !important;
+    background: linear-gradient(8deg, #0b86dd 15.1%, #419fe1 100%);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none !important;
+    font-size: 16px;
+    text-align: left;
+    border:1px solid #0b86dd;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2rem;
 }
 
-.btn {
+.custom-file-input input[type='file'] {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0;
+    right: 0;
+    top: 0;
     cursor: pointer;
 }
 
-.text-light {
-    color: #babbbc !important;
-}
-
-.btn-facebook {
-    border-color: rgba(0, 0, 0, 0);
-    background  : #3B5998;
-    color       : #fff;
-}
-
-.btn-instagram {
-    border-color: rgba(0, 0, 0, 0);
-    background  : #000;
-    color       : #fff;
-}
-
-.card {
-    background-clip: padding-box;
-    box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
-}
-
-.row-bordered {
-    overflow: hidden;
-}
-
-.account-settings-fileinput {
-    position  : absolute;
-    visibility: hidden;
-    width     : 1px;
-    height    : 1px;
-    opacity   : 0;
+.custom-file-input:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 
 
 
-/* palha */
-.account-settings-links .list-group-item.active {
-    font-weight: bold !important;
+
+
+/* form */
+
+.botao {
+    padding: 10px 30px;
+    margin-top: 50px !important;
+    background: linear-gradient(8deg, #0b86dd 15.1%, #419fe1 100%);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none !important;
+    font-size: 16px;
+    text-align: left;
+    border:1px solid #0b86dd;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 2rem;
 }
 
-html:not(.dark-style) .account-settings-links .list-group-item.active {
-    background: transparent !important;
+
+.botao:hover {
+    background: #fff;
+    color: #0b86dd;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 30px 25px -5px, rgba(0, 0, 0, 0.04) 0px 20px 10px -5px;
 }
 
-.account-settings-multiselect~.select2-container {
-    width: 100% !important;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.light-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
+.form-group label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #419fe1;
 }
 
-.light-style .account-settings-links .list-group-item.active {
-    color: #4e5155 !important;
-}
+.form-group input[type="text"],
+    .form-group input[type="tel"] {
+        border: none; 
+        border-bottom: 2px solid #ccc;
+        padding: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #333;
+        outline: none;
+    }
 
-.material-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
-}
 
-.material-style .account-settings-links .list-group-item.active {
-    color: #4e5155 !important;
-}
-
-.dark-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(255, 255, 255, 0.03) !important;
-}
-
-.dark-style .account-settings-links .list-group-item.active {
-    color: #fff !important;
-}
-
-.light-style .account-settings-links .list-group-item.active {
-    color: #4E5155 !important;
-}
-
-.light-style .account-settings-links .list-group-item {
-    padding     : 0.85rem 1.5rem;
-    border-color: rgba(24, 28, 33, 0.03) !important;
-}
+    .form-group input[type="text"]:focus,
+    .form-group input[type="tel"]:focus {
+        border-bottom-color: #007bff;
+        outline: none !important;
+    }

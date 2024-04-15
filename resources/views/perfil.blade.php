@@ -22,30 +22,38 @@
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="tab-content">
+                <div class="perfildados">
                     <div class="tab-pane fade active show" id="account-general">
                         <div class="card-body media align-items-center">
 
                             <img src="{{ asset('https://bootdey.com/img/Content/avatar/avatar1.png') }}" alt
-                                class="d-block ui-w-80">
-                            <div class="media-body ml-4">
-                                <label class="btn btn-outline-primary">
-                                    Upload new photo
-                                    <input type="file" class="account-settings-fileinput">
-                                </label> &nbsp;
-                                <button type="button" class="btn btn-default md-btn-flat">Reset</button>
+                                class="userimage">
+                            <div class="botoes1">
+                                <label class="custom-file-input">
+                                    Inserir Arquivo
+                                    <input type="file" class="botaoins">
+                                </label>
+
+                                <button type="button" class="botaoins">Reset</button>
                                 <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
                             </div>
                         </div>
                         <hr class="border-light m-0">
+
                         <div class="card-body">
                             <div class="form-group">
-                                <label class="form-label">Name</label>
-                                <input type="text" class="form-control" value="">
+                                <label for="nome" class="nome">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome">
                             </div>
+
                             <div class="form-group">
-                                <label class="form-label">Email</label>
-                                <input type="text" class="form-control" value="">
+                                <label for="email" class="email">Email</label>
+                                <input type="text" class="form-control" id="email" name="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contacto" class="contacto">Contacto</label>
+                                <input type="tel" class="form-control" id="contacto" name="contacto">
                             </div>
                         </div>
                     </div>
@@ -53,11 +61,13 @@
                 </div>
             </div>
         </div>
-    </div>
+
+
     <div class="text-right mt-3">
-        <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
-        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="button" class="botao">Save changes</button>&nbsp;
+        <button type="button" class="botao">Cancel</button>
     </div>
+</div>
 </div>
 
 
@@ -66,8 +76,5 @@
 
 @section('moreScripts')
 
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript"></script>
         <script src="{{ asset('js/upbuton.js') }}"></script>
     @endsection
