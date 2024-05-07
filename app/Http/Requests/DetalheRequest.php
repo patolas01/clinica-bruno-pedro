@@ -39,7 +39,7 @@ class DetalheRequest extends FormRequest
             'imagem.required' => 'A imagem é obrigatória.',
             'imagem.image' => 'O arquivo enviado deve ser uma imagem.',
             'imagem.mimes' => 'A imagem deve ser do tipo: jpeg, png, jpg ou gif.',
-            'imagem.max' => 'A imagem não deve ser maior que 2MB.',
+            'imagem.max' => 'A imagem não deve ser maior que 5MB.',
             'descriçao.required' => 'A descrição é obrigatória.',
             'especialidade_id.required' => 'A especialidade é obrigatória.',
             'especialidade_id.exists' => 'A especialidade selecionada é inválida.',
