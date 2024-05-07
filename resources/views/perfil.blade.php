@@ -13,15 +13,8 @@
         </h4>
         <div class="carduser">
             <div class="row no-gutters row-bordered row-border-light">
-                <div class="col-md-3 pt-0">
-                    <div class="list-group list-group-flush account-settings-links">
-                        <a class="list-group-item list-group-item-action active" data-toggle="list"
-                            href="#account-general">General</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-change-password">Change password</a>
-                    </div>
-                </div>
-                <div class="col-md-9">
+
+                <div class="form">
                     <div class="perfildados">
                         <div class="tab-pane fade active show" id="account-general">
                             <div class="card-body media align-items-center">

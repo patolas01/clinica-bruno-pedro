@@ -22,7 +22,7 @@ class DetalheRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'imagem' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'imagem' => 'required|image|mimes:jpeg,png,jpg,gif|max:5120',
             'descriçao' => 'required',
             'especialidade_id' => 'required|exists:especialidades,id',
         ];
