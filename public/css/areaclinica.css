@@ -162,11 +162,19 @@ body {
     opacity: 0;
     display: flex;
     flex-direction: column;
-    width: 25rem;
-    min-height: 15rem;
-    height: auto;
+    width: 25rem; /* Largura fixa do cartão */
+    height: 18rem; /* Altura fixa do cartão */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    position: relative; /* Define o posicionamento relativo no cartão */
+}
+
+.servicos-card-content {
+    flex-grow: 1; /* Permite que o conteúdo do cartão cresça para ocupar o espaço restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    padding: 0 20px;
 }
 
 .servicos-card h5 {
@@ -218,27 +226,25 @@ body {
 
 
 .button {
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-bottom: 35px;
     padding: 10px 40px;
     background-color: white;
     color: #0b86dd;
     font-weight: bold;
     text-decoration: none !important;
     font-size: 16px;
-    text-align: left;
-    border:1px solid #0b86dd;
-    cursor: pointer;
-    display: inline-block;
+    border: 1px solid #0b86dd;
     border-radius: 2rem;
+    cursor: pointer;
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;
 }
 
 .button-wrapper {
     text-align: center;
-
+    position: absolute;
+    bottom: 25px; /* Distância fixa do botão em relação ao fundo do cartão */
+    left: 50%; /* Posiciona o botão no centro horizontal do cartão */
+    transform: translateX(-50%); /* Corrige o posicionamento horizontal do botão */
 }
 
 .button:hover {
