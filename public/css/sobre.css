@@ -32,12 +32,12 @@ body {
     font-style: normal;
     font-weight: bold;
     color: #30383B;
-    padding-top: 15rem;
+    padding-top: 150px;
 }
 
 .divisorbloco {
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
@@ -108,7 +108,7 @@ body {
         opacity: 0%;
     }
 
-    30%{
+    30% {
         opacity: 60%;
     }
 
@@ -117,6 +117,7 @@ body {
     }
 }
 
+
 .about-us {
     animation: fadeIn 2s;
     text-align: center;
@@ -124,14 +125,65 @@ body {
 }
 
 .about-us p {
-    transition: ease-in-out 400ms;
+    transition: ease-in 400ms;
     font-size: 14pt !important;
     margin-bottom: 3rem;
 }
 
 .about-us p:hover {
-    transform: scale(105%);
+    transform: scale(100.2%);
 }
+
+.about-us p a,
+strong,
+ul li a {
+    position: relative;
+    transition-duration: 255ms;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.about-us p a:hover,
+strong:hover {
+    color: #444;
+}
+
+.about-us p a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    /* Adjust the thickness of the underline */
+    bottom: -1px;
+    /* Position the underline below the text */
+    left: 0;
+    background-color: #575757;
+    /* Change color as needed */
+    transition: ease-in-out 0.5s;
+}
+
+.about-us p a:hover::after {
+    width: 100%;
+    /* Adjust the width of the underline on hover */
+}
+
+.about-us ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* Two equal-width columns */
+    grid-gap: 1.5rem;
+    /* Adjust the gap between columns */
+    padding: 0;
+    padding-bottom: 3.5rem;
+}
+
+
+
 
 /*--RESPONSIVO--*/
 @media screen and (max-width: 1024px) {
