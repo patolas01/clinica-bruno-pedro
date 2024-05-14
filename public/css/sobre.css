@@ -191,6 +191,11 @@ strong:hover {
         padding-left: 100px;
         padding-right: 100px;
     }
+
+    .about-us ul {
+        grid-template-columns: auto;
+        font-size: larger;
+    }
 }
 
 @media screen and (max-width: 768px) {
