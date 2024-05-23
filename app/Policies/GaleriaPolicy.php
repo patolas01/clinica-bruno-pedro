@@ -13,26 +13,26 @@ class GaleriaPolicy
 
     public function viewAny(User $user)
     {
-        return $user->isAdmin(); // Apenas administradores podem ver a lista de galerias
+        return $user->isAdmin();
     }
 
     public function view(User $user, Galeria $galeria)
     {
-        return $user->isAdmin() || $user->id === $galeria->user_id; // Apenas administradores ou o proprietário podem ver uma galeria específica
+        return $user->isAdmin() || $user->id === $galeria->user_id;
     }
 
     public function create(User $user)
     {
-        return $user->isAdmin(); // Apenas administradores podem criar uma nova galeria
+        return $user->isAdmin();
     }
 
     public function update(User $user, Galeria $galeria)
     {
-        return $user->isAdmin() || $user->id === $galeria->user_id; // Apenas administradores ou o proprietário podem atualizar uma galeria
+        return $user->isAdmin() || $user->id === $galeria->user_id;
     }
 
     public function delete(User $user, Galeria $galeria)
     {
-        return $user->isAdmin(); // Apenas administradores podem excluir uma galeria
+        return $user->isAdmin();
     }
 }

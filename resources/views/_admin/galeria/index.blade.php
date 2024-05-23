@@ -24,29 +24,37 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($galerias as $galeria)
+                                @foreach ($galerias as $galeria)
                                     <tr>
-                                        <td> <img height='100' src="{{ asset('storage/galeria_imagens/' . $galeria->icon) }}" alt="Imagem do Post"></td>
-                                        <td>{{$galeria->nome}}</td>
-                                        <td>{{$galeria->curta_desc}}</td>
+                                        <td> <img height='100'
+                                                src="{{ asset('storage/galeria_imagens/' . $galeria->imagem) }}"
+                                                alt="Imagem do Post"></td>
+                                        <td>{{ $galeria->nome }}</td>
 
                                         <td nowrap>
-                                            <a class="btn btn-xs btn-primary btn-p" href="{{route('admin.galeria.show',$galeria)}}"><i class="fas fa-eye fa-xs"></i></a>
-                                            <a class="btn btn-xs btn-warning btn-p" href="{{route('admin.galeria.edit',$galeria)}}"><i class="fas fa-pen fa-xs"></i></a>
-                                            <form method="POST" action="{{route('admin.galeria.destroy',$galeria)}}" role="form" class="inline" onsubmit="return confirm('Confirma que pretende eliminar esta galeria?');">
+                                            <a class="btn btn-xs btn-primary btn-p"
+                                                href="{{ route('admin.galeria.show', $galeria) }}"><i
+                                                    class="fas fa-eye fa-xs"></i></a>
+                                            <a class="btn btn-xs btn-warning btn-p"
+                                                href="{{ route('admin.galeria.edit', $galeria) }}"><i
+                                                    class="fas fa-pen fa-xs"></i></a>
+                                            <form method="POST" action="{{ route('admin.galeria.destroy', $galeria) }}"
+                                                role="form" class="inline"
+                                                onsubmit="return confirm('Confirma que pretende eliminar esta galeria?');">
                                                 @csrf
-                                                @method("DELETE")
-                                                <button type="submit" class="btn btn-xs btn-danger btn-p"> <i class="fas fa-trash fa-xs"> </i></button>
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-xs btn-danger btn-p"> <i
+                                                        class="fas fa-trash fa-xs"> </i></button>
                                             </form>
                                         </td>
                                     </tr>
-                                    @endforeach
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
-                    @else
+                @else
                     <h6>Não existem galeria registados</h6>
-                    @endif
+                @endif
             </div>
         </div>
     </div>
@@ -59,8 +67,7 @@
             "order": [
                 [0, 'asc']
             ],
-            "columns": [
-                {
+            "columns": [{
                     "orderable": false
                 },
                 null,

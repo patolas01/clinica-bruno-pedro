@@ -24,16 +24,16 @@ class GaleriaController extends Controller
      * Show the form for creating a new resource.
      */
 
-     public function create()
-     {
-         if (Gate::allows('create', Galeria::class)) {
+    public function create()
+    {
+        if (Gate::allows('create', Galeria::class)) {
 
-             $galeria = new Galeria();
-             return view('_admin.galeria.create', compact('galeria'));
-         } else {
-             abort(403); 
-         }
-     }
+            $galeria = new Galeria();
+            return view('_admin.galeria.create', compact('galeria'));
+        } else {
+            abort(403);
+        }
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -63,7 +63,7 @@ class GaleriaController extends Controller
 
     public function show(Galeria $galeria)
     {
-        return view('_admin.galeria.show', compact("galeria"));
+        return view('_admin.galeria.show', compact('galeria'));
     }
 
     /**
@@ -79,27 +79,28 @@ class GaleriaController extends Controller
      * Update the specified resource in storage.
      */
 
-     public function update(GaleriaRequest $request, Galeria $galeria)
-     {
-         $fields = $request->validated();
-         $galeria->fill($fields);
+    public function update(GaleriaRequest $request, Galeria $galeria)
+    {
+
+        $fields = $request->validated();
+        $galeria->fill($fields);
 
 
-         if ($request->hasFile('imagem')) {
+        if ($request->hasFile('imagem')) {
 
-             if (!empty($galeria->imagem)) {
-                 Storage::disk('public')->delete('galeria_imagens/' . $galeria->imagem);
-             }
+            if (!empty($galeria->imagem)) {
+                Storage::disk('public')->delete('galeria_imagens/' . $galeria->imagem);
+            }
 
 
-             $imagem_path = $request->file('imagem')->store('public/galeria_imagens');
-             $galeria->imagem = basename($imagem_path);
-         }
+            $imagem_path = $request->file('imagem')->store('public/galeria_imagens');
+            $galeria->imagem = basename($imagem_path);
+        }
 
-         $galeria->save();
+        $galeria->save();
 
-         return redirect()->route('admin.galeria.index')->with('success', 'Imagem da Galeria atualizada com sucesso');
-     }
+        return redirect()->route('admin.galeria.index')->with('success', 'Imagem da Galeria atualizada com sucesso');
+    }
 
     /**
      * Remove the specified resource from storage.

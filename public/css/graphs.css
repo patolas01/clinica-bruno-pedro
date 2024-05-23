@@ -27,7 +27,7 @@
 
 /* Graph Info Section */
 .graph-info {
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
 
 
 }
@@ -55,6 +55,7 @@
     justify-content: right;
     padding: 0.5rem;
     background-color: blue;
+    box-shadow: 1px 4px 5px rgb(179, 179, 179);
 }
 
 /* Graph Info Value */

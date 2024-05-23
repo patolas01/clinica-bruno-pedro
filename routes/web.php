@@ -48,6 +48,8 @@ Auth::routes(['verify' => true]);
 Route::resource('/admin/users', UserController::class, ['as' => 'admin', 'middleware' => ['auth', 'verified']])->only(['edit', 'update']);
 
 
+Route::put('/admin/galeria/{id}', [GaleriaController::class, 'update'])->name('admin.galeria.update');
+
 
 
 

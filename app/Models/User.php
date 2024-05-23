@@ -56,8 +56,8 @@ class User extends Authenticatable
         }
     }
     public function isAdmin()
-{
-    return $this->perm === 'A'; // Considerando que 'A' representa o papel de administrador
-}
+    {
+        return $this->perm === 'A'; // Considerando que 'A' representa o papel de administrador
+    }
 
 }

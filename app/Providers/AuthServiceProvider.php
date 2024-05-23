@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Providers;
+
 use App\Models\Galeria;
 use App\Policies\GaleriaPolicy;
 use Illuminate\Support\Facades\Gate;
-
-// use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -13,10 +12,10 @@ class AuthServiceProvider extends ServiceProvider
     /**
      * The model to policy mappings for the application.
      *
-     * @var array<class-string, class-string>
+     * @var array
      */
     protected $policies = [
-        //
+        /*Galeria::class => GaleriaPolicy::class, // Adicione esta linha*/
     ];
 
     /**
@@ -26,6 +25,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Gate::resource('galeria', GaleriaPolicy::class);
+        /*// Você pode usar Gate::resource se desejar
+        Gate::resource('galeria', GaleriaPolicy::class);*/
     }
+
+
 }

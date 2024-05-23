@@ -35,7 +35,6 @@ class EspecialidadeRequest extends FormRequest
             'nome.regex' => 'O nome deve conter apenas letras e espaços',
             'icon.max' => 'Imagem demaisado grande',
             'icon.mimes' => 'A imagem deve ter um dos seguintes formatos: jpg, png, jpeg, gif, svg',
-            'icon.max' => 'A imagem não deve exceder 2MB',
         ];
     }
 }

@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-md-3 mb-3">
                         <strong>Imagem:</strong>
-                        <img class="img-fluid" src="{{asset('storage/galeria_imagens/'. $galeria->icon )}}"
+                        <img class="img-fluid" src="{{asset('storage/galeria_imagens/'. $galeria->imagem )}}"
                             alt="Imagem da galeria">
                     </div>
 
