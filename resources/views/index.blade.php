@@ -26,7 +26,6 @@
             @foreach ($especialidades as $especialidade)
                 <li class="card">
                     @if (isset($detalhesByEspecialidade[$especialidade->id]))
-                        <!-- Use <a> como link em volta da <div> da imagem -->
                         <a href="{{ route('especialidadeDetalhe', $especialidade) }}">
                             <div class="img">
                                 <img src="{{ asset('storage/detalheesp_imagens/' . $detalhesByEspecialidade[$especialidade->id]->imagem) }}"
@@ -40,10 +39,6 @@
         </ul>
         <i id="right" class="fa-solid fa-angle-right"></i>
     </div>
-
-    {{-- <div class="divisorblocoprincipal">
-        <div class="linhaprincipal"></div>
-    </div> --}}
 
     <section id="main2">
         <div id="seccaoprincipal2">
