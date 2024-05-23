@@ -41,10 +41,10 @@ class PageController extends Controller
     }
 
     public function especialidadeDetalhe(Especialidade $especialidade)
-{
-    $detalhes = Detalhe::where('especialidade_id', $especialidade->id)->get();
-    return view('especialidade-detalhe', compact('especialidade', 'detalhes'));
-}
+    {
+        $detalhes = Detalhe::where('especialidade_id', $especialidade->id)->get();
+        return view('especialidade-detalhe', compact('especialidade', 'detalhes'));
+    }
 
 
     public function contactos()
@@ -60,12 +60,13 @@ class PageController extends Controller
     public function guiaSaude()
     {
         $posts = PostSaude::all();
-        return view('guia-saude',compact('posts'));
+        return view('guia-saude', compact('posts'));
     }
 
     public function sobre()
     {
-        return view('sobre');
+        $especialidades = Especialidade::all();
+        return view('sobre', compact('especialidades'));
     }
 
     public function equipa()
@@ -91,7 +92,7 @@ class PageController extends Controller
         // Verifique se o usuário está autenticado
         if ($user) {
             return view('perfil', compact('user'));
-        } 
+        }
     }
 
     public function dashboard()

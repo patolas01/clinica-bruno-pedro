@@ -23,24 +23,20 @@
 
             <p>Oferecemos uma ampla gama de serviços, incluindo:
             <ul>
-                <li><a href="">Dentisteria</a></li>
-                <li><a href="">Estética</a></li>
-                <li><a href="">Endodontia</a></li>
-                <li><a href="">Higiene Oral</a></li>
-                <li><a href="">Periodontologia</a></li>
-                <li><a href="">Prótese Fixa</a></li>
-                <li><a href="">Prótese Removível</a></li>
-                <li><a href="">Ortodontia</a></li>
-                <li><a href="">Odontopediatria</a></li>
-                <li><a href="">Odontogeriatria</a></li>
-                <li><a href="">Cirurgia
-                        Oral</a></li>
-                <li><a href="">Implantes</a></li>
+                @if (!is_null($especialidades) && count($especialidades) > 0)
+                    @foreach ($especialidades as $especialidade)
+                        <li><a href="{{ route('especialidadeDetalhe', $especialidade) }}">{{ $especialidade->nome }}</a></li>
+                    @endforeach
+                @else
+                    <p class="erro-message">Nenhuma especialidade disponível no momento.</p>
+                @endif
             </ul>
             </p>
-            <p>Localizada na <a href="https://maps.app.goo.gl/QmeayfJtorh9GmiZ9" target="_blank">Rua Fonte da Vila, nº 922, 3100-012 Abiul</a>, estamos sempre disponíveis
+            <p>Localizada na <a href="https://maps.app.goo.gl/QmeayfJtorh9GmiZ9" target="_blank">Rua Fonte da Vila, nº 922,
+                    3100-012 Abiul</a>, estamos sempre disponíveis
                 para
-                atender às suas necessidades. Entre em contato connosco pelo telefone <a href="tel:236 922 431">236 922 431</a> para
+                atender às suas necessidades. Entre em contato connosco pelo telefone <a href="tel:236 922 431">236 922
+                    431</a> para
                 agendar a sua consulta.<br> Estamos aqui para cuidar do seu sorriso!</p>
 
         </div>
