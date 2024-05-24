@@ -19,7 +19,7 @@
             <a href="">
                 <figure>
                     <img src="{{ asset('storage/galeria_imagens/' . $galeria->imagem) }}" alt="{{ $galeria->nome }}" class="imggallery">
-                    <figcaption>{{ $galeria->nome }}</figcaption>
+                    <figcaption class="figcaption">{{ $galeria->nome }}</figcaption>
                 </figure>
             </a>
         </li>
