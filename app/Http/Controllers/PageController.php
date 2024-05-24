@@ -54,7 +54,8 @@ class PageController extends Controller
 
     public function galeria()
     {
-        return view('galeria');
+        $galerias = Galeria::all();
+        return view('galeria', compact('galerias'));
     }
 
     public function guiaSaude()
