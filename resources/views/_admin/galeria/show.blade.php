@@ -11,13 +11,13 @@
                 <div class="row">
                     <div class="col-md-3 mb-3">
                         <strong>Imagem:</strong>
-                        <img class="img-fluid" src="{{asset('storage/galeria_imagens/'. $galeria->imagem )}}"
+                        <img class="img-fluid" src="{{asset('storage/galeria_imagens/'. $galerium->imagem )}}"
                             alt="Imagem da galeria">
                     </div>
 
                     <div class="col-md-9">
                         <div class="mb-3">
-                            <strong>Nome:</strong> {{ $galeria->nome }}
+                            <strong>Nome:</strong> {{ $galerium->nome }}
                         </div>
 
                     </div>

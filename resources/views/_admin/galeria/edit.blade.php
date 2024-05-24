@@ -9,7 +9,7 @@
             </div>
             <div class="card-body">
 
-                <form method="POST" action="{{ route('admin.galeria.update', $galeria) }}" class="form-group"
+                <form method="POST" action="{{ route('admin.galeria.update', $galerium) }}" class="form-group"
                     enctype="multipart/form-data">
                     @csrf
                     @method('PUT')

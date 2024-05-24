@@ -13,7 +13,6 @@ class GaleriaController extends Controller
     /**
      * Display a listing of the resource.
      */
-
     public function index()
     {
         $galerias = Galeria::all();
@@ -23,13 +22,11 @@ class GaleriaController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-
     public function create()
     {
         if (Gate::allows('create', Galeria::class)) {
-
-            $galeria = new Galeria();
-            return view('_admin.galeria.create', compact('galeria'));
+            $galerium = new Galeria();
+            return view('_admin.galeria.create', compact('galerium'));
         } else {
             abort(403);
         }
@@ -38,21 +35,20 @@ class GaleriaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-
     public function store(GaleriaRequest $request)
     {
         $fields = $request->validated();
 
+        $galerium = new Galeria();  // Corrigido aqui
+        $galerium->fill($fields);
 
-
-        $galeria = new galeria();
-        $galeria->fill($fields);
         if ($request->hasFile('imagem')) {
-            $imagem_path =
-                $request->file('imagem')->store('public/galeria_imagens');
-            $galeria->imagem = basename($imagem_path);
+            $imagem_path = $request->file('imagem')->store('public/galeria_imagens');
+            $galerium->imagem = basename($imagem_path);
         }
-        $galeria->save();
+
+        $galerium->save();
+
         return redirect()->route('admin.galeria.index')
             ->with('success', 'Imagem da galeria criada com sucesso');
     }
@@ -60,44 +56,37 @@ class GaleriaController extends Controller
     /**
      * Display the specified resource.
      */
-
-    public function show(Galeria $galeria)
+    public function show(Galeria $galerium)
     {
-        return view('_admin.galeria.show', compact('galeria'));
+        return view('_admin.galeria.show', compact('galerium'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-
-    public function edit(Galeria $galeria)
+    public function edit(Galeria $galerium)
     {
-        return view('_admin.galeria.edit', compact('galeria'));
+        return view('_admin.galeria.edit', compact('galerium'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-
-    public function update(GaleriaRequest $request, Galeria $galeria)
+    public function update(GaleriaRequest $request, Galeria $galerium)
     {
-
         $fields = $request->validated();
-        $galeria->fill($fields);
-
+        $galerium->fill($fields);
 
         if ($request->hasFile('imagem')) {
-
-            if (!empty($galeria->imagem)) {
-                Storage::disk('public')->delete('galeria_imagens/' . $galeria->imagem);
+            if (!empty($galerium->imagem)) {
+                Storage::disk('public')->delete('galeria_imagens/' . $galerium->imagem);
             }
 
-
             $imagem_path = $request->file('imagem')->store('public/galeria_imagens');
-            $galeria->imagem = basename($imagem_path);
+            $galerium->imagem = basename($imagem_path);
         }
 
-        $galeria->save();
+        $galerium->save();
 
         return redirect()->route('admin.galeria.index')->with('success', 'Imagem da Galeria atualizada com sucesso');
     }
@@ -105,15 +94,10 @@ class GaleriaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-
-    public function destroy(Galeria $galeria)
+    public function destroy(Galeria $galerium)
     {
-        Storage::disk('public')->delete('galeria_imagens/' . $galeria->imagem);
-        $galeria->delete();
-        return redirect()->route('admin.galeria.index')->with(
-            'success',
-            'Imagem da galeria eliminada com sucesso'
-        );
+        Storage::disk('public')->delete('galeria_imagens/' . $galerium->imagem);
+        $galerium->delete();
+        return redirect()->route('admin.galeria.index')->with('success', 'Imagem da galeria eliminada com sucesso');
     }
 }
-
