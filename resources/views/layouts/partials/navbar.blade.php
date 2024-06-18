@@ -80,29 +80,24 @@
 
                                 <!-- Dropdown - User Information -->
 
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                    aria-labelledby="userDropdown">
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                     @if (Auth::check())
                                         @php
                                             $user = auth()->user();
-                                            $route = $user->perm === 'A'
-                                                    ? route('admin.users.edit', $user)
-                                                    : route('perfil');
                                         @endphp
 
-                                        <a class="dropdown-item" href="{{ $route }}">
-                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Perfil
-                                        </a>
+                                        @if ($user->perm === 'A')
+                                            <a class="dropdown-item" href="{{ route('admin.users.edit', $user) }}">
+                                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                                Perfil
+                                            </a>
+                                            <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
+                                                <i class="fas fa-fw fa-tachometer-alt"></i>
+                                                Dashboard
+                                            </a>
+                                        @endif
                                     @endif
-                                    @if (Auth::user()->perm == 'A')
-                                        <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
-                                            <i class="fas fa-fw fa-tachometer-alt"></i>
-                                            Dashboard
-                                        </a>
-                                    @endif
-                                    <a class="dropdown-item" href="#" data-toggle="modal"
-                                        data-target="#exampleModalCenter">
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModalCenter">
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Logout
                                     </a>
