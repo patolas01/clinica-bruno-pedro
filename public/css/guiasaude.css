@@ -191,14 +191,14 @@ body {
 .categoria-conteudo {
     padding: 10px;
     overflow-y: auto;
-    flex: 1; /* Permite que o conteúdo se expanda verticalmente */
+    flex: 1;
 }
 
 .cardcategoria p {
     padding-left: 10px;
     padding-right: 10px;
     overflow: hidden;
-    text-overflow: ellipsis; /* Adiciona reticências (...) se o texto for muito longo */
+    text-overflow: ellipsis;
     word-wrap: break-word;
 }
 
@@ -225,7 +225,7 @@ body {
 .button2:hover {
     background-color: white;
     color: #0b86dd;
-    /*scale: 105%;*/
+
     border-radius: 2rem;
 }
 
@@ -243,7 +243,7 @@ body {
 /*--responsive for mobile phone--*/
 @media (max-width: 1250px) {
     .cardcategoria {
-        width: calc(50% - 30px); /* 2 cards por linha em telas menores que 1200px */
+        width: calc(50% - 30px);
     }
     .rowcategoria {
         max-width: 850px;
@@ -252,7 +252,7 @@ body {
 
 @media (max-width: 900px) {
     .cardcategoria {
-        width: calc(100% - 30px); /* 1 card por linha em telas menores que 768px */
+        width: calc(100% - 30px); 
     }
     .rowcategoria {
         max-width: 400px;

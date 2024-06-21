@@ -98,32 +98,6 @@
                 </div>
             </div>
 
-
-
-
-            <!--
-
-                                                                           {{-- {{-- each graph --}}
-                                                                            <div class="graph bar">
-                                                                                {{-- main title --}}
-                                                                                <h3 class="graph-title">Graph 1</h3>
-                                                                                {{-- bars section --}}
-                                                                                <div class="graph-info">
-
-                                                                                    {{-- each bar --}}
-                                                                                    <div class="graph-info-item">
-                                                                                        {{-- title of the item --}}
-                                                                                        <p class="graph-info-title">Value 1</p>
-                                                                                        {{-- horizontal bar with value --}}
-                                                                                        <div class="graph-info-bar">
-                                                                                            <p class="graph-info-value">12345</p>
-                                                                                        </div>
-                                                                                    </div>
-
-                                                                                </div>
-                                                                            </div>
-                                                                        !-->
-
         </div>
 
 
@@ -133,7 +107,7 @@
 
 
 
-        {{-- graph section (middle) --}}
+     
         <div class="mid-graphs">
             {{-- timeline graph --}}
             <div class="graph timeline"></div>

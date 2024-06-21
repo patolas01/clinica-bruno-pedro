@@ -9,7 +9,7 @@
             <div class="card-body">
                 <form method="POST" action="{{ route('admin.formularios.store') }}" class="form-group" enctype="multipart/form-data">
                     @csrf
-                    <!-- Adicione aqui os campos do formulário -->
+
                     <div class="form-group">
                         <label for="contacto">Contacto:</label>
                         <input type="text" name="contacto" class="form-control" id="contacto">
@@ -30,7 +30,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <!-- Adicione os outros campos conforme necessário -->
+                 
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-success" name="ok">Guardar</button>

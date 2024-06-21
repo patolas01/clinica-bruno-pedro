@@ -28,10 +28,7 @@
                         href="{{ route('guiaSaude') }}">Guia Saúde</a></li>
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
                         href="{{ route('galeria') }}">Galeria</a></li>
-                {{--
-                    <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
-                        href="{{ route('equipa') }}">Equipa</a></li>
-                        --}}
+
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
                         href="{{ route('sobre') }}">Sobre</a></li>
                 <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"
@@ -64,8 +61,8 @@
                                             $fullName = auth()->user()->name;
                                             $nameParts = explode(' ', $fullName);
                                             $firstName = $nameParts[0];
-                                            $lastName = count($nameParts) > 1 ? end($nameParts) : ''; // Check if there are multiple parts in the name
-                                            echo $firstName . ($lastName ? ' ' . $lastName : ''); // Only echo the last name if it exists
+                                            $lastName = count($nameParts) > 1 ? end($nameParts) : '';
+                                            echo $firstName . ($lastName ? ' ' . $lastName : '');
                                         @endphp
                                     </span>
                                     @if (empty(auth()->user()->img))
@@ -185,10 +182,7 @@
                     href="{{ route('guiaSaude') }}">Guia Saúde</a></li>
             <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'galeria') active @endif"
                     href="{{ route('galeria') }}">Galeria</a></li>
-            {{--
-                <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
-                    href="{{ route('equipa') }}">Equipa</a></li>
-                    --}}
+          
             <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'equipa') active @endif"
                     href="{{ route('sobre') }}">Sobre</a></li>
             <li><a class="nav-hiper scrollto @if (Route::currentRouteName() == 'contactos') active @endif"

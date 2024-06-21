@@ -11,9 +11,7 @@
 <div class="divisorbloco">
     <div class="linha"></div>
 </div>
-{{--
-<p>Descrição: {{ $especialidade->descricao }}</p>
- --}}
+
 
  <section id="main">
     <div id="detalhe">
@@ -39,7 +37,7 @@
 
 
 @section('moreScripts')
-    {{-- <script src="{{ asset('js/carousel.js') }}"></script> --}}
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/lightslider.js') }}"></script>
     <script src="{{ asset('js/animation-scroll.js') }}"></script>

@@ -162,18 +162,18 @@ body {
     opacity: 0;
     display: flex;
     flex-direction: column;
-    width: 25rem; /* Largura fixa do cartão */
-    height: 18rem; /* Altura fixa do cartão */
+    width: 25rem;
+    height: 18rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
-    position: relative; /* Define o posicionamento relativo no cartão */
+    position: relative;
 }
 
 .servicos-card-content {
-    flex-grow: 1; /* Permite que o conteúdo do cartão cresça para ocupar o espaço restante */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: center;
     padding: 0 20px;
 }
 
@@ -205,12 +205,12 @@ body {
 }
 
 
-/* animation */
+
 .servicos-card.animation {
     animation: up-opacity ease-in 0.5s;
 }
 
-/* comments */
+
 @keyframes up-opacity {
     0% {
         z-index: -1;
@@ -242,9 +242,9 @@ body {
 .button-wrapper {
     text-align: center;
     position: absolute;
-    bottom: 25px; /* Distância fixa do botão em relação ao fundo do cartão */
-    left: 50%; /* Posiciona o botão no centro horizontal do cartão */
-    transform: translateX(-50%); /* Corrige o posicionamento horizontal do botão */
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .button:hover {
@@ -278,7 +278,7 @@ body {
     }
 }
 
-/*--responsive for mobile phone--*/
+
 @media(max-width:720px) {
 
     .content {
