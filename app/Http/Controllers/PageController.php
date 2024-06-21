@@ -15,18 +15,13 @@ class PageController extends Controller
 {
     public function index()
     {
-        // Retrieve all especialidades
         $especialidades = Especialidade::all();
 
-        // Define an array to store the detalhes for each especialidade
         $detalhesByEspecialidade = [];
 
-        // Loop through each especialidade and retrieve its associated detalhes
         foreach ($especialidades as $especialidade) {
-            // Retrieve the associated detalhes for the current especialidade
             $detalhe = Detalhe::where('especialidade_id', $especialidade->id)->first();
 
-            // Add the retrieved detalhe to the array
             $detalhesByEspecialidade[$especialidade->id] = $detalhe;
         }
 
@@ -87,10 +82,10 @@ class PageController extends Controller
 
     public function perfil()
     {
-        // Obtenha o usuário autenticado
+
         $user = auth()->user();
 
-        // Verifique se o usuário está autenticado
+
         if ($user) {
             return view('perfil', compact('user'));
         }
@@ -98,19 +93,19 @@ class PageController extends Controller
 
     public function dashboard()
     {
-        // Verificar se o usuário está autenticado
+
         if (!auth()->check()) {
-            // Se o usuário não está autenticado, redirecionar para a página de login
+
             return redirect()->route('login');
         }
 
-        // Verificar se o usuário é um administrador
+
         if (!auth()->user()->isAdmin()) {
-            // Se o usuário não é um administrador, abortar com erro 403 (Acesso não autorizado)
+
             abort(403, 'Acesso não autorizado.');
         }
 
-        // Continuar com a lógica existente para buscar dados relacionados a Formulários e Avaliações
+
         $formularioData = Formulario::select('especialidade_id', Formulario::raw('count(*) as total'))
             ->groupBy('especialidade_id')
             ->pluck('total', 'especialidade_id');
@@ -121,7 +116,7 @@ class PageController extends Controller
             ->groupBy('classificacao')
             ->pluck('total', 'classificacao');
 
-        // Retornar a view do dashboard com os dados buscados e os dados de formulários e avaliações
+
         return view('_admin.dashboard', compact('formularioData', 'especialidades', 'avaliacaoData'));
     }
     public function Error()

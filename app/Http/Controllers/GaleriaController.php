@@ -10,18 +10,14 @@ use App\Http\Requests\GaleriaRequest;
 
 class GaleriaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
         $galerias = Galeria::all();
         return view('_admin.galeria.index', compact('galerias'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
         if (Gate::allows('create', Galeria::class)) {
@@ -32,14 +28,12 @@ class GaleriaController extends Controller
         }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(GaleriaRequest $request)
     {
         $fields = $request->validated();
 
-        $galerium = new Galeria();  // Corrigido aqui
+        $galerium = new Galeria();
         $galerium->fill($fields);
 
         if ($request->hasFile('imagem')) {
@@ -53,25 +47,19 @@ class GaleriaController extends Controller
             ->with('success', 'Imagem da galeria criada com sucesso');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(Galeria $galerium)
     {
         return view('_admin.galeria.show', compact('galerium'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(Galeria $galerium)
     {
         return view('_admin.galeria.edit', compact('galerium'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(GaleriaRequest $request, Galeria $galerium)
     {
         $fields = $request->validated();
@@ -91,9 +79,7 @@ class GaleriaController extends Controller
         return redirect()->route('admin.galeria.index')->with('success', 'Imagem da Galeria atualizada com sucesso');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(Galeria $galerium)
     {
         Storage::disk('public')->delete('galeria_imagens/' . $galerium->imagem);

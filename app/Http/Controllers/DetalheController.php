@@ -10,9 +10,7 @@ use App\Models\Especialidade;
 
 class DetalheController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
 
     public function index()
 {
@@ -20,9 +18,7 @@ class DetalheController extends Controller
     return view('_admin.detalhe.index', compact('detalhes'));
 }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
 
      public function create()
 {
@@ -30,9 +26,7 @@ class DetalheController extends Controller
     $detalhe = new Detalhe;
     return view('_admin.detalhe.create', compact('detalhe', 'especialidades'));
 }
-    /**
-     * Store a newly created resource in storage.
-     */
+
 
     public function store(DetalheRequest $request)
     {
@@ -52,18 +46,13 @@ class DetalheController extends Controller
             ->with('success', 'detalhes criado com sucesso');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
 
     public function show(Detalhe $detalhe)
     {
         return view('_admin.detalhe.show', compact("detalhe"));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
 
     public function edit(Detalhe $detalhe)
 
@@ -72,9 +61,7 @@ class DetalheController extends Controller
         return view('_admin.detalhe.edit', compact('detalhe','especialidades'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
 
     public function update(DetalheRequest $request, Detalhe $detalhe)
     {
@@ -95,9 +82,6 @@ class DetalheController extends Controller
     }
 
 
-    /**
-     * Remove the specified resource from storage.
-     */
 
      public function destroy(Detalhe $detalhe)
      {

@@ -32,23 +32,20 @@ class PostSaudeController extends Controller
             $imagem = $request->file('imagem');
 
             $caminhoImagem = $imagem->store('public/post_imagens');
-       
+
             $fields['imagem'] = basename($caminhoImagem);
         }
 
-        // Crie uma nova instância do modelo PostSaude com os dados preenchidos
+
         $posts_saude = new PostSaude($fields);
 
-        // Salve o post de saúde no banco de dados
         $posts_saude->save();
 
-        // Redirecione de volta para a página de índice com uma mensagem de sucesso
         return redirect()->route('admin.posts-saude.index')->with('success', 'Publicação criada com sucesso');
     }
 
     public function show(PostSaude $posts_saude)
     {
-        /*dd($postSaude);*/
         return view('_admin.post-saude.show', compact('posts_saude'));
     }
 
@@ -61,7 +58,6 @@ class PostSaudeController extends Controller
     {
         $fields = $request->validated();
         $posts_saude->fill($fields);
-        // Adicione aqui o código para lidar com o upload do arquivo, se necessário
 
         $posts_saude->save();
         return redirect()->route('admin.posts-saude.index')
@@ -70,7 +66,6 @@ class PostSaudeController extends Controller
 
     public function destroy(PostSaude $posts_saude)
     {
-        // Adicione aqui o código para excluir o arquivo, se necessário
 
         $posts_saude->delete();
         return redirect()->route('admin.posts-saude.index')

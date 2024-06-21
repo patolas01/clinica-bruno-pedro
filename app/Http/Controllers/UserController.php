@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index(Request $request)
     {
         if (count($request->all()) == 0) {
@@ -42,7 +40,6 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
         $fields = $request->validated();
-        /*$user =User::create($fields); */
         $user = new User();
         $user->fill($fields);
         $user->password = Hash::make('password');
@@ -54,7 +51,7 @@ class UserController extends Controller
         }
         $user->save();
 
-         /*$user->sendEmailVerificationNotification();*/
+
         return redirect()->route('admin.users.index')
             ->with('success', 'Utilizador criado com sucesso');
     }
@@ -78,9 +75,6 @@ class UserController extends Controller
     }
 
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(UserRequest $request, User $user)
     {
         if (auth()->user()->can('updateRole', $user)) {

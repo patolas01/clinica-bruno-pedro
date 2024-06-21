@@ -28,11 +28,11 @@ class FormularioController extends Controller
         $fields = $request->validated();
         $formulario = new Formulario();
         $formulario->fill($fields);
-        // Additional logic for file upload, if necessary
+
 
         $formulario->save();
 
-        // Redirect back to the contactos page with a success message
+
         return redirect()->route('contactos')
             ->with('success', 'Formulário enviado com sucesso');
     }
@@ -42,7 +42,7 @@ class FormularioController extends Controller
         $fields = $request->validated();
         $formulario = new Formulario();
         $formulario->fill($fields);
-        // Adicione aqui o código para lidar com o upload do arquivo, se necessário
+
 
         $formulario->save();
         return redirect()->route('admin.formularios.index')
@@ -63,7 +63,7 @@ class FormularioController extends Controller
     {
         $fields = $request->validated();
         $formulario->fill($fields);
-        // Adicione aqui o código para lidar com o upload do arquivo, se necessário
+
 
         $formulario->save();
         return redirect()->route('admin.formularios.index')
@@ -72,7 +72,7 @@ class FormularioController extends Controller
 
     public function destroy(Formulario $formulario)
     {
-        // Adicione aqui o código para excluir o arquivo, se necessário
+
 
         $formulario->delete();
         return redirect()->route('admin.formularios.index')

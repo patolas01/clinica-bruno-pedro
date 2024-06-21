@@ -9,9 +9,7 @@ use App\Http\Requests\EspecialidadeRequest;
 
 class EspecialidadeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
 
     public function index()
     {
@@ -19,9 +17,7 @@ class EspecialidadeController extends Controller
         return view('_admin.especialidade.index', compact('especialidades'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
 
     public function create()
     {
@@ -29,9 +25,7 @@ class EspecialidadeController extends Controller
         return view('_admin.especialidade.create', compact("especialidade"));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
 
     public function store(EspecialidadeRequest $request)
     {
@@ -51,27 +45,19 @@ class EspecialidadeController extends Controller
             ->with('success', 'Especialidade criada com sucesso');
     }
 
-    /**
-     * Display the specified resource.
-     */
 
     public function show(Especialidade $especialidade)
     {
         return view('_admin.especialidade.show', compact("especialidade"));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
 
     public function edit(Especialidade $especialidade)
     {
         return view('_admin.especialidade.edit', compact('especialidade'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
 
      public function update(EspecialidadeRequest $request, Especialidade $especialidade)
      {
@@ -95,9 +81,7 @@ class EspecialidadeController extends Controller
          return redirect()->route('admin.especialidades.index')->with('success', 'Especialidade atualizada com sucesso');
      }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
 
     public function destroy(Especialidade $especialidade)
     {
