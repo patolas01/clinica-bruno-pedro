@@ -44,7 +44,7 @@ Route::get('/perfil', [PageController::class, 'perfil'])->name('perfil');
 
 Auth::routes(['verify' => true]);
 
-// Rota para editar e atualizar usuário apenas para administradores autenticados e verificados
+
 Route::resource('/admin/users', UserController::class, ['as' => 'admin', 'middleware' => ['auth', 'verified']])->only(['edit', 'update']);
 
 
