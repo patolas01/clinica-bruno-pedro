@@ -70,7 +70,7 @@
 
                             <label for="especialidade_id">Especialidade</label>
                             <select id="especialidade_id" name="especialidade_id">
-                                <!-- Change name attribute to "especialidade" -->
+                                
                                 <option value="" disabled selected>Selecione a especialidade</option>
                                 @if ($especialidades->isEmpty())
                                     <option value="" disabled>Nenhuma especialidade existente</option>

@@ -268,13 +268,13 @@ h6 {
 
     .list-footer {
         flex-direction: column;
-        gap: 0.5rem; /* Diminuir o gap */
+        gap: 0.5rem;
     }
 
     .container-footer {
         padding: 2rem 5%;
-        margin: 0 auto; /* centralizar */
-        max-width: 900px; /* adicionar largura máxima para evitar esticamento em telas grandes */
+        margin: 0 auto;
+        max-width: 900px;
     }
 
     .logofooter {
@@ -286,13 +286,13 @@ h6 {
     .upper-footer,
     .list-footer {
         flex-direction: column;
-        gap: 1rem; /* Diminuir o gap */
+        gap: 1rem;
     }
 
     .container-footer {
         padding: 2rem 5%;
-        margin: 0 auto; /* centralizar */
-        max-width: 600px; /* ajustar largura máxima */
+        margin: 0 auto;
+        max-width: 600px;
     }
 
     .logofooter {
@@ -308,8 +308,8 @@ h6 {
 @media(max-width: 660px) {
     .container-footer {
         padding: 2rem 5%;
-        margin: 0 auto; /* centralizar */
-        max-width: 450px; /* ajustar largura máxima */
+        margin: 0 auto; 
+        max-width: 450px;
     }
 }
 

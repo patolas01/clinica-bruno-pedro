@@ -17,16 +17,6 @@ body {
     font-family: "Poppins", sans-serif !important;
 }
 
-/*body {
-	margin: 0;
-	padding: 1rem;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: rgba(20, 20, 20, 1);
-}*/
-
 * {
     margin: 0;
     padding: 0;

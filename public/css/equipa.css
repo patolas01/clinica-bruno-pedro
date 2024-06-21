@@ -82,12 +82,12 @@ max-width: 1400px;
 
 @media (max-width: 1400px) {
     .rowequipa {
-        max-width: 750px; /* Defina a largura máxima da div dos cards */
-        margin: 0 auto; /* Centralize a div dos cards na página */
+        max-width: 750px; 
+        margin: 0 auto;
     }
 
     .cardequipa {
-        width: 300px ;  /* Calcula a largura para exibir 2 cards por linha */
-        margin: 20px; /* Ajusta a margem entre os cards */
+        width: 300px ;
+        margin: 20px;
     }
 }

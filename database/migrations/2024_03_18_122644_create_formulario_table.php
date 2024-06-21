@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('nome');
             $table->string('email');
             $table->string('mensagem');
-            $table->unsignedBigInteger('especialidade_id'); // Chave estrangeira
+            $table->unsignedBigInteger('especialidade_id');
             $table->foreign('especialidade_id')->references('id')->on('especialidades');
             $table->timestamps();
             $table->softDeletes();

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('imagem');
             $table->text('descriçao');
-            $table->unsignedBigInteger('especialidade_id'); // Chave estrangeira
+            $table->unsignedBigInteger('especialidade_id');
             $table->foreign('especialidade_id')->references('id')->on('especialidades');
             $table->softDeletes();
         });

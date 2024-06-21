@@ -10,7 +10,7 @@
                 <form method="POST" action="{{ route('admin.formularios.update', $formulario) }}" class="form-group">
                     @csrf
                     @method('PUT')
-                    <!-- Inclua aqui os campos do formulário -->
+
                     <div class="form-group">
                         <label for="contacto">Contacto:</label>
                         <input type="text" name="contacto" class="form-control" id="contacto"
@@ -29,10 +29,10 @@
                     <div class="form-group">
                         <label for="especialidade_id">Especialidade:</label>
                         <select name="especialidade_id" class="form-control" id="especialidade_id">
-                            <!-- Preencha esta opção com as especialidades disponíveis -->
+
                         </select>
                     </div>
-                    <!-- Adicione os outros campos conforme necessário -->
+                  
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-success" name="ok">Guardar</button>
