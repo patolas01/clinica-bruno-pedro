@@ -48,8 +48,7 @@
                     <div class="linha"></div>
                 </div>
                 <div id="descricaoseccaoprincipal2">
-                    <p>Esta Clinica tem um texto de exemplo pois ainda não foi feito o estudo sobre a história da clinica.
-                        Foi fundada talvez num ano qualquer por exemplo 1988, na zona de Pombal.</p>
+                    <p>A Clínica Dentária Bruno & Pedro foi fundada em 18 de setembro de 2005 com o compromisso de proporcionar tratamentos de qualidade na área da Medicina Oral.</p>
                 </div>
                 <a href="{{ route('sobre') }}" class="vermais2">Saber mais ></a>
             </div>
