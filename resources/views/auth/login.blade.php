@@ -4,8 +4,8 @@
 
         <div class="center">
             <img src="{{ asset('img/Logo BrunoPedro escuro.png') }}" alt="Logo Login" id="logologin">
-            <h1>Login</h1>
-            <p>Faça login ou registre-se para aceder:</p>
+            <h1>Inicie sessão</h1>
+            <p>Inicie sessão ou registre-se para aceder:</p>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
@@ -32,7 +32,7 @@
                     </span>
                     @enderror
                 </div>
-                <input type="submit" value="Login">
+                <input type="submit" value="Iniciar sessão">
             </form>
             <div class="forget">
                 @if (Route::has('password.request'))
