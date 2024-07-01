@@ -5,7 +5,7 @@
         <div class="center">
             <img src="{{ asset('img/Logo BrunoPedro escuro.png') }}" alt="Logo Login" id="logologin">
             <h1>Inicie sessão</h1>
-            <p>Inicie sessão ou registre-se para aceder:</p>
+            <p>Inicie sessão ou registe-se para aceder:</p>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
