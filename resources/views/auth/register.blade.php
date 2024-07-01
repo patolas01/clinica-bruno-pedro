@@ -64,7 +64,7 @@
                 </div>
                 <input type="submit" value="Registar">
                 <div class="signup_link">
-                    Já tem conta? <a href="{{ route('login') }}">Login</a>
+                    Já tem conta? <a href="{{ route('login') }}">Iniciar sessão</a>
                 </div>
             </form>
         </div>
