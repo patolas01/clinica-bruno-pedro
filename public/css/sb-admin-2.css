@@ -2722,14 +2722,14 @@ fieldset:disabled a.btn {
 
 .btn-warning {
     color: #fff;
-    background-color: #f6c23e;
-    border-color: #f6c23e;
+    background-color: #00ce6e;
+    border-color: #00ce6e;
 }
 
 .btn-warning:hover {
     color: #fff;
-    background-color: #f4b619;
-    border-color: #f4b30d;
+    background-color: #00ce6e;
+    border-color: #00ce6e;
 }
 
 .btn-warning:focus,
@@ -2740,8 +2740,8 @@ fieldset:disabled a.btn {
 .btn-warning.disabled,
 .btn-warning:disabled {
     color: #fff;
-    background-color: #f6c23e;
-    border-color: #f6c23e;
+    background-color: #00ce6e;
+    border-color: #00ce6e;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active,
