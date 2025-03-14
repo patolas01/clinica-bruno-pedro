@@ -26,6 +26,8 @@
     @endforeach
 </ul>
 
+<p>Ola mundo</p>
+
 
 @endsection
 @section('moreScripts')
